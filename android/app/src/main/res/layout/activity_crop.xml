@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ro.vodafone.mcare.android.ui.utils.imagecontroller.photoview.PhotoView
+        android:id="@+id/photoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="center" />
+
+    <ro.vodafone.mcare.android.ui.utils.imagecontroller.cropoverlay.CropOverlayView
+        android:id="@+id/crop_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:borderColor="#ffffff"
+        app:drawCircle="true"
+        app:guideLines="false"
+        app:marginSide="20dp"
+        app:marginTop="50dp"
+        app:overlayColor="#B3000000"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/black_opacity_60"
+            android:text="Cancel"
+            android:textColor="@color/pay_bill_white_color"
+
+            />
+        <Button
+            android:id="@+id/sendBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/black_opacity_60"
+            android:text="OK"
+            android:layout_weight="1"
+            android:textColor="@color/pay_bill_white_color"
+
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

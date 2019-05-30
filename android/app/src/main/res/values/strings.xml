@@ -1,0 +1,575 @@
+<resources>
+    <string name="app_name">My Vodafone</string>
+    <string name="app_name2">My Vodafone</string>
+
+    <string name="filter_deeplink">Filter Deep Linking</string>
+
+
+    <!-- Payment Confirmation-->
+
+    <string name="paymentConfirmationInfo">Completează informaţiile de mai jos pentru a-ţi confirma plata facturii</string>
+    <string name="paymentConfirmationAmount">Sumă de plată</string>
+    <string name="paymentContactNumber">Număr de contact</string>
+    <string name="paymentConfirmationCode">Cod plată</string>
+    <string name="paymentConfirmationButton">Post</string>
+    <string name="paymentConfirmationAmountError">Te rugăm să introduci o valoare mai mare sau egală cu 5, având maxim 2 zecimale.</string>
+    <string name="paymentConfirmationCodeError">Codul de operație nu este corect. Te rugăm să contactezi serviciul clienți la *222</string>
+    <string name="paymentConfirmationContactError">Formatul numărului introdus nu este valid (ex. 07XXXXXXXX)</string>
+
+    <!--Cookie-->
+    <!--<string name="iplanet_cookie_name">iPlanetDirectoryPro</string>-->
+    <!--<string name="iplanet_cookie_path">/</string>-->
+    <!--<string name="iplanet_cookie_maxage">1296000</string>-->
+
+    <!-- Login Page Labels -->
+
+    <string name="forgotLabel">Ai uitat\u00A0</string>
+    <string name="forgotPasswordText"><u>parola</u>\u00A0</string>
+    <string name="forgotUsernameText"><u>numele de utilizator</u>\u00A0?</string>
+    <string name="orLabel">sau\u00A0</string>
+    <string name="rememberMe">Păstrează-mă autentificat</string>
+    <string name="loginToMyVodafone">Autentifică-te în \nMy Vodafone</string>
+    <string name="userNameInputLabel">Nume utilizator</string>
+    <string name="userNameInputHint">nume utilizator</string>
+    <string name="userNameInputLabelRecoverPassword">Nume de utilizator</string>
+    <string name="userNameInputHintRecoverPassword">nume de utilizator</string>
+    <string name="passwordInputLabel">Parola</string>
+    <string name="passwordInputHint">parola</string>
+    <string name="loginButtonLabel">Autentificare</string>
+    <string name="registerNowButtonLabel">Înregistrează-te acum</string>
+    <string name="reset_account_button_label">Reset your account now</string>
+    <string name="notRegisteredLabel">Nu ești încă înregistrat cu \nMy Vodafone?</string>
+
+    <!-- Seamless labels-->
+
+    <string name="login_easier_with_vodafone_label">Te poți autentifica rapid în aplicație dacă ești conectat la rețeaua Vodafone.</string>
+    <string name="enter_buton_label">Intră</string>
+    <string name="login_with_vdf_network_instead_wifi_label">Deconectează-te de la Wi-Fi pentru a te autentifica folosind rețeaua Vodafone.</string>
+    <string name="login_with_vodafone_account_label">Autentifică-te cu un cont Vodafone existent</string>
+    <string name="authentication_button_label">Autentificare</string>
+    <string name="skip_usual_registration_precess_label">Sari peste procesul de autentificare și înregistrare prin scurta oprire a Wi-Fi-ului și conectându-te la rețeaua Vodafone.</string>
+    <string name="vodafone_remember_your_details_label">Nu-ți face griji, va fi necesar să faci asta o singură dată. Aplicația MyVodafone va reține detaliile tale pentru a te autentifica în viitor prin Wi-Fi sau prin rețeaua Vodafone.</string>
+    <string name="wifi_settings_button_label">Setări Wi-Fi</string>
+    <string name="dont_wont_turn_off_wifi_label">Nu vreau să opresc Wi-Fi</string>
+    <string name="register_button_label">Înregistrare</string>
+
+    <!-- Login Page Error Messages -->
+
+    <string name="invalid_password_message">Ai introdus o parolă greșită.</string>
+    <string name="invalid_username_message">Numele de utilizator este incorect.</string>
+    <string name="faqs">FAQs</string>
+    <string name="chat">Chat</string>
+    <string name="requesterId">mcare</string>
+    <string name="requesterPassword">mcare</string>
+    <string name="title">Bine ai venit în My Vodafone!</string>
+    <string name="paybill">Plătește factura</string>
+    <string name="clientcode">Cod client:</string>
+    <string name="rechargeList">Reîncarcă</string>
+    <string name="anuleaza">Anulează</string>
+    <string name="costcontrol">Cost Control</string>
+    <string name="email">Email</string>
+    <string name="internetLeft">Ți-au rămas puține date și mai ai 9 zile până la reînnoirea abonamentului.</string>
+    <string name="internetLeftSubTitle">Adaugă una dintre cele două opțiuni pentru a beneficia în continuare de cel mai rapid Internet.</string>
+    <string name="da">Da</string>
+    <string name="recharge">Reîncarcă cartela</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="server_error">Eroare de server. Te rugăm să încerci mai târziu.</string>
+    <string name="internet_connection_problem">Probleme de conectare. Verifică dacă ai acces la Internet din setările telefonului.</string>
+
+    <!--onboarding activity-->
+    <string name="onboarding_screen_title">My Vodafone</string>
+    <string name="onboarding_configuring_text"> </string>
+    <string name="dialog_tc">Daca nu ești de acord cu Termenii și Condițiile nu poți accesa aplicația. Ești sigur că vrei să ieși din aplicație?</string>
+    <string name="dialog_cancel">Renunţă</string>
+    <string name="dialog_give_up">Anulează</string>
+    <string name="dialog_continue">Continuă</string>
+    <string name="reload_button_label">Reîncearcă</string>
+    <string name="oobe_area1">Ai acces la informațiile despre contul tău și Asistență 24/7 și poți verifica viteza și detalierea traficului tău de date.
+    Folosim informații din telefonul tău și modul în care folosești aplicația ca să ne ajute să îți oferim oferte și servicii personalizate pentru ca tu să poți profita la maxim de MyVodafone.</string>
+    <string name="oobe_area2_title">Calitate și Conectivitate</string>
+    <string name="onboarding_right_message_btn">OK</string>
+    <string name="onboarding_left_message_btn">Anulează</string>
+
+    <!--no internet connection dialog-->
+    <string name="dialog_no_internet_connection_message">Nu s-a putut efectua legatura cu serverul. Te rugăm să te asiguri că ai conexiune la Internet și apoi reîncearcă.</string>
+    <string name="dialog_no_internet_connection_positive">Reîncearcă</string>
+    <string name="dialog_no_internet_connection_negative">Verifică setările</string>
+
+    <!--logout dialog-->
+    <string name="logout_confirmation_label">Ești sigur că vrei să te deconectezi?</string>
+
+    <!--Terms and conditions-->
+
+    <string name="terms_conditions_error">Pentru a continua trebuie să fii de acord cu termenii și condițiile.</string>
+
+    <!--Menu-->
+
+    <string name="item_home">Acasă</string>
+    <string name="item_paybill">Plăţi</string>
+    <string name="item_services">Serviciile tale</string>
+    <string name="item_services_prepaid"> Cost Control </string>
+    <string name="item_services_details">Detalii servicii</string>
+    <string name="item_services_calls">Detalii apeluri</string>
+    <string name="item_offers">Oferte și opțiuni pentru tine.</string>
+    <string name="item_offers_prepaid">Promoţii</string>
+    <string name="item_offers_postpaid">Promoții și opțiuni</string>
+    <string name="item_offers_postpaid1">Oferte pentru tine</string>
+    <string name="item_loyalty">Program Loialitate</string>
+    <string name="item_bills_and_payments">Plată factură</string>
+    <string name="item_billing_overview">Istoric Factură</string>
+    <string name="item_traveling_abroad">Roaming</string>
+    <string name="item_prepaid_recharge">Reîncarcă</string>
+    <string name="item_postpaid_recharge">Reîncărcare</string>
+    <string name="item_settings">Setări</string>
+    <string name="item_logout">Deconectare</string>
+    <string name="item_login">Autentificare</string>
+    <string name="item_vodafoneshops">Magazine Vodafone</string>
+    <string name="item_your_profile">Profilul tău</string>
+    <string name="item_vodafone_tv">Vodafone TV</string>
+
+    <!--Dashboard-->
+    <string name="dashboard_postpaid_left_days_until_bill_cycle">Emitere factură în data de %1$s lunar.</string>
+
+    <!-- Register Page Labels -->
+
+    <string name="register_tittle_label">Înregistrare</string>
+    <string name="register_first_step_page_tittle_label">Te rugăm să introduci un număr de telefon pentru care dorești să creezi contul</string>
+    <string name="register_second_step_page_tittle_label">Te rugăm să introduci datele necesare creării contului</string>
+    <string name="register_button_next_step_label">Pasul următor</string>
+    <string name="register_input_phone_label">Număr de telefon</string>
+    <string name="register_input_username_hint">0xxxxxxxxx</string>
+    <string name="register_input_username_label">Nume utilizator</string>
+    <string name="register_input_firstname_label">Prenume</string>
+    <string name="register_input_firstname_hint">Prenume</string>
+    <string name="register_input_lastname_label">Nume</string>
+    <string name="register_input_lastname_hint">Nume</string>
+    <string name="register_input_email_address_label">Adresă de e-mail</string>
+    <string name="register_input_email_address_hint">nume@exemplu.com</string>
+    <string name="register_input_terms_and_conditions_label">Sunt de acord cu termenii și condițiile</string>
+    <string name="register_input_news_label">Vreau să primesc newsletters de la Vodafone</string>
+    <string name="register_input_unique_code_label">Cod unic</string>
+    <string name="register_button_resend_code_label">Retrimite codul</string>
+    <string name="register_input_contact_phone_label">Număr telefon de contact</string>
+    <string name="register_input_contact_phone_hint">0xxxxxxxxx</string>
+    <string name="register_third_step_page_tittle_label">Te rugăm să introduci datele necesare creării contului</string>
+    <string name="register_input_confirm_password_label">Confirmă parola</string>
+    <string name="register_button_create_account_label">Creează cont</string>
+    <string name="register_activate_account">Activează contul</string>
+
+
+    <!-- Register Page Error Message -->
+    <string name="register_error_message_invalid_phone_number">Formatul numărului introdus nu este valid (ex. 07XXXXXXXX)</string>
+    <string name="register_error_message_min_characters_username">Numele de utilizator trebuie să conţină cel puţin 4 caractere.</string>
+    <string name="register_error_message_invalid_characters_username">Diacritice și caractere speciale nu sunt permise.</string>
+    <string name="register_error_message_terms_checkbox">Pentru a continua este necesar să fii de acord cu termenii și condițiile.</string>
+    <string name="register_error_message_email_address">Te rugăm să introduci un email valid!</string>
+    <!--<string name="register_error_message_invalid_characters_username">Caracterele !=|%*"/'`@#~$^()[]{};:?,+ , sunt interzise</string>-->
+    <!--<string name="register_error_message_terms_checkbox">Pentru a continua este necesar să fii de acord cu termenii şi condiţiile.</string>-->
+    <!--<string name="register_error_message_email_address">Te rugăm să introduci un email valid!</string>-->
+    <!--<string name="register_error_message_unique_code">Codul introdus este incorect. Te rugăm să introduci un cod valid.</string>-->
+    <string name="register_error_message_register_password">Parola trebuie să fie de minimum 8 caractere, să conțină cifre, litere mari și mici.</string>
+    <string name="register_error_message_confirm_password">Câmpurile nu coincid.</string>
+
+
+    <!-- Confirm Profile -->
+
+    <string name="confirm_profile_tittle_label">Confirmare profil</string>
+    <string name="confirm_profile_first_step_page_tittle_label">Avem nevoie de datele tale pentru a-ți putea confirma profilul.\u00A0</string>
+    <string name="confirm_profile_dialog_positive">Renunță</string>
+    <string name="confirm_profile_telephone_number_hint">0xxxxxxxxx</string>
+    <string name="confirm_profile_activation_code_hint">cod</string>
+    <string name="confirm_profile_second_step_page_tittle_label">Te rugăm să introduci codul de activare primit prin SMS.</string>
+    <string name="confirm_profile_activate_profile">Activează contul</string>
+
+
+    <!-- Recover Username Page -->
+    <string name="recover_username_page_title">Am uitat numele \n de utilizator</string>
+    <string name="recover_username_telephone_number_label">Număr de telefon</string>
+    <string name="recover_username_telephone_number_hint">0xxxxxxxxx</string>
+    <string name="recover_username_email_adress_label">Adresă de e-mail</string>
+    <string name="recover_username_email_adress_hint">nume@exemplu.com</string>
+    <string name="recover_username_button_label">Trimite numele de utilizator</string>
+
+
+    <!-- Recover Password Page -->
+
+    <string name="recover_password_page_title">Am uitat parola</string>
+    <string name="recover_password_page_description">Te rugăm să introduci numele de utilizator pentru care vrei să regenerezi parola</string>
+    <string name="recover_password_telephone_number_label">Număr de telefon</string>
+    <string name="recover_password_telephone_number_hint">0xxxxxxxxx</string>
+    <string name="recover_password_email_adress_label">Adresă de e-mail</string>
+    <string name="recover_password_email_adress_hint">nume@exemplu.com</string>
+    <string name="recover_password_next_step_button_label">Resetează parola</string>
+    <string name="recover_password_enter_activation_data_label">Te rugăm să introduci datele necesare activării  contului</string>
+    <string name="recover_password_activation_code_label">Cod unic</string>
+    <string name="recover_password_new_password_label">Parola</string>
+    <string name="recover_password_confirmation_password_label">Confirmă parola</string>
+    <string name="recover_password_resend_activation_code">Retrimite codul</string>
+    <string name="recover_password_activate_account_button">Activează cont</string>
+    <string name="recover_password_password_hint">parola</string>
+    <string name="recover_password_activation_code_hint">cod</string>
+    <string name="recover_password_refuse_button">Renunță</string>
+
+
+    <!-- Recover Password Page Error Messages-->
+
+    <string name="recover_password_password_invalid_format">Parola trebuie să fie de minim 8 caractere, să conțină cifre, litere mari și mici.</string>
+
+    <!-- Account Activation Page -->
+    <string name="activate_account_new_password">Parolă nouă</string>
+    <string name="activate_account_confirm_password">Confirmă parola</string>
+    <string name="activate_account_accept_terms_and_conditions_label">Sunt de acord cu <u>Termenii și Condițiile</u></string>
+    <string name="activate_account_activate_button">Activează contul</string>
+    <string name="activate_account_password_hint">parolă</string>
+    <string name="activate_account_dialog_logout_message">Ești sigur că vrei să te deconectezi?</string>
+    <string name="activate_account_dialog_logout_positive">Confirmă</string>
+    <string name="activate_account_dialog_logout_negative">Anulează</string>
+
+    <!-- Account Activation Page Error Messages -->
+    <string name="activate_account_invalid_password">Parola trebuie să fie de minimum 8 caractere, să conțină cifre, litere mari și mici.</string>
+    <string name="activate_account_password_do_not_coincide">Câmpurile nu coincid.</string>
+    <string name="activate_account_invalid_email_format">Te rugăm să introduci un email valid!</string>
+    <string name="activate_account_failed_api_call">Serviciul momentan indisponibil. Contul nu a putut fi activat. Te rugăm să reîncerci.</string>
+    <string name="activate_account_email_blacklisted">Adresă de email invalidă!</string>
+
+    <!-- Pay Bill -->
+
+    <string name="pay_own_bill_button">Plătește factura ta</string>
+    <string name="pay_another_bill_button">Plătește factura altcuiva</string>
+    <string name="pay_own_bill_button_description">Plătește factura ta cu cardul</string>
+    <string name="pay_another_bill_button_description">Plătește o altă factură cu cardul</string>
+    <string name="pay_bill_amount">Total de plată</string>
+    <string name="pay_bill_tva">(TVA inclus)</string>
+    <string name="pay_bill_client_code">Cont Client</string>
+    <string name="pay_bill_number">Număr factură</string>
+    <string name="pay_bill_due_date">Scadență factură</string>
+    <string name="pay_bill_securely">Plătește în siguranță</string>
+    <string name="pay_bill_do_you_want_pay_for_another">Dorești să plătești factura altcuiva?</string>
+    <string name="pay_bill_do_you_want_pay_your_bill">Dorești să plătești factura ta?</string>
+    <string name="pay_bill_button">Plătește factura</string>
+    <string name="pay_bill_telephone_number">Număr de telefon</string>
+    <string name="pay_bill_telephone_number_hint">07XXXXXXXX</string>
+    <string name="pay_bill_email">Adresă e-mail</string>
+    <string name="pay_bill_email_hint">nume@exemplu.com</string>
+    <string name="pay_bill_invoice_value">Valoarea facturii (RON)</string>
+    <string name="pay_bill_invoice_value_hint">0</string>
+    <string name="pay_bill_all_bill_is_paid">Nu ai facturi de plătit. Mulțumim!</string>
+    <string name="pay_bill_after_due_date_message">Plătește factura la timp pentru a evita suspendarea abonamentului tău.</string>
+    <string name="pay_bill_save_credit_card">Salvează cardul tău pentru plăți mai rapide în viitor</string>
+    <string name="service_selector_tittle">Selectează identitatea</string>
+    <string name="service_selector_tittle_cbu">Selectează un serviciu</string>
+    <string name="simplu_si_rapid">Simplu și rapid</string>
+    <string name ="card_de_credit">Card de credit</string>
+    <!--Warning message-->
+    <string name="widget_warning_message">Informație inaccesibilă</string>
+
+    <!--Euro sign-->
+    <string name="euro_sign"> € </string>
+
+    <!--Call Details Filter-->
+
+    <string name="call_details_filter_destination_label">Destinație</string>
+    <string name="call_details_filter_national_checkbox_label">Național</string>
+    <string name="call_details_filter_period_label">Perioada</string>
+    <string name="call_details_filter_spinner_label">Selectează luna</string>
+    <string name="call_details_apply_filter_title">Filtrare</string>
+    <string name="call_details_apply_filter_button_label">Aplică filtre</string>
+
+
+    <!--Privacy Policy-->
+    <string name="privacy_policy_title">Servicii și recomandări personalizate</string>
+    <string name="privacy_policy_information">Prin pornirea acestui serviciu, ne poți ajuta în următoarele moduri: \n\n•\u0020 \u0020Să te ajutăm să controlezi consumul de date arătându-ți care aplicații consumă cele mai multe date. \n\n•\u0020 \u0020Să îți îmbunătățim experiența prin monitorizarea semnalului și a calității apelurilor.\n\n•\u0020 \u0020Să descoperi ce poate periclita performanța aplicației și a telefonului tău și să lucrăm pentru a o soluționa.\n\n•\u0020 \u0020Să îți recomandăm oferte în funcție de preferințele tale. \n\n•\u0020 \u0020Să anticipăm nevoile tale prin acumularea datelor din interacțiunea ta cu aplicația. \n\n•\u0020 \u0020Te reasigurăm că nu vom colecta sau folosi niciodată informații legate de apelurile tale, istoricul de navigare sau alte informații care ar putea fi incluse în orice altă aplicație în afara aplicației My Vodafone.</string>
+    <string name="privacy_policy_message">Ce se întâmplă când am această opțiune pornită?</string>
+    <string name="privacy_policy_information_toast">Aveți nevoie de această opțiune pornită pentru a putea efectua verificarea consumului de date al aplicațiilor tale.</string>
+
+    <!--confidentiality-->
+    <string name="optimization_title">Optimizarea rețelei</string>
+    <string name="optimization_information">Prin datele colectate, incluzând locația, performanața telefonului tău și aplicațiile instalate, putem îmbunătăți calitatea serviciile clienților noștri. Datele sunt transmise în mod anonim.</string>
+    <string name="optimization_message">Ce se întâmplă când am această opțiune pornită?</string>
+    <string name="optimization_information_toast">Aveți nevoie de această opțiune pornită pentru a putea efectua verificarea vitezei de rețea.</string>
+    <string name="optimization_information_expandable">Prin pornirea acestui serviciu, ne poți ajuta în următoarele moduri:\n\n•\u0020 \u0020Să îmbunătățim rețeaua Vodafone în locații în care clienții folosesc mai mult traficul de date prin utilizarea funcționalității de verificare a vitezei traficului.\n\n•\u0020 \u0020Să ne îmbunătățim rețeaua punând accentul pe zonele în care telefoanele nu funcționează la fel de bine precum ar trebui.\n\n•\u0020 \u0020Să lucrăm cu producătorii de telefoane pentru a îmbunătăți modul de funcționare a telefoanelor în rețeaua Vodafone.\n\n•\u0020 \u0020Să oferim pachete de date care reflectă modul în care clientii noștri folosesc traficul de date versus Wi-Fi.</string>
+    <string name="information_toast">În scopul de a oferi servicii personalizate și recomandări, opțiunea de optimizare a rețelei este de asemenea activată.</string>
+    <string-array name="months_array">
+        <item>Ianuarie</item>
+        <item>Februarie</item>
+        <item>Martie</item>
+        <item>Aprilie</item>
+        <item>Mai</item>
+        <item>Iunie</item>
+        <item>Iulie</item>
+        <item>August</item>
+        <item>Septembrie</item>
+        <item>Octombrie</item>
+        <item>Noiembrie</item>
+        <item>Decembrie</item>
+    </string-array>
+
+    <!--String resources for balance cards-->
+    <string name="text_high_postpaid_balance_card">Cost suplimentar de la %1$s</string>
+    <string name="text_high_postpaid_multiple_balance_card">Cost suplimentar – Toate conturile de la %1$s</string>
+    <string name="text_amount_balance_card">%1$s €</string>
+    <string name="text_low_postpaid_balance_card">Creştere dinamică: %1$s €</string>
+    <string name="voice_postpaid_text_left">Apeluri naționale neincluse în plan</string>
+    <string name="voice_prepaid_text_left">Voce</string>
+    <string name="sms_prepaid_text_left">SMS</string>
+    <string name="data_prepaid_text_left">Date</string>
+    <string name="other_postpaid_text_left">Altele</string>
+    <string name="text_high_prepaid_secondary_balance_card">Balanță secundară</string>
+
+    <!--String resources for Settings Page-->
+    <string name="resetPassword">Resetare parolă</string>
+    <string name="electronicBill">Factura electronică</string>
+    <string name="blockSIM">Blochează SIM</string>
+    <string name="paymentAgreement">Amânare de plată</string>
+    <string name="customizeAccount">Personalizează-ți conturile</string>
+    <string name="confidentiality">Confidențialitate</string>
+    <string name="notifications">Notificări</string>
+    <string name="terms">Termeni şi Condiții</string>
+    <string name="permissions">Permisiuni</string>
+
+    <string name="confidentialityPolicy">Politica de confidențialitate</string>
+
+    <!-- Settings messages-->
+
+    <string name="notificationTitle">Notificări de la Vodafone</string>
+    <string name="notifications_message1">Cu această opțiune pornită, vei primi ultimele noutăți, recomandări personalizate și alte mesaje relevante direct pe ecranul principal.</string>
+    <string name="notifications_message2">Chiar dacă ai această opțiune oprită, tot vei primi mesaje legate de factura ta.</string>
+    <string name="overlayTitle">Eşti sigur?</string>
+    <string name="policy_overlayButtonturnOff">Oprește</string>
+    <string name="overlaySubtext">Dacă oprești această opțiune nu vom mai putea să îmbunătățim serviciile prin colectarea datelor tale.</string>
+    <string name="overlaySubtext2">Nu vei mai avea posibilitatea de a testa viteza internetului tău, de a verifica consumul de date al aplicațiilor tale sau de a primi asistență personalizată și recomandări.</string>
+    <string name="overlayButtonkeepOn">Păstrează opţiunea pornită</string>
+    <string name="overlayButtonturnOff">Opreşte</string>
+    <string name="back">Înapoi</string>
+    <string name="changePassword">Schimbă parola</string>
+    <string name="oldPassword">parola actuală</string>
+    <string name="newPassword">parola nouă</string>
+    <string name="confirmPassword">confirmă parola</string>
+    <string name="oldPasswordB">Parola actuală</string>
+    <string name="newPasswordB">Parola nouă</string>
+    <string name="confirmPasswordB">Confirmă parola</string>
+    <string name="enroll_now">Înscrie-te acum</string>
+    <string name="phone_number">Număr de telefon</string>
+    <string name="accept_tc1">Sunt de acord cu </string>
+    <string name="accept_tc2"><u>Termenii şi Condiţiile</u></string>
+    <string name="hint_CNP">1890526112959</string>
+    <string name="sim_current_status">Status curent: </string>
+    <string name="bad_phone_number">Te rugăm să introduci un număr de telefon valid.</string>
+    <string name="postpone_payment">Amână plata</string>
+    <string name="enroll_header_title"> Înscrie-te în YOU</string>
+    <string name="enroll_header_text">Bine ai venit în YOU! De acum ești înscris în YOU și te poți bucura de oferta YOU.</string>
+
+    <!--Recurrent recharges strings-->
+    <string name="delete_button_text">Şterge</string>
+    <string name="month_recurent">Lunar</string>
+    <string name="week_recurent">Săptămânal</string>
+    <string name="date_recurent">La data</string>
+    <string name="monthly_recharge_item_header">În ziua de DATE ale lunii</string>
+    <string name="weekly_recharge_item_header">În fiecare DAY </string>
+    <string name="recurrent_recharge_To">Către MSISDN </string>
+    <string name="recurrent_recharge_amout">AMOUNT €</string>
+    <string name="recurrent_delete_popup_message">Ești sigur că vrei să ștergi reîncărcarea programată?</string>
+    <string name="recurrent_positive_delete_toast">Reîncărcarea programată a fost ștearsă.</string>
+    <string name="recurrent_negative_delete_toast">Reîncărcarea programată nu a fost ștearsă. Te rugăm să încerci mai târziu.</string>
+    <string name="x_weekly_recharges_available">Poți să programezi maxim %1$s reîncărcări cu recurență săptămânală într-o zi selectată de tine pe parcursul lunii de facturare. Mai ai disponibile %2$s.</string>
+    <string name="top_up_code_voucher">Cod voucher</string>
+    <string name="top_up_phone_number_hint">07xxxxxxxx</string>
+    <string name="pay_with_voucher">Reîncarcă cu voucher</string>
+    <string name="pay_with_invoice">Plată pe factură</string>
+    <string name="pay_with_card">Plătește cu cardul</string>
+    <string name="pay_with_other_card">Plătește cu alt card</string>
+
+    <string name="recharge_history_postpaid">Istoric reîncărcări</string>
+    <string name="recharge_history_prepaid">Istoric tranzacții</string>
+
+    <!-- Add to favorites from dashboarde -->
+    <string name="add_button_text">Salvează</string>
+    <string name="title_add_to_favorites">Adaugă un număr \nfavorit</string>
+    <string name="message_add_to_favorites">Te rugăm să introduci numele.</string>
+    <string name="hint_number">0720000000</string>
+    <string name="hint_name">Nume</string>
+    <string name="message_information">Vom afișa numele ("spre exemplu, 'Andrei (0720000000)'") și numărul de telefon astfel încât să fie mai ușor de identificat.</string>
+
+    <!--Graphs-->
+    <string name="graph_history_default_title">Reîncărcările tale din \n ultimele 6 luni</string>
+
+    <!-- Accepted Offers-->
+    <string name="accepted_offers_contract_validity">Valabilitate contract:</string>
+    <string name="accepted_offers_offer_number">Oferta numărul: </string>
+    <string name="accepted_offers_dated">Din data: </string>
+    <string name="accepted_offers_t_c">Termenii și condiții generale</string>
+    <string name="accepted_offers_general_t_c">Clauzele specifice contractului încheiat la distanță</string>
+    <string name="accepted_offers_contract_details">Detalii contract</string>
+    <string name="proposals_pending_t_c">Sunt de acord cu termenii și condițiile</string>
+    <string name="proposals_pending_no_offers">Nu există oferte în așteptare pentru acest număr.</string>
+    <string name="no_accepted_offers">Nu există oferte acceptate pentru acest număr.</string>
+    <string name="proposals_pending_general_t_c"> Sunt de acord cu clauzele specifice\n contractului încheiat la distanță</string>
+    <string name="proposals_pending_button_accept">Acceptă oferta</string>
+    <string name="proposals_pending_button_refuse">Refuză oferta</string>
+    <string name="overlayTitleRefusedOffers">Refuză oferta</string>
+
+    <!--your services page - cost control-->
+    <string name="your_services_cost_control_total_balance">Credit total</string>
+    <string name="your_services_cost_control_available_balance">Credit disponibil</string>
+    <string name="your_services_cost_control_expiration">Expiră la %1$s</string>
+    <string name="your_services_cost_control_secondary_balance">Balanța secundară</string>
+    <string name="your_services_details_service_label">Serviciu</string>
+    <string name="your_services_details_option_label">Opțiune</string>
+    <string name="your_services_details_cost_label">Cost (lunar):</string>
+    <string name="your_services_details_duration_label">Durată:</string>
+    <string name="your_services_details_start_date">De la %1$s</string>
+    <string name="your_services_details_end_date">Până la %1$s</string>
+    <string name="your_services_details_is_expired">Credit expirat la %1$s</string>
+    <string name="your_services_details_abonament">Sumar beneficii</string>
+    <string name="your_services_contract_cost_description">%1$s €</string>
+    <string name="your_services_ebu_contract_cost_description">%1$s € pe lună</string>
+    <string name="your_services_options_amount_unit">%1$s € pe lună (TVA inclus)</string>
+    <string name="your_services_amount_eur">%1$s €</string>
+    <string name="your_option_days">%1$s zile</string>
+    <string name="your_option_months">%1$s luni</string>
+    <string name="your_services_price_plan">Abonament</string>
+    <string name="your_option_monthly_fee">Cost lunar:</string>
+    <string name="your_option_contract_period">Perioada contractuală</string>
+    <string name="your_option_activation_date">Data activare: %1$s</string>
+    <string name="your_option_deactivation_date">Data dezactivare: %1$s</string>
+
+    <!--retention-->
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_faq">FAQ</string>
+    <string name="title_email">Email</string>
+
+    <!-- Date -->
+    <string name="date_yesterday">Yesterday</string>
+
+    <!-- Messages -->
+    <string name="message_new">New message!</string>
+    <string name="message_text_copied">Text copied</string>
+    <string name="message_view">VIEW</string>
+    <string name="when_to_recharge">Când vrei să programezi reîncărcarea:</string>
+
+
+    <!--Loyalty points program-->
+
+    <string name="loyalty_offers_button">Oferte pentru numărul tău</string>
+    <string name="loyalty_filter_button">Filtrare după dată</string>
+    <string name="loyalty_filter">Filtrare</string>
+    <string name="loyalty_refuse_program">Renunță la programul de loialitate</string>
+    <string name="loyalty_points">Puncte de loialitate</string>
+    <string name="loyalty_last_update">Ultima actualizare: %1$s</string>
+    <string name="loyalty_received_points">Puncte acumulate</string>
+    <string name="loyalty_cancel_button">Resetează filtrele</string>
+
+
+    <!--GDPR Component-->
+    <string name="overlay_save_button">Salvează modificările</string>
+    <string name="overlay_activate_button">Activează</string>
+    <string name="overlay_discard_button">Renunță</string>
+    <string name="placeholder_phone">0xxxxxxxxx</string>
+    <string name="placeholder_email">nume@exemplu.com</string>
+    <string name="placeholder_birthdate">zz/ll/aaaa</string>
+    <string name="link_from_instructional_text">www.vodafone.ro/privacy</string>
+    <string name="see_details_text">Vezi detalii</string>
+
+    <!--ION Component-->
+    <string name="unlimited_prepaid_ion_inactive_text">Activează oferta</string>
+    <string name="unlimited_postpaid_cbu_ion_inactive_text">Vezi oferta</string>
+    <string name="unlimited_ion_delete_msisdn_text">Şterge numărul selectat</string>
+    <string name="unlimited_ion_add_msisdn_text">Adaugă număr</string>
+    <string name="unlimited_ion_confirmation_on_button">Da, şterge</string>
+    <string name="unlimited_ion_confirmation_off_button">Nu, mulţumesc</string>
+
+    <!--SIM Replacement-->
+    <string name="replacement_confirmation_on_button">Continuă</string>
+    <string name="replacement_confirmation_off_button">Înapoi</string>
+
+    <!-- CHAT -->
+    <string name="chat_first_agent_message">Salut! Acum caut un operator disponibil. Te rog să aștepți câteva momente, până te va prelua unul dintre operatorii noștrii.</string>
+    <string name="chat_agent_end_conversation">Conversaţia a fost închisă de către operator.</string>
+    <!-- Hardcode for privacy policy -->
+
+    <string-array name="first_category_list">
+        <item>Procentajul puterii semnalului de rețea pe parcursul perioadei în care telefonul tău este pornit</item>
+        <item>Zone cu semnal slab sau inexistent</item>
+        <item>Calitatea acoperirii mobile (2G, 3G, 4G)</item>
+        <item>Durata apelurilor</item>
+        <item>Modul în care se termină apelurile</item>
+        <item>Teste regulate legate de potențialul telefonului tău de a se conecta la rețea</item>
+        <item>Vitezele tale de descărcare și încărcare</item>
+        <item>Durata necesară setării unei conexiuni la internet</item>
+        <item>Calitatea conexiunilor WiFi și a adreselor MAC ale hotspot-urilor WiFi pe care le poate vedea telefonul tău și cât de aglomerate sunt </item>
+        <item>Consumul de trafic de date pe oră</item>
+        <item>Consumul de date al telefonului atunci când este în stand-by</item>
+        <item>Traficul de date prin conexiune WiFi versus prin rețeaua Vodafone</item>
+    </string-array>
+    <string-array name="third_category_list">
+        <item>Ce aplicații sunt instalate pe telefonul tău</item>
+        <item>Ce aplicații sunt accesate în fiecare zi și durata utilizării lor</item>
+        <item>Traficul de date consumat pentru fiecare aplicație</item>
+        <item>Durata în care o aplicație poate primi și transmite date și de asemenea tipul și calitatea rețelei utilizate (de exemplu, rețeaua Vodafone sau WiFi și puterea semnalului fiecăreia)</item>
+    </string-array>
+    <string-array name="fourth_category_list">
+        <item>Firma și modelul telefonului</item>
+        <item>Sistemul de operare</item>
+        <item>Versiunea firmware</item>
+        <item>Capabilități hardware</item>
+        <item>Limbă și locație</item>
+        <item>Statusul bateriei</item>
+        <item>Consumul memoriei</item>
+        <item>Durata de la ultima resetare</item>
+    </string-array>
+    <string-array name="seventh_category_list">
+        <item>Apelurile efectuate sau primite.</item>
+        <item>Informații despre receptorul și transmițătorul mesajelor de tip text, e-mail-uri, sau mesaje prin chat pe telefonul tău.</item>
+        <item>Orice informație sau comunicare, precum SMS, e-mail-uri sau conținutul chat-urilor, sau istoricul navigării tale pe Internet.</item>
+        <item>Informații legate despre ce funcționalități ale aplicațiilor tale folosești, sau ce conținut trimiți, primești sau consumi prin intermediul unei aplicații.</item>
+    </string-array>
+    <string-array name="eighth_category_list">
+        <item>Îmbunătățirea calității rețelei prin ex. O mai bună înțelegere legată de zonele exacte care au o performanță a rețelei slabă, sau zone de trafic mare de date care ne ajută la prioritizarea implementării zonelor noi de acoperire și de altfel, îmbunătățirea performanței rețelei.</item>
+        <item>Ne ajută să gestionăm problemele de performanță cauzate de telefoane slab performante.</item>
+        <item>Îmbunătățirea modelelor comerciale și a ofertelor noastre bazate pe o mai bună înțelegere a tiparelor ce descriu utilizarea aplicațiilor și calitatea conexiunii.</item>
+        <item>Îmbunătățirea performanței și a design-ului aplicației My Vodafone prin captarea celor mai populare funcționalități și modul în care se comportă acele funcționalități pe diverse tipuri de telefoane.</item>
+    </string-array>
+    <string-array name="ninth_category_list">
+        <item>Recomandări pentru o nouă ofertă sau opțiune bazat pe modul în care îți utilizezi serviciile de conectivitate.</item>
+        <item>Te ajutăm să ai controlul planurilor tale de date prin a-ți arăta care aplicații consumă cele mai multe date.</item>
+        <item>Optimizări pentru telefonul tău sau promovarea accesoriilor.</item>
+    </string-array>
+    <string-array name="tenth_category_list">
+        <item>Dezactivezi colectarea datelor personale legate de calitatea și utilizarea serviciilor tale de conectivitate, a locației și aplicațiilor.</item>
+        <item>Dezactivarea trimiterii informațiilor legate de utilizarea aplicației My Vodafone.</item>
+        <item>Dezactivarea notificărilor. NOTĂ: dacă dezactivezi notificările, noi tot vom avea posibilitatea de a-ți trimite SMS-uri sau e-mail-uri, sau a conduce campanii de telemarketing dacă avem permisiunea ta să facem acest lucru.</item>
+    </string-array>
+
+
+    <string name="ebu_migrated_entity_subscriber">Subscriber</string>
+    <string name="ebu_migrated_entity_account_cui">AccountCUI</string>
+    <string name="ebu_migrated_entity_account_holding">AccountHolding</string>
+    <string name="ebu_migrated_entity_billing_customer">BillingCustomer</string>
+    <string name="ebu_migrated_entity_financial_account">FinancialAccount</string>
+
+    <string name="facebook_app_id">569059393196200</string>
+    <string name="fb_login_protocol_scheme">fb569059393196200</string>
+
+    <!-- My Cards Screen -->
+    <string name="add_card">Adaugă card</string>
+    <string name="add_card_disabled">Adaugă card nou</string>
+    <string name="item_my_cards">Cardurile mele</string>
+    <string name="no_cards">Nu ai niciun card salvat.</string>
+    <string name="save_cards">Salvează cardul pentru a plăti mai ușor!</string>
+    <string name="terms_and_conditions"><font color="#42b6ff">termenii și condițiile</font></string>
+    <string name="deduct_string">Pentru validarea cardului suma de <b>1 leu</b> va fi reținută temporar. Suma va fi deblocată după verificarea cardului.</string>
+    <string name="delete">Șterge</string>
+    <string name="delete_card_confirmation_dialog_title">Șterge card</string>
+    <string name="delete_confirmation">Ești sigur că vrei să ștergi cardul</string>
+    <string name="add_card_error">Ne pare rău. S-a produs o eroare la adăugarea cardului. Te rugăm încearcă din nou</string>
+    <string name="delete_card_error">Ne pare rău. S-a produs o eroare la ștergerea cardului. Te rugăm încearcă din nou</string>
+    <string name="max_number_of_cards">Ai atins limita maximă de carduri disponibilă pentru acest cont. Pentru a adăuga unul nou șterge unul din lista de mai sus.</string>
+    <string name="add_card_success">Cardul a fost adăugat cu succes.</string>
+    <string name="delete_card_success">Cardul a fost șters cu succes.</string>
+
+</resources>

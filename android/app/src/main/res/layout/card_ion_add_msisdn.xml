@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/border_shadow">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/instructional_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Lorem ipsum"
+            android:textColor="@color/pay_bill_bold_text_color"
+            android:layout_marginBottom="12dp"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <TextView
+            android:id="@+id/add_msisdn_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Introdu numărul de telefon:"
+            android:textColor="@color/blackNormal"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- PHONE NUMBER Error -->
+        <LinearLayout
+            android:id="@+id/phone_number_input_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_error_message_border"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_alert"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="top"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/error_text_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:textSize="@dimen/login_page_labels_text_size"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="18dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/black_triangle">
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phone_number_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:layout_marginBottom="12dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <ro.vodafone.mcare.android.custom.PrefixCustomAutoCompleteEditText
+                android:id="@+id/prefix_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:padding="14dp"
+                android:background="@drawable/prefix_background"
+                android:completionThreshold="1"
+                android:imeOptions="actionNone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:textColor="#000000"
+                android:textColorHint="@color/gray_text_color"
+                android:textCursorDrawable="@null"
+                android:maxLength="3"
+                android:text="39"
+                android:textSize="@dimen/login_page_labels_text_size" />
+
+            <View
+                android:id="@+id/divider_prefix_and_msisdn"
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#cccccc"/>
+
+            <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+                android:id="@+id/phone_number_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@drawable/ion_msisdn_background"
+                android:hint="XXXXXXXXXX"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:padding="14dp"
+                android:textColorHint="@color/gray_input_text"
+                android:textSize="@dimen/login_page_labels_text_size"
+                customAttrs:type="phone"/>
+
+
+        </LinearLayout>
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/card_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:text="Adaugă număr"
+            android:textSize="@dimen/button_text_size"
+            android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+            android:enabled="false"
+            customAttrs:vodafoneTextStyle ="vodafoneRG"
+            style="@style/CardPrimaryButton"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="@drawable/border_shadow"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/viewCaller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <ro.vodafone.mcare.android.ui.views.TooltipError
+            android:id="@+id/callerPhoneNumberError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/lblCaller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            tools:text="Numar apelant"
+            android:textSize="18sp"
+            android:textColor="@color/blackNormal"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:vodafoneTextStyle = "vodafoneRGBD"/>
+
+        <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+            android:id="@+id/txtCaller"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_input_height"
+            android:singleLine="true"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:background="@drawable/default_input_border"
+	        android:textColorHint="@color/light_gray_text_color"
+            android:hint="07XXXXXXXX"
+            android:maxLength="10"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewRecipient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+        <ro.vodafone.mcare.android.ui.views.TooltipError
+            android:id="@+id/recipientPhoneNumberError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/lblRecipient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            tools:text="Numar destinatar"
+            android:textSize="18sp"
+            android:textColor="@color/blackNormal"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            app:vodafoneTextStyle = "vodafoneRGBD"/>
+
+        <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+            android:id="@+id/txtRecipient"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_input_height"
+	        android:textColorHint="@color/light_gray_text_color"
+            android:maxLines="1"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:background="@drawable/default_input_border"
+            android:hint="0034XXXXXXXXX"
+            android:maxLength="20"
+            android:inputType="number"/>
+
+    </LinearLayout>
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/btnDisplayFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Afiseaza tarif"
+        android:textSize="@dimen/button_text_size"
+        android:enabled="false"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        style="@style/CardPrimaryButton"/>
+
+</LinearLayout>

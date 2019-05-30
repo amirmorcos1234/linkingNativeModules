@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/program_status_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/roaming_active_background">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/roaming_white_circle">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src = "@drawable/superstar"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/relativeLayout2">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/loyalty_segment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_alignStart="@+id/loyalty_segment_description"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                customAttrs:vodafoneTextStyle = "vodafoneRGBD"/>
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/loyalty_segment_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@+id/loyalty_segment_text"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                customAttrs:vodafoneTextStyle = "vodafoneRG"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

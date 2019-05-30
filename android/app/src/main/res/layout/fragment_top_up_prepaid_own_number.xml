@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/card_background_gray"
+        android:paddingLeft="@dimen/card_horizontal_margin"
+        android:paddingRight="@dimen/card_horizontal_margin"
+        android:paddingTop="@dimen/card_vertical_margin"
+        android:paddingBottom="@dimen/card_vertical_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_shadow"
+            android:paddingLeft="@dimen/card_horizontal_padding"
+            android:paddingRight="@dimen/card_horizontal_padding"
+            android:paddingTop="@dimen/card_vertical_padding"
+            android:paddingBottom="@dimen/card_vertical_padding"
+            android:orientation="vertical">
+
+
+            <ro.vodafone.mcare.android.ui.views.RechargeValueSection
+                android:id="@+id/recharge_value_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ro.vodafone.mcare.android.ui.views.RechargeValueSection>
+
+            <!-- Separator line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin">
+
+                <View
+                    android:layout_height="@dimen/separator_line_height"
+                    android:layout_width="match_parent"
+                    android:background="@color/pay_bill_separator_line_color"/>
+
+            </LinearLayout>
+
+            <!--Email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/inside_card_view_element_vertical_margin">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/email_adress_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/card_field_name_text_size"
+                        android:textColor="@color/dark_gray_text_color"
+                        customAttrs:vodafoneTextStyle="vodafoneRG"
+                        android:text="Adresa ta de email"/>
+
+                </LinearLayout>
+
+                <!-- Phone Number Error -->
+                <LinearLayout
+                    android:id="@+id/email_error_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="5dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/black_error_message_border"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/icon_alert"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="top"/>
+
+                        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                            android:id="@+id/email_error_message"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/whiteNormalTextColor"
+                            android:textSize="@dimen/login_page_labels_text_size"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="18dp"
+                        android:layout_height="10dp"
+                        android:layout_marginLeft="12dp"
+                        android:background="@drawable/black_triangle">
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ro.vodafone.mcare.android.custom.CustomEditText
+                        android:id="@+id/email_address_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/default_input_height"
+                        android:textColorHint="@color/gray_text_color"
+                        android:textSize="@dimen/card_hint_text_size"
+                        android:maxLines="1"
+                        android:paddingLeft="14dp"
+                        android:paddingRight="14dp"
+                        android:background="@drawable/default_input_border"
+                        android:inputType="textEmailAddress"
+                        customAttrs:type="email"
+                        customAttrs:defaultBorderColor="gray"
+                        android:hint="@string/pay_bill_email_hint"
+                        android:imeOptions="actionDone">
+                    </ro.vodafone.mcare.android.custom.CustomEditText>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Separator line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin">
+
+                <View
+                    android:layout_height="@dimen/separator_line_height"
+                    android:layout_width="match_parent"
+                    android:background="@color/pay_bill_separator_line_color"/>
+
+            </LinearLayout>
+
+            <!-- Pay with card layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin">
+
+
+
+                <RadioGroup android:id="@+id/payment_type"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton android:id="@+id/pay_with_card"
+                        android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pay_with_card"
+                        android:paddingLeft="10dp"
+                        android:button="@drawable/radio_button_selector"
+                        android:checked="true"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/payment_icons_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin"
+                        android:orientation="vertical"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cards_container"
+                            android:orientation="vertical"
+                            ></LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/add_new_card_container"
+                            android:orientation="vertical"
+
+                            ></LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <RadioButton android:id="@+id/pay_with_voucher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin"
+                        android:text="@string/pay_with_voucher"
+                        android:paddingLeft="10dp"
+                        android:button="@drawable/radio_button_selector"/>
+
+                    <LinearLayout
+                        android:id="@+id/pay_with_voucher_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/voucher_error_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="5dp"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/black_error_message_border"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp"
+                                android:paddingRight="10dp">
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:src="@drawable/icon_alert"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_gravity="top"/>
+
+                                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                                    android:id="@+id/voucher_error_message"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/whiteNormalTextColor"
+                                    android:textSize="@dimen/login_page_labels_text_size"/>
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="18dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="12dp"
+                                android:background="@drawable/black_triangle">
+                            </RelativeLayout>
+
+                        </LinearLayout>
+
+
+                        <ro.vodafone.mcare.android.custom.CustomEditText
+                            android:id="@+id/voucher_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/default_input_height"
+                            android:textColorHint="@color/gray_text_color"
+                            android:textSize="@dimen/card_hint_text_size"
+                            android:maxLines="1"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:maxLength="14"
+                            android:background="@drawable/default_input_border"
+                            android:inputType="number"
+                            customAttrs:type="voucherCode"
+                            customAttrs:defaultBorderColor="gray"
+                            customAttrs:fromChildFragment="true">
+                        </ro.vodafone.mcare.android.custom.CustomEditText>
+
+                    </LinearLayout>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- Recharge Button -->
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/recharge_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "@string/recharge"
+                android:textSize="@dimen/button_text_size"
+                android:enabled="false"
+                style="@style/CardPrimaryButton"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp">
+
+    <ImageView
+        android:id="@+id/header_icon"
+        android:layout_marginTop="5dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/default_avatar_icon"
+        android:visibility="gone"/>
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/header_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/header_icon"
+        android:textSize="16sp"
+        android:textColor="@color/dark_gray_text_color"
+        android:visibility="gone"/>
+
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/header_icon"
+        android:layout_below="@+id/header_category"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:textColor="@color/dark_gray_text_color"
+            android:visibility="gone"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/header_extraParameter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textSize="26sp"
+            android:text="998e"
+            android:textColor="@color/dark_gray_text_color"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/header_bottom_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/header_icon"
+        android:layout_below="@+id/title_layout"
+        android:textSize="16sp"
+        android:textColor="@color/dark_gray_text_color"
+        android:visibility="gone"/>
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/header_subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/header_icon"
+        android:layout_below="@+id/header_bottom_category"
+        android:textSize="16sp"
+        android:textColor="@color/dark_gray_text_color"
+        android:visibility="gone"/>
+
+</RelativeLayout>

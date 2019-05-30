@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/card_background_gray"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/default_margin_vertical"
+        android:paddingLeft="@dimen/default_margin_horizontal"
+        android:paddingRight="@dimen/default_margin_horizontal"
+        android:paddingTop="@dimen/default_margin_vertical">
+
+        <LinearLayout
+            android:id="@+id/inflate_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_shadow"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/default_padding_vertical"
+            android:paddingLeft="@dimen/default_padding_horizontal"
+            android:paddingRight="@dimen/default_padding_horizontal"
+            android:paddingTop="@dimen/default_padding_vertical">
+
+            <LinearLayout
+                android:id="@+id/recurring_recharges_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ro.vodafone.mcare.android.ui.views.vodafoneSpinner.VodafoneSpinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    customAttrs:defaultValue="Toate reîncărcările"
+                    customAttrs:textTint="@color/dark_gray_text_color"></ro.vodafone.mcare.android.ui.views.vodafoneSpinner.VodafoneSpinner>
+
+            </LinearLayout>
+
+            <!--Weekly View -->
+            <LinearLayout
+                android:id="@+id/week_recurrent_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:divider="@color/list_view_divired_color"
+                android:dividerHeight="1dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/week_recurent"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+                <ListView
+                    android:id="@+id/week_recurrent_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/list_view_divired_color"
+                    android:dividerHeight="1dp"></ListView>
+            </LinearLayout>
+
+            <!--Monthly View -->
+            <LinearLayout
+                android:id="@+id/month_recurrent_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:divider="@color/list_view_divired_color"
+                android:dividerHeight="1dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/month_recurent"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+                <ListView
+                    android:id="@+id/month_recurrent_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/list_view_divired_color"
+                    android:dividerHeight="1dp"></ListView>
+            </LinearLayout>
+
+            <!--Date View -->
+            <LinearLayout
+                android:id="@+id/date_recurrent_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:divider="@color/list_view_divired_color"
+                android:dividerHeight="1dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_recurent"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+                <ListView
+                    android:id="@+id/date_recurrent_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/list_view_divired_color"
+                    android:dividerHeight="1dp"></ListView>
+
+            </LinearLayout>
+
+
+            <!--No results found -->
+            <LinearLayout
+                android:id="@+id/recurrent_no_results_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="35dp">
+
+                    <ImageView
+                        android:id="@+id/error_circle"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/info_circle" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/no_results_heder_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Nu există reîncărcări pentru selecţia făcută"
+                        android:textColor="@color/dark_gray_text_color"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/no_history_results_content_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--System Error-->
+
+            <LinearLayout
+                android:id="@+id/recurrent_system_error_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:layout_marginTop="35dp">
+
+                    <ImageView
+                        android:id="@+id/error_sign"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_alert" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/history_system_error_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Serviciu momentan indisponibil"
+                        android:textColor="@color/dark_gray_text_color"
+                        android:textSize="@dimen/medium_text_size"
+                        customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Apasă pentru a reîncerca"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/text_size"
+                        customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

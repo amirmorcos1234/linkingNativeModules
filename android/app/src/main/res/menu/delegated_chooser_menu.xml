@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"   >
+    <group android:id="@+id/menu_group_1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/item_home"
+            android:icon="@drawable/home_48"
+            android:title="@string/item_home" />
+        <item
+            android:id="@+id/item_services"
+            android:icon="@drawable/mobile_48"
+            android:title="@string/item_services" />
+        <item
+            android:id="@+id/item_offers"
+            android:icon="@drawable/ratings_or_favourite_48"
+            android:title="@string/item_offers_postpaid1" />
+        <item
+            android:id="@+id/item_billing_overview"
+            android:icon="@drawable/reports_48"
+            android:title="@string/item_billing_overview" />
+        <item
+            android:id="@+id/item_paybill"
+            android:icon="@drawable/bill_or_report_48"
+            android:title="@string/item_bills_and_payments" />
+        <item
+            android:id="@+id/item_loyalty"
+            android:icon="@drawable/birthday_greeting_48"
+            android:title="@string/item_loyalty" />
+        <item
+            android:id="@+id/item_recharge"
+            android:icon="@drawable/recharge_48"
+            android:title="@string/item_postpaid_recharge" />
+        <item
+            android:id="@+id/item_traveling_abroad"
+            android:icon="@drawable/roaming_48"
+            android:title="@string/item_traveling_abroad" />
+        <item
+            android:id="@+id/item_vodafoneshops"
+            android:icon="@drawable/location_48"
+            android:title="@string/item_vodafoneshops" />
+        <item
+            android:id="@+id/item_your_profile"
+            android:icon="@drawable/profile_48"
+            android:title="Profilul tău" />
+        <item
+            android:id="@+id/item_settings"
+            android:icon="@drawable/settings_48"
+            android:title="@string/item_settings" />
+        <item
+            android:id="@+id/item_my_cards"
+            android:icon="@drawable/ic_credit_card_black"
+            android:title="@string/item_my_cards" />
+        <item
+            android:icon="@drawable/log_out_48"
+            android:id="@+id/item_logout"
+            android:title="@string/item_logout" />
+    </group>
+</menu>

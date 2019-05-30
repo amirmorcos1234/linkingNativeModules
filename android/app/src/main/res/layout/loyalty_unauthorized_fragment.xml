@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_background_gray"
+    android:orientation="vertical">
+
+    <ro.vodafone.mcare.android.card.VodafoneGenericCard
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/unauthorized_msisdn_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/default_padding_vertical"
+            android:paddingBottom="@dimen/default_padding_vertical"
+            android:paddingStart="@dimen/default_padding_horizontal"
+            android:paddingEnd="@dimen/default_padding_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/dark_gray_text_color"
+            android:textSize="16sp"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+    </ro.vodafone.mcare.android.card.VodafoneGenericCard>
+
+
+</LinearLayout>

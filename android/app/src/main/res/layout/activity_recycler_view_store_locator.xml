@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ro.vodafone.mcare.android.ui.views.recyclerview.ReverseOrderRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_recycler_view_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+

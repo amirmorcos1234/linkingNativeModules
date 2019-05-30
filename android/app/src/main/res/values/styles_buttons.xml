@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="GeneralVodafoneButton" parent="android:style/Widget.Button">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+    <style name="CardPrimaryButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@drawable/selector_button_textcolor_card_primary</item>
+        <item name="android:background">@drawable/selector_button_background_card_primary</item>
+    </style>
+    <style name="CardSecondaryButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@drawable/selector_button_textcolor_card_secondary</item>
+        <item name="android:background">@drawable/selector_button_background_card_secondary</item>
+    </style>
+    <style name="CardTertiaryButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@drawable/selector_button_textcolor_card_tertiary</item>
+        <item name="android:background">@drawable/selector_button_background_card_tertiary</item>
+    </style>
+    <style name="CardQuaternaryButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@drawable/selector_button_textcolor_card_quaternary</item>
+        <item name="android:background">@drawable/selector_button_background_card_quaternary</item>
+    </style>
+    <style name="CardQuaternaryWhiteButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@drawable/selector_button_textcolor_card_secondary</item>
+        <item name="android:background">@drawable/selector_button_background_card_quaternary</item>
+    </style>
+    <style name="OverlayPrimaryButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@drawable/selector_button_textcolor_overlay_primary</item>
+        <item name="android:background">@drawable/selector_button_background_overlay_primary</item>
+    </style>
+    <style name="OverlaySecondaryButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@color/dark_gray_text_color</item>
+        <item name="android:background">@drawable/selector_button_background_overlay_secondary</item>
+    </style>
+    <style name="OverlayTertiaryButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@drawable/selector_button_textcolor_overlay_tertiary</item>
+        <item name="android:background">@drawable/selector_button_background_overlay_tertiary</item>
+    </style>
+    <style name="NudgePrimaryButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@color/white_text_color</item>
+        <item name="android:background">@drawable/selector_button_background_nudge_primary</item>
+    </style>
+    <style name="NudgeSecondaryButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@color/gray_button_text_color</item>
+        <item name="android:background">@drawable/selector_button_background_nudge_secondary</item>
+    </style>
+    <style name="TransparentButton" parent="GeneralVodafoneButton">
+        <item name="android:textColor">@drawable/selector_button_textcolor_transparent</item>
+        <item name="android:background">@drawable/selector_button_background_transparent</item>
+    </style>
+    <style name="FilterSelectionCheckBox" parent="android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/selector_checkbox_filter_selection_backgroud</item>
+        <item name="android:background">@drawable/selector_checkbox_filter_selection_backgroud</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:textColor">@color/selector_checkbox_filter_selection_text</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+    <style name="StorageSelectionCheckBox" parent="android:style/Widget.CompoundButton.CheckBox">
+        <!--<item name="android:button">@drawable/selector_checkbox_selection_storage_background</item>-->
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:drawableLeft">@android:color/transparent</item>
+        <item name="android:background">@drawable/selector_checkbox_selection_storage_background</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+    </style>
+</resources>

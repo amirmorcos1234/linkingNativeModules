@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/tools"
+    android:id="@+id/info_last_updated"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="1dp"
+    android:layout_marginTop="1dp"
+    android:layout_alignStart="@id/cost_control_widget"
+    android:layout_alignEnd="@id/cost_control_widget"
+    android:layout_alignBottom="@+id/cost_control_widget"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/refresh"
+        android:src="@drawable/refresh"
+        android:layout_width="15dp"
+        android:layout_height="15dp"/>
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/last_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textSize="@dimen/text_size"
+        android:textColor="@color/whiteNormalTextColor"
+        customAttrs:vodafoneTextStyle="vodafoneRG"
+        android:layout_toEndOf="@id/refresh"/>
+
+</RelativeLayout>

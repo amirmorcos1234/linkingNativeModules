@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/credit_plus_text_layout"
+            android:layout_width="@dimen/credit_plus_component_width"
+            android:layout_height="@dimen/credit_plus_component_heigth"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_corner_grey"
+            android:gravity="center_vertical|start"
+            android:padding="5dp"
+            android:layout_marginEnd="5dp"
+            android:visibility="visible"
+            android:animateLayoutChanges="true"
+            >
+             <ro.vodafone.mcare.android.ui.views.textviews.AutoResizeTextView
+                 android:id="@+id/credit_plus_text_label"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/credit_plus_text_label_height"
+                 android:text="Credit"
+                 android:textSize="15sp"
+                 android:paddingStart="8dp"
+                 android:paddingEnd="45dp"
+                 android:lines="1"
+                 android:maxLines="2"
+                 android:textColor="@color/blackNormal"
+                customAttrs:vodafoneTextStyle="vodafoneRG"
+                />
+            <ro.vodafone.mcare.android.ui.views.textviews.AutoResizeTextView
+                android:id="@+id/credit_plus_text_value"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/credit_plus_text_value_heigth"
+                android:lines="1"
+                android:text="0 €"
+                android:textSize="25sp"
+                android:paddingStart="8dp"
+                android:paddingEnd="45dp"
+                android:textColor="@color/blackNormal"
+                customAttrs:vodafoneTextStyle="vodafoneRGBD"
+                />
+        </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/credit_plus_error_layout"
+        android:layout_width="@dimen/credit_plus_component_width"
+        android:layout_height="@dimen/credit_plus_component_heigth"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_grey"
+        android:padding="5dp"
+        android:layout_marginEnd="5dp"
+        android:animateLayoutChanges="true"
+        android:visibility="invisible"
+        >
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/credit_plus_text_error"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/credit_plus_component_heigth"
+            android:text="Informaţie \n inaccesibilă"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:lines="2"
+            android:layout_centerHorizontal="true"
+            android:maxLines="2"
+            android:textColor="@color/white_text_color"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <ro.vodafone.mcare.android.ui.DynamicColorImageView
+            android:id="@+id/credit_plus_error_image"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            customAttrs:drawableColor="@color/attention_icon_orange"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/warning" />
+    </RelativeLayout>
+
+<FrameLayout
+    android:id="@+id/credit_plus_loading_layout"
+    android:layout_width="@dimen/credit_plus_component_width"
+    android:layout_height="@dimen/credit_plus_component_heigth"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corner_grey"
+    android:padding="10dp"
+    android:layout_marginEnd="5dp"
+    android:animateLayoutChanges="true"
+    android:visibility="invisible">
+    <ProgressBar
+        android:layout_gravity="start"
+        android:layout_marginStart="24dp"
+        android:id="@+id/credit_plus_loading_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</FrameLayout>
+    <FrameLayout android:id="@+id/credit_plus_image_layout"
+        android:layout_marginEnd="5dp"
+        android:layout_width="@dimen/credit_plus_component_width"
+        android:layout_height="@dimen/credit_plus_component_heigth">
+        <ImageView android:id="@+id/credit_plus_circle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/white_circle"
+            />
+        <ImageView android:id="@+id/credit_plus_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/credit_plus_component_credit_plus_image_margin"
+            android:src="@drawable/usage_gauge_plus"
+            />
+    </FrameLayout>
+
+</RelativeLayout>

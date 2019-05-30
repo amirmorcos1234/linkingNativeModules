@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="75dp"
+    android:layout_width="match_parent"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swipe_layout"
+        android:layout_height="75dp">
+
+        <LinearLayout
+            android:id="@+id/recurent_delete_button"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:background="@color/pay_bill_red_button_color"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_height="24dp"
+                android:layout_width="24dp"
+                android:src="@drawable/delete_white_48"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_button_text"
+                android:textSize="@dimen/card_field_name_text_size"
+                android:textColor="@color/white_text_color"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/recurent_item_container"
+            android:orientation="horizontal"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:paddingLeft="30dp"
+            android:background="@color/card_background_white">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:src="@drawable/top_up_recurrent"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/recurent_event_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/inside_card_layout_vertical_margin"
+                    android:layout_marginLeft="@dimen/card_horizontal_margin"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    android:textColor="@color/gray_button_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/recurent_beneficiar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/recurent_event_name"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="@dimen/pay_bill_litle_text_size"
+                    android:layout_alignStart="@+id/recurent_event_name"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                     android:id="@+id/recurrent_amount"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginEnd="15dp"
+                     android:layout_centerVertical="true"
+                     android:layout_alignParentEnd="true"
+                     android:textSize="@dimen/pay_bill_text_size"
+                     android:textColor="@color/pay_bill_bold_text_color"
+                     customAttrs:vodafoneTextStyle="vodafoneRGBD"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </com.daimajia.swipe.SwipeLayout>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/pay_bill_container_vertical_pading"
+        android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+        android:background="@drawable/border_shadow"
+        android:orientation="horizontal"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:paddingRight="@dimen/pay_bill_container_horizontal_pading"
+        android:paddingTop="@dimen/pay_bill_container_vertical_pading">
+
+        <ro.vodafone.mcare.android.ui.DynamicColorImageView
+            android:id="@+id/error_circle"
+            android:paddingLeft="@dimen/pay_bill_container_horizontal_pading"
+            android:layout_width="wrap_content"
+            customAttrs:drawableColor="@color/widget_warning_icon_color"
+            android:paddingRight="@dimen/pay_bill_container_horizontal_pading"
+            android:src="@drawable/error_circle_48"
+            android:layout_height="wrap_content" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/errorMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ne pare rău, chat-ul este indisponibil momentan."
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/pay_bill_white_color"
+            android:textSize="@dimen/pay_bill_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+    </LinearLayout>
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        style="@style/CardPrimaryButton"
+        android:background="@drawable/selector_button_background_card_primary"
+        android:id="@+id/nextStep"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="20dp"
+        android:text="Contactează-ne pe e-mail"
+        android:textAllCaps="false"
+        android:textColor="@color/pay_bill_white_color" />
+
+
+</LinearLayout>

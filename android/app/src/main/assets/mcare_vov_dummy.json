@@ -1,0 +1,87 @@
+{
+	"VoVs": [{
+			"priority": 10,
+			"category": "Welcome",
+			"title": "Buna ziua",
+			"message": "Bine ai venit în My Vodafone!",
+			"leftButton": {
+				"enabled": false,
+				"title": "",
+				"action": "",
+				"actionParameter": ""
+			},
+			"rightButton": {
+				"enabled": false,
+				"title": "",
+				"action": "",
+				"actionParameter": ""
+			},
+			"layout": "notification",
+			"loginType": ["seamless"],
+			"userRole": ["PrivateUser", "PrepaidUser", "Rescorp", "Ressub", "BasicUser", "EBUMigrated", "Hybrid", "CorpSubUser", "CorpUser", "SubUser", "nonVFUser", "PowerUser", "Chooser", "DelegatedChooser", "AuthorisedPerson", "SubUserCRMRole"]
+		},
+		{
+			"priority": 10,
+			"category": "Welcome",
+			"title": "Buna {userName},",
+			"message": "Bine ai venit în My Vodafone!",
+			"leftButton": {
+				"enabled": false,
+				"title": "",
+				"action": "",
+				"actionParameter": ""
+			},
+			"rightButton": {
+				"enabled": false,
+				"title": "",
+				"action": "",
+				"actionParameter": ""
+			},
+			"layout": "notification",
+			"loginType": ["authenticated"],
+			"userRole": ["PrivateUser", "PrepaidUser", "Rescorp", "Ressub", "BasicUser", "EBUMigrated", "Hybrid", "CorpSubUser", "CorpUser", "SubUser", "nonVFUser", "PowerUser", "Chooser", "DelegatedChooser", "AuthorisedPerson", "SubUserCRMRole"]
+		},
+		{
+			"priority": 15,
+			"category": "WebviewCampaign",
+			"title": "Title campaign",
+			"message": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+			"leftButton": {
+				"enabled": true,
+				"title": "Participa",
+				"action": "openUrl",
+				"actionParameter": "http://portal-pet-ot.vodafone.ro/personal/campanii/cdmpsapscnpslfsn/index.htm"
+			},
+			"rightButton": {
+				"enabled": false,
+				"title": "",
+				"action": "",
+				"actionParameter": ""
+			},
+			"layout": "dialog",
+			"loginType": ["seamless", "authenticated"],
+			"userRole": ["PrivateUser", "PrepaidUser", "Rescorp", "Ressub", "BasicUser", "EBUMigrated", "Hybrid", "CorpSubUser", "CorpUser", "SubUser", "nonVFUser"]
+		},
+		{
+			"priority": 15,
+			"category": "WebviewCampaign",
+			"title": "Title campaign CRM",
+			"message": "Different text CRM, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+			"leftButton": {
+				"enabled": true,
+				"title": "Participa",
+				"action": "openUrl",
+				"actionParameter": "http://portal-pet-ot.vodafone.ro/personal/campanii/cdmpsapscnpslfsn/index.htm"
+			},
+			"rightButton": {
+				"enabled": false,
+				"title": "",
+				"action": "",
+				"actionParameter": ""
+			},
+			"layout": "dialog",
+			"loginType": ["seamless", "authenticated"],
+			"userRole": ["PowerUser", "Chooser", "DelegatedChooser", "AuthorisedPerson", "SubUserCRMRole"]
+		}
+	]
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/border_shadow">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/msisdn_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textSize="18sp"
+            android:text="Description"
+            android:textColor="@color/pay_bill_bold_text_color"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/msisdn_sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textSize="16sp"
+            android:text="Description"
+            android:textColor="@color/pay_bill_bold_text_color"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_400"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/msisdn_recycler_view"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+        </android.support.v7.widget.RecyclerView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_400"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="14dp"/>
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/card_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:text="Şterge numărul selectat"
+            android:textSize="@dimen/button_text_size"
+            android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+            android:enabled="false"
+            customAttrs:vodafoneTextStyle ="vodafoneRG"
+            style="@style/CardPrimaryButton"/>
+
+    </LinearLayout>
+
+</LinearLayout>

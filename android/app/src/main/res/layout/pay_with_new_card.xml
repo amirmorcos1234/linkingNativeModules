@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/card_horizontal_margin"
+    android:paddingTop="@dimen/card_vertical_margin"
+    android:paddingRight="@dimen/card_horizontal_margin"
+    android:paddingBottom="@dimen/card_vertical_margin"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <RadioButton android:id="@+id/pay_with_alt_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin"
+            android:text="Plătește cu alt card"
+            android:textStyle="bold"
+            android:paddingLeft="10dp"
+            android:button="@drawable/radio_button_selector"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/save_linear"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/blacktransparent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/card_vertical_margin"
+            android:id="@+id/check_box_linear"
+
+            >
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_margin="10dp"
+            android:button="@drawable/terms_and_conditions_checkbox_selector"
+            android:gravity="center_vertical|center_horizontal"
+            />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pay_bill_save_credit_card"
+                android:textColor="@color/black_transparent_c0"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:lineSpacingExtra="5dp"
+                android:id="@+id/checkBoxText"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/card_vertical_margin"
+            >
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:src="@drawable/ic_pad_lock"
+                />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/pay_bill_securely"
+                android:textColor="@color/black_transparent_c0"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+
+            >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:src="@drawable/ic_clock"
+            />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/simplu_si_rapid"
+            android:textColor="@color/black_transparent_c0"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/payment_icons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/card_vertical_margin"
+            >
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="40dp"
+                android:src="@drawable/visa_card"
+                android:layout_marginRight="2dp"/>
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="40dp"
+                android:src="@drawable/visa_electronic"
+                android:layout_marginRight="2dp"/>
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="40dp"
+                android:src="@drawable/master_card"
+                android:layout_marginRight="2dp"/>
+
+            <ImageView
+                android:layout_width="54dp"
+                android:layout_height="40dp"
+                android:src="@drawable/maestro_card"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

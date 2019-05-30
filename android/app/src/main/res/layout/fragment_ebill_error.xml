@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/general_background_light_gray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pay_bill_container_vertical_pading"
+            android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pay_bill_container_vertical_pading"
+                android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+                android:background="@drawable/black_with_shadow_border"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/pay_bill_container_vertical_pading">
+
+                <ro.vodafone.mcare.android.ui.DynamicColorImageView
+                    android:id="@+id/error_circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/pay_bill_container_horizontal_pading"
+                    android:paddingRight="@dimen/pay_bill_container_horizontal_pading"
+                    android:src="@drawable/error_circle_48"
+                    customAttrs:drawableColor="@color/widget_warning_icon_color" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/electronicBillBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Sistem momentan indisponibil. Apasă aici pentru a reîncerca."
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="290dp"
+    android:layout_marginBottom="18dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.hookedonplay.decoviewlib.DecoView
+        android:id="@+id/dynamicArcView"
+        app:dv_lineWidth="5dp"
+        android:layout_width="@dimen/cost_control_widget_gauge"
+        android:layout_height="@dimen/cost_control_widget_gauge"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:id="@+id/gauge_white_circle"
+        android:layout_width="@dimen/cost_control_widget_white_layer"
+        android:layout_height="@dimen/cost_control_widget_white_layer"
+        android:visibility="invisible"
+        android:layout_centerInParent="true"
+        android:src="@drawable/gauge_white_transparent_circle"
+        android:layout_centerHorizontal="true" />
+    <View
+        android:id="@+id/gauge_click_view"
+        android:layout_height="130dp"
+        android:layout_width="110dp"
+        android:background="@color/transparent"
+        android:visibility="visible"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.AutoResizeTextView
+        android:id="@+id/availableResourceTv"
+        android:layout_width="@dimen/cost_control_widget_gauge_textview_size"
+        android:layout_height="@dimen/cost_control_widget_gauge_textview_size"
+        android:layout_marginBottom="25dp"
+        android:textSize="20sp"
+        android:lines="4"
+        android:maxLines="4"
+        android:gravity="center"
+        android:textColor="@color/whiteNormalTextColor"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/dynamicArcView"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

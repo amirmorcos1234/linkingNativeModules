@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="10"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/msisdn_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="8.5"
+        android:layout_margin="12dp"
+        android:src="@drawable/selector_unchecked_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/msisdn_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Description"
+            android:textColor="@color/pay_bill_bold_text_color"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/msisdn_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Description"
+            android:visibility="gone"
+            android:textColor="@color/pay_bill_bold_text_color"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+    </LinearLayout>
+
+</LinearLayout>

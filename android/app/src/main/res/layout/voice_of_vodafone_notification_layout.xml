@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp"
+    android:layout_centerInParent="true">
+
+<!--Content-->
+
+    <RelativeLayout
+        android:id="@+id/bubble_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bubble_shape">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:text="Good new. \nYou can update now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/whiteNormalTextColor"
+            android:id="@+id/bc_headline_textview"
+            android:layout_alignStart="@+id/red_line"
+            android:layout_marginEnd="17dp"
+            android:layout_marginStart="17dp"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:text="You can update from \n12 Dec 2015"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bc_message_textView"
+            android:textSize="16sp"
+            android:textColor="@color/whiteNormalTextColor"
+            android:layout_below="@+id/bc_headline_textview"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:drawableStart="@drawable/bubble_background"
+            android:layout_alignStart="@+id/bc_headline_textview"
+            android:layout_alignEnd="@+id/bc_headline_textview"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/red_vertical_line"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/red_line"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/margin"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="17dp" />
+
+        <View android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:id="@+id/margin"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/bc_message_textView"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+</RelativeLayout>

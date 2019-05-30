@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_background_gray">
+
+    <ro.vodafone.mcare.android.card.VodafoneGenericCard
+        android:id="@+id/enroll_in_program_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/card_horizontal_margin"
+            android:textColor="@color/dark_gray_text_color"
+            android:textSize="17sp"
+            customAttrs:vodafoneTextStyle="vodafoneRG" /-->
+
+        <!--ImageView
+            android:id="@+id/points_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/message"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/puncte_img" /-->
+
+        <!--ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/points_image_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="@dimen/inside_card_view_element_vertical_margin"
+            android:layout_marginStart="@dimen/inside_card_view_element_vertical_margin"
+            android:layout_marginTop="@dimen/inside_card_layout_vertical_margin"-->
+
+    </ro.vodafone.mcare.android.card.VodafoneGenericCard>
+</LinearLayout>

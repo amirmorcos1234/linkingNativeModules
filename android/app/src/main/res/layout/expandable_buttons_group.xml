@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_opacity_70"
+    android:padding="14dp">
+
+    <RelativeLayout
+        android:id="@+id/notExpandedGroup"
+        android:layout_width="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/nameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/grey_300"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:visibility="visible"
+            android:minHeight="32dp"
+            android:padding="5dp"
+            android:layout_toStartOf="@+id/arrow_indicator"
+            android:text=""/>
+        <ro.vodafone.mcare.android.ui.DynamicColorImageView
+            android:id="@+id/arrow_indicator"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            customAttrs:drawableColor="@color/white"
+            android:src="@drawable/chevron_down_48"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/expandable_buttons_group_ll_buttons_group"
+        android:layout_below="@+id/notExpandedGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/general_margin_start">
+
+    </LinearLayout>
+
+
+</RelativeLayout>

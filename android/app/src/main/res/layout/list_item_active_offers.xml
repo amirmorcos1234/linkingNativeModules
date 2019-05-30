@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/offer_price"
+            android:layout_centerVertical="true"
+            >
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/offer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="16sp" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_below="@id/offer_name"
+                android:id="@+id/offer_sub_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="16sp"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/offer_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/dynamicArcView"
+            android:textColor="@color/dark_gray_text_color"
+            android:layout_marginStart="8dp"
+            android:textSize="16sp" />
+
+        <com.hookedonplay.decoviewlib.DecoView
+            android:id="@+id/dynamicArcView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp" />
+
+    </RelativeLayout>
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/benefit_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_gray_text_color"
+        android:textSize="16sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"/>
+
+</LinearLayout>

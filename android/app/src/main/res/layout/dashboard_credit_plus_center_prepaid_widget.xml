@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ro.vodafone.mcare.android.widget.creditplus.CreditPlusWidget xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/credit_plus_center"
+    android:layout_width="240dp"
+    android:layout_height="80dp"
+    app:components_size="70dp"
+    app:image_plus_margin="15dp"/>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:style="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="16dp"
+            android:text="Aranjează imaginea după preferinţele tale."
+            android:textColor="@color/whiteNormalTextColor"
+            android:textSize="@dimen/pay_bill_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/doneButton"
+            style="@style/CardSecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:padding="16dp"
+            android:text="Gata"
+            android:textAllCaps="false" />
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/changePicButton"
+            style="@style/CardSecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:padding="16dp"
+            android:text=""
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

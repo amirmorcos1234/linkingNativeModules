@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_onboarding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ro.vodafone.mcare.android.ui.activities.OnboardingActivity">
+
+    <ImageView
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:id="@+id/splashscreen"
+        style="@style/ImageView.VodafoneIcon" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_marginTop="@dimen/top_menu_size"
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26sp"
+                android:textColor="@color/whiteNormalTextColor"
+                android:text="@string/onboarding_screen_title"
+                android:layout_centerHorizontal="true" />
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/policies_list"
+                android:background="@color/blacktransparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/title"
+                android:layout_margin="20dp"
+                android:padding="20dp"
+                >
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/text_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:text="@string/oobe_area1"/>
+                <!--Start permissions elements added dynamic in layout-->
+
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:weightSum="2"
+               android:orientation="horizontal"
+               android:layout_marginTop="20dp">
+               <Button
+                   android:id="@+id/action_cancel"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:layout_marginRight="10dp"
+                   android:layout_marginEnd="10dp"
+                   android:background="@drawable/selector_button_background_nudge_secondary"
+                   android:text="@string/onboarding_left_message_btn"
+                   android:textColor="@color/dark_gray_text_color"
+                   android:textAllCaps="false"
+                   />
+               <Button
+                   android:id="@+id/action_continue"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:layout_marginStart="10dp"
+                   android:layout_marginLeft="10dp"
+                   android:background="@drawable/selector_button_background_card_primary"
+                   android:text="@string/onboarding_right_message_btn"
+                   android:textColor="@color/whiteNormalTextColor"
+                   android:textAllCaps="false" />
+           </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

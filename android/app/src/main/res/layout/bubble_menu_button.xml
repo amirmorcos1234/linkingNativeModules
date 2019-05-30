@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_btn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ro.vodafone.mcare.android.ui.DynamicColorImageView
+        android:id="@+id/menu_btn_imageView"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        customAttrs:drawableColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:src="@drawable/menu_48" />
+
+</RelativeLayout>

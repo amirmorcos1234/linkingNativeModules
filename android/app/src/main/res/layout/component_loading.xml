@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewLoading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/blacktransparent"
+    android:clickable="true">
+
+    <ro.vodafone.mcare.android.ui.views.textviews.AutoResizeTextView
+        android:id="@+id/loadingTextView"
+        android:text="@string/onboarding_configuring_text"
+        android:textSize="26sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/whiteNormalTextColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:maxLines="1"/>
+
+    <ProgressBar
+        android:id="@+id/progress_view"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:indeterminateBehavior="cycle"
+        android:indeterminate="true"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

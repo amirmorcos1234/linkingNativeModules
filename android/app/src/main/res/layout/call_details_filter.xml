@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay_background"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/overlay_regular_border"
+    android:paddingLeft="@dimen/overlay_regular_border"
+    android:paddingRight="@dimen/overlay_regular_border"
+    android:paddingTop="@dimen/overlay_regular_border">
+
+    <RelativeLayout
+        android:id="@+id/select_dialog_tittle_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/call_details_filter_close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:src="@drawable/close_48_white" />
+
+        <TextView
+            android:id="@+id/filter_reset_filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="@string/call_details_apply_filter_title"
+            android:textColor="@color/whiteNormalTextColor"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/call_details_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttons_container"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:layout_marginTop="45dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/call_details_filter_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <!--Destinations Container-->
+            <RelativeLayout
+                android:id="@+id/call_details_filter_destinations_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/call_details_filter_destination_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:id="@+id/call_details_filter_national_and_international_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/call_details_filter_destination_label"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/call_details_filter_national_and_international_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/terms_and_conditions_checkbox_selector"
+                        android:checked="true"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/whiteNormalTextColor" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/call_details_filter_national_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/call_details_filter_national_and_international_container">
+
+                    <CheckBox
+                        android:id="@+id/call_details_filter_national_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/terms_and_conditions_checkbox_selector"
+                        android:checked="true"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/whiteNormalTextColor" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/call_details_filter_international_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/call_details_filter_national_container">
+
+                    <CheckBox
+                        android:id="@+id/call_details_filter_international_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/terms_and_conditions_checkbox_selector"
+                        android:checked="true"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/whiteNormalTextColor" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/call_details_filter_roaming_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/call_details_filter_international_container">
+
+                    <CheckBox
+                        android:id="@+id/call_details_filter_roaming_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/terms_and_conditions_checkbox_selector"
+                        android:checked="true"
+                        android:paddingStart="10dp"
+                        android:textColor="@color/whiteNormalTextColor" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--General Filter Period  Container-->
+            <RelativeLayout
+                android:id="@+id/filter_period_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/call_details_filter_destinations_container">
+
+                <!--Period UNBilled Container-->
+                <RelativeLayout
+                    android:id="@+id/call_details_filter_unbilled_postpaid_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+
+                    <RelativeLayout
+                        android:id="@+id/call_details_filter_period_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/call_details_filter_period_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:textColor="@color/whiteNormalTextColor"
+                            android:textSize="20sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/period_buttons"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/call_details_filter_period_label">
+
+                            <Button
+                                android:id="@+id/call_details_filter_button_from"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/view2"
+                                android:paddingStart="15dp"
+                                android:text="Button_From"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/gray_text_color" />
+
+                            <View
+                                android:id="@+id/view2"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true" />
+
+                            <Button
+                                android:id="@+id/call_details_filter_button_to"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_toEndOf="@+id/view2"
+                                android:paddingStart="15dp"
+                                android:text="Button_To"
+                                android:textAllCaps="false"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/gray_text_color" />
+
+                        </RelativeLayout>
+
+
+                        <!--Calendar-->
+                        <RelativeLayout
+                            android:id="@+id/call_details_filter_calendar"
+                            android:layout_width="match_parent"
+                            android:layout_height="280dp"
+                            android:layout_below="@+id/period_buttons"
+                            android:layout_marginTop="10dp">
+
+                            <ro.vodafone.mcare.android.ui.activities.callDetailsFilter.CalendarView
+
+                                android:id="@+id/calendar_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!--DropDown Implementation-->
+
+                <RelativeLayout
+                    android:id="@+id/call_details_filter_drop_down_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_below="@+id/call_details_filter_unbilled_postpaid_container"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/call_details_filter_spinner_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/whiteNormalTextColor"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/call_details_filter_spinner_label"
+                        android:layout_marginTop="10dp">
+
+                        <Spinner
+                            android:id="@+id/call_details_month_filter_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/whiteNormalTextColor"
+                            android:spinnerMode="dropdown" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/spinner_expand_arrow" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--Button Container-->
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:orientation="vertical">
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/call_details_apply_filter_container"
+            style="@style/OverlayPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/call_details_filter_reset_filters"
+            style="@style/OverlaySecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            customAttrs:vodafoneTextStyle="vodafoneRG">
+
+        </ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

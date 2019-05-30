@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttr.s="http://schemas.android.com/apk/res-auto"
+    xmlns:customAttrs="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/bad_request_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/black_error_message_border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/bad_request_layout_imageView"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_alert" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/bad_request_layout_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" Te rugăm să alegi tipul solicitării tale din lista de mai jos.  "
+                        android:textColor="@color/whiteNormalTextColor"
+                        android:textSize="@dimen/login_page_labels_text_size" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/black_triangle" />
+
+
+            </LinearLayout>
+
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+
+                android:text="Alege tipul solicitării tale din listă:"
+                android:textColor="@color/blackNormal"
+                android:textSize="@dimen/medium_text_size"
+                customAttr.s:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.activities.support.SupportWindowSpinner
+                android:id="@+id/requestSpinnerInput"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+        <!--NAME-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_view_margin"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:id="@+id/bad_lastName_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/black_error_message_border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/bad_lastName_layout_imageView5"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_alert" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/bad_lastName_layout_message1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" Te rugăm să introduci numele tău. "
+                        android:textColor="@color/whiteNormalTextColor"
+                        android:textSize="@dimen/login_page_labels_text_size" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/black_triangle" />
+
+
+            </LinearLayout>
+
+            <!--TEXTVIEW-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/vodafoneTextView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nume:"
+                    android:textColor="@color/blackNormal"
+                    android:textSize="@dimen/medium_text_size"
+                    customAttr.s:vodafoneTextStyle="vodafoneRG" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+                <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+                    android:id="@+id/lastnameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_input_height"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/gray_input_border"
+                    android:hint="ex: Popescu"
+                    android:gravity="center_vertical"
+                    android:maxLength="30"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:maxLines="1"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textColorHint="@color/custom_input_hint_color"
+                    android:textSize="@dimen/login_page_labels_text_size"
+                    android:imeOptions="actionNext"
+                    customAttrs:defaultBorderColor="gray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--NAME-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_view_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/bad_firstName_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/black_error_message_border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/bad_firstName_layout_imageView5"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_alert" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/bad_firstName_layout_message1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" Te rugăm să introduci prenumele tău. "
+                        android:textColor="@color/whiteNormalTextColor"
+                        android:textSize="@dimen/login_page_labels_text_size" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/black_triangle" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Prenume:"
+                    android:textColor="@color/blackNormal"
+                    android:textSize="@dimen/medium_text_size"
+                    customAttr.s:vodafoneTextStyle="vodafoneRG" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+                <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+                    android:id="@+id/firstnameInput"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_height="@dimen/default_input_height"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/gray_input_border"
+                    android:hint="ex: Alexandru"
+                    android:maxLength="30"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:maxLines="1"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textColorHint="@color/custom_input_hint_color"
+                    android:textSize="@dimen/login_page_labels_text_size"
+                    android:imeOptions="actionNext"
+                    customAttrs:defaultBorderColor="gray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_view_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/bad_email_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/black_error_message_border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_alert" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/phone_number_error_message1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" Te rugăm să introduci o adresă de e-mail validă, pentru a primi o copie a conversației. "
+                        android:textColor="@color/whiteNormalTextColor"
+                        android:textSize="@dimen/login_page_labels_text_size" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/black_triangle" />
+
+
+            </LinearLayout>
+
+            <!--TEXTVIEW-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email:"
+                    android:textColor="@color/blackNormal"
+                    android:textSize="@dimen/medium_text_size"
+                    customAttr.s:vodafoneTextStyle="vodafoneRG" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+                <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+                    android:id="@+id/emailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_input_height"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/gray_input_border"
+                    android:hint="ex: nume@exemplu.com"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:maxLines="1"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textColorHint="@color/custom_input_hint_color"
+                    android:textSize="@dimen/login_page_labels_text_size"
+                    customAttrs:defaultBorderColor="gray"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionDone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/vodafoneTextView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Pentru îmbunătățirea calității serviciilor noastre, această interacțiune poate fi înregistrată.\n\nContinuarea interacțiunii reprezintă acceptul tău. Vei primi pe email o copie a conversației."
+        android:textColor="@color/blackNormal"
+        android:textSize="@dimen/small_text_size"
+        customAttr.s:vodafoneTextStyle="vodafoneRG" />
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        style="@style/CardPrimaryButton"
+        android:background="@drawable/selector_button_background_card_primary"
+        android:id="@+id/nextStep"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="20dp"
+        android:text="Pasul următor"
+        android:textAllCaps="false"
+        android:textColor="@color/pay_bill_white_color" />
+
+
+</LinearLayout>

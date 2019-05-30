@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay_background"
+    android:paddingBottom="@dimen/overlay_regular_border"
+    android:paddingLeft="@dimen/overlay_regular_border"
+    android:paddingRight="@dimen/overlay_regular_border"
+    android:paddingTop="@dimen/overlay_regular_border">
+
+    <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/incompatible_activation_close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:src="@drawable/close_48_white" />
+
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/incompatible_activation_tittle_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:minHeight="45dp"
+            android:text="DEFAULT TITLE"
+            android:textColor="@color/pay_bill_white_color"
+            android:textSize="@dimen/overlay_title_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttons_container"
+        android:layout_below="@id/header_container"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:paddingLeft="@dimen/overlay_second_border"
+        android:paddingRight="@dimen/overlay_second_border"
+        android:paddingTop="@dimen/overlay_second_border"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp">
+
+
+
+            <TextView
+                android:id="@+id/activation_request_options_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="Ai cerut lalalalalal"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/current_selected_option_container"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/activation_request_options_text" />
+
+
+
+
+            <TextView
+                android:id="@+id/current_options_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/current_selected_option_container"
+                android:layout_marginTop="20dp"
+                android:text="Dar deja ai"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/already_active_optios_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/current_options_text"
+                android:orientation="vertical" />
+
+
+
+
+            <TextView
+                android:id="@+id/incompatible_conflict_text_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/already_active_optios_container"
+                android:layout_marginTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="conflict_text"
+                android:textColor="@color/white" />
+
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp">
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/incompatible_activation_container"
+            style="@style/OverlayPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/incompatible_activation_back_container"
+            style="@style/OverlaySecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="10dp"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+    </LinearLayout>
+
+</RelativeLayout>

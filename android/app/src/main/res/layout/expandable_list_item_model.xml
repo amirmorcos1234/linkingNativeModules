@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/card_background_white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:clickable="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/cost">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Voce"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="16sp"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/item_subtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/item_name"
+                android:layout_below="@id/item_name"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="@dimen/small_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/item_arrow"
+            android:layout_width="25dp"
+            android:layout_marginEnd="10dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/chevron_down_48"
+            android:visibility="invisible" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/item_arrow"
+            android:text="235.40 Lei"
+            android:textColor="@color/dark_gray_text_color"
+            android:textSize="@dimen/medium_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/custom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"/>
+
+</LinearLayout>

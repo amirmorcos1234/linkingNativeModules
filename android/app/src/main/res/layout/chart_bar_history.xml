@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customAttrs="http://schemas.android.com/tools"
+    android:padding="15dp"
+    android:background="@color/black_opacity_50"
+    android:layout_width="match_parent"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_height="wrap_content">
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:lines="2"
+        android:id="@+id/chart_title"
+        android:textColor="@color/whiteNormalTextColor"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:text="Reincarcarile tale \n din ultimele 6 luni"/>
+
+    <ro.vodafone.mcare.android.widget.charts.BarChart
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/barchart"
+        android:layout_below="@+id/chart_title"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:egFixedBarWidth="true"
+        app:egBarWidth="7dp"
+        app:egBarMargin="15dp"
+        app:egLegendHeight="30dp"
+     />
+    <View
+        android:layout_marginTop="3dp"
+        android:id="@+id/bottom_line"
+        android:layout_margin="15dp"
+        android:layout_below="@+id/barchart"
+        android:background="@color/white_transparent_low"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/bottom_left_text"
+        android:text=" &#8226; Reîncărcări pe lună"
+        android:layout_alignParentStart="true"
+        android:textSize="16sp"
+        android:textColor="@color/white_text_color"
+        android:layout_margin="5dp"
+        android:layout_below="@+id/bottom_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/bottom_right_text"
+        android:text="0.00 € "
+        android:textSize="17sp"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/white_text_color"
+        android:layout_margin="5dp"
+
+        android:layout_below="@+id/bottom_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        customAttrs:vodafoneTextStyle="2"
+        />
+
+</RelativeLayout>

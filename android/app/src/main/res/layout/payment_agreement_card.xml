@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/payment_agreement_card"
+    android:paddingBottom="10dp"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    >
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/calendar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/pay_bill_bold_text_color"
+        android:textSize="@dimen/large_text_size"
+        android:layout_marginTop="15dp"
+        android:paddingTop="15dp"
+        android:layout_marginBottom="20dp"
+        customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/calendar_subtitle_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blackNormal"
+        android:textSize="@dimen/medium_text_size"
+        customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+    <ro.vodafone.mcare.android.ui.views.datepickers.PACalendarPickerView
+
+        android:id="@+id/calendar_picker_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/postpone_payment_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/pay_bill_white_color"
+        style="@style/CardPrimaryButton"
+        android:text="@string/postpone_payment"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="15dp"/>
+
+</LinearLayout>

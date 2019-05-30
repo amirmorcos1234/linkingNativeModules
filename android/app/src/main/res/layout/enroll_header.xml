@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ban_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/pay_bill_horizontal_pading"
+            android:layout_marginRight="@dimen/pay_bill_horizontal_pading"
+            android:background="@color/pay_bill_selector_semi_transparent_background"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <!--Users photo-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_view_elements_vertical_margin"
+                android:layout_marginTop="@dimen/pay_bill_horizontal_pading">
+
+                <LinearLayout
+                    android:id="@+id/profile_photo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/blue_circle"
+                    android:gravity="center">
+
+                    <ro.vodafone.mcare.android.ui.DynamicColorImageView
+                        android:id="@+id/enroll_you_icon"
+                        android:layout_width="50dp"
+
+                        android:layout_height="50dp"
+                        android:src="@drawable/you" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/enroll_header_title"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/separator_line_height"
+                    android:background="@color/pay_bill_separator_line_color" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_view_elements_vertical_margin">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/client_code_selected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/pay_bill_text_margin"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="@string/enroll_header_text"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:textSize="@dimen/small_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

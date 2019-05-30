@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/select_dialog_search_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:parentTag="ro.vodafone.mcare.android.ui.views.autocomplete.VodafoneAutoCompleteTextView"
+    android:background="@color/selector_search_background"
+    android:visibility="visible">
+        <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+
+            android:id="@+id/search_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/default_input_border"
+            android:gravity="center_vertical"
+            android:hint="Caută un număr"
+            android:maxLines="1"
+            android:inputType="text"
+            android:minHeight="40dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:textColor="@color/gray_input_text"
+            android:textColorHint="@color/gray_input_text"
+            android:textSize="@dimen/login_page_labels_text_size" />
+</merge >
+

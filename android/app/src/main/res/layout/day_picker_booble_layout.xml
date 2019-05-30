@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/day_picker_booble_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/day_booble"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/white_circle"
+        android:gravity="center"
+        >
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_gray_text_color"
+            android:textSize="@dimen/large_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+    </LinearLayout>
+
+</LinearLayout>

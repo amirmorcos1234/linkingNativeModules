@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    package="ro.vodafone.mcare.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- Additional permissions for netperform sdk -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+
+    <application
+        android:name=".application.VodafoneController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_round_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tool:replace="android:icon">
+        <uses-library android:name="com.google.android.maps" />
+
+        <activity
+            android:name=".ui.MyReactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:label="@string/filter_deeplink">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "myvodafone://webview?page_id=${relativeURl}” -->
+                <data
+                    android:host="webview"
+                    android:scheme="myvodafone" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="login_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.DashboardActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="dashboard_page" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.OnboardingActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.settings.TermsAndConditionsActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/WebviewTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.OnboardingActivity" />
+        </activity>
+        <activity
+            android:name=".ui.webviews.WebviewActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/WebviewTheme">
+            <intent-filter>
+                <action android:name="webview_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.OnboardingActivity" />
+        </activity>
+        <activity
+            android:name=".ui.webviews.PhoneShopWebViewActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/WebviewTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.OnboardingActivity" />
+        </activity>
+        <activity
+            android:name=".ui.webviews.BillingWebViewActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/WebviewTheme">
+            <intent-filter>
+                <action android:name="billing_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.OnboardingActivity" />
+        </activity>
+        <activity
+            android:name=".ui.webviews.TopUpWebViewFActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/WebviewTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.OnboardingActivity" />
+        </activity>
+        <activity
+            android:name=".ui.webviews.SurveyWebViewActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/WebviewTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.utils.SurveyOverlayDialog" />
+        </activity>
+        <activity
+            android:name=".ui.activities.LoadingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.registration.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.ConfirmProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.RecoverUsernameActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.RecoverPasswordActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.TutorialActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.PayBillActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="paybill_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.settings.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="settings_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.yourProfile.YourProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="your_profile_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.yourServices.YourServicesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="services_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.selectorDialogActivity.SelectorDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activities.selectorDialogActivity.EBUSelectorDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.activities.CallDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="callDetails_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.TopUpActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="topUp_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".utils.SurveyOverlayDialog"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.callDetailsFilter.CallDetailsFilter"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.offers.OffersActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="offers_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.offers.BeoActivationPrepaidActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.offers.BeoActivationPostPaidActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.offers.BeoActivationEbuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.travellingAboard.TravelingAboardActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="travelling_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.loyalty.LoyaltyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="loyalty_selection_activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.loyalty.LoyaltyPointsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="loyalty_program" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.loyalty.LoyaltyActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.loyalty.LoyaltyMarketActivity"
+            android:parentActivityName=".ui.activities.loyalty.LoyaltyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="loyalty_market" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.loyalty.LoyaltyActivity" />
+        </activity>
+        <activity
+            android:name=".ui.utils.CropActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="crop_activity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.other.PrivacyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="privacy_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- Fabric API key generated from gradle -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="${fabric_key}" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC89BkX9T7zUujBZ6m3AwtJ6GZiMmGTagU" /> <!-- Adobe Receiver -->
+
+        <!--Adform Receiver-->
+        <receiver
+            android:name="com.adform.adformtrackingsdk.services.ReferrerReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        
+        <receiver
+            android:name=".utils.GPBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver> <!-- Urban Airship Receiver -->
+        <receiver
+            android:name=".utils.urban.UrbanAirshipReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.urbanairship.push.CHANNEL_UPDATED" />
+                <action android:name="com.urbanairship.push.OPENED" />
+                <action android:name="com.urbanairship.push.RECEIVED" />
+                <action android:name="com.urbanairship.push.DISMISSED" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.activities.filters.ServicesFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.filters.PhonesFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.filters.loyalty.LoyaltyOffersFilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.authentication.LoginIdentitySelectorActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="identity_selector_page" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.BillingOverviewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="billing_overview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".widget.messaging.ViewImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.activities.store_locator.StoreLocatorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="store_locator_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.DashboardActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.store_locator.StoreLocatorDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="store_locator_details_page" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.store_locator.StoreLocatorActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activities.settings.BlockSimActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="block_sim" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.settings.SettingsActivity" />
+        </activity>
+        <activity
+            android:name=".utils.navigation.notification.LinkDispatcherActivity"
+            android:noHistory="true"
+            android:theme="@style/noAnimTheme" />
+        <activity
+            android:name=".ui.activities.VodafoneTvActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="vodafone_tv" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.VodafoneTvActivity" />
+        </activity>
+        <activity
+            android:name=".ui.myCards.MyCardsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="my_cards" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.myCards.MyCardsActivity" />
+        </activity>
+        <activity
+            android:name=".ui.myCards.AddCreditCardWebViewActivity"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/WebviewTheme">
+            <intent-filter>
+                <action android:name="add_credit_card_web_view" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ro.vodafone.mcare.android.ui.activities.OnboardingActivity" />
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activities.TestFBActivity" />
+    </application>
+
+</manifest>

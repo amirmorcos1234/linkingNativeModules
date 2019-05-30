@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="@dimen/message_bubble_margin_top">
+
+    <FrameLayout
+        android:id="@+id/message_scout_media_image_view_avatar_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/message_scout_media_view_group_media"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/message_scout_media_image_view_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:civ_border_color="@color/drop_shadow_black_op_35"
+            app:civ_border_width="2dp"
+            app:civ_fill_color="@color/red_color_message_circle" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_scout_media_view_group_media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:layout_toEndOf="@+id/message_scout_media_image_view_avatar_group"
+        android:background="@drawable/bubble_shape">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/message_scout_media_text_view_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_toEndOf="@+id/user_name"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="12:29pm" />
+
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="16dp"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="Vodafone"
+            />
+
+        <ro.vodafone.mcare.android.widget.messaging.view.image.GlideRoundedImageView
+            android:id="@+id/message_scout_media_picasso_rounded_image_view_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/message_scout_media_text_view_timestamp"
+            android:layout_marginBottom="16dp"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

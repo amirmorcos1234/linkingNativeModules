@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <!--Content Container-->
+        <RelativeLayout
+            android:id="@+id/beo_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/general_background_light_gray"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/default_margin_vertical">
+
+            <LinearLayout
+                android:id="@+id/wrong_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:visibility="gone">
+
+            </LinearLayout>
+
+            <ro.vodafone.mcare.android.ui.views.ExpandableAdapterBackedLinearLayout
+                android:id="@+id/beo_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wrong_container"
+                android:paddingLeft="@dimen/default_margin_vertical"
+                android:paddingRight="@dimen/default_margin_vertical" />
+
+
+            <LinearLayout
+                android:id="@+id/extra_offer_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/beo_list"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/extra_category_tittle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal"
+                    android:text="DEFAULT TEXT"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/pay_bill_text_size" />
+
+                <ro.vodafone.mcare.android.ui.views.AdapterBackedLinearLayout
+                    android:id="@+id/extra_beo_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/default_margin_vertical"
+                    android:paddingRight="@dimen/default_margin_vertical"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+</LinearLayout>

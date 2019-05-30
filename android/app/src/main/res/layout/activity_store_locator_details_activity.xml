@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ro.vodafone.mcare.android.ui.header.NavigationHeader
+            android:id="@+id/navigation_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/card_background_gray">
+
+            <RelativeLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/border_shadow_grey">
+
+                <LinearLayout
+                    android:id="@+id/adressCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/product_card_primary_dark_blue"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal"
+                        android:text="Adresă magazin"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/adress_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_horizontal"
+                        android:text=" "
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/adressCard"
+                    android:orientation="vertical">
+
+                    <com.google.android.gms.maps.MapView
+                        android:id="@+id/unmutable_map_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/image_clock"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:padding="10dp"
+                            android:src="@drawable/clock_or_timed_48" />
+
+                        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                            android:id="@+id/days_labels"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_toEndOf="@+id/image_clock"
+                            android:gravity="start"
+                            android:text=""
+                            android:textColor="@color/blackNormal"
+                            android:textSize="16sp"
+                            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                            android:id="@+id/program_values"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_toEndOf="@+id/days_labels"
+                            android:gravity="start"
+                            android:text=""
+                            android:textColor="@color/blackNormal"
+                            android:textSize="16sp"
+                            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                            android:id="@+id/permission_granted_distance_eta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="15dp"
+                            android:gravity="center_horizontal"
+                            android:text=""
+                            android:textColor="@color/blackNormal"
+                            android:textSize="16sp"
+                            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                            android:id="@+id/go_maps_button"
+                            style="@style/OverlayPrimaryButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:minHeight="45dp"
+                            android:text="Indicaţii la orientare"
+                            android:textSize="@dimen/button_text_size"
+                            customAttrs:vodafoneTextStyle="vodafoneRG" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

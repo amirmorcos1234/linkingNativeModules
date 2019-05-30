@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_background_light_gray"
+    android:orientation="vertical">
+
+    <!--Content Container-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/general_background_light_gray"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ro.vodafone.mcare.android.card.travelling.RoamingStatusCard
+            android:id="@+id/administration_roaming_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <ro.vodafone.mcare.android.card.travelling.RoamingStatusCard
+            android:id="@+id/administration_international_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/administration_roaming_card"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/general_background_light_gray">
+
+        <RelativeLayout
+            android:id="@+id/administration_travelling_aboad_card_desciption_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/administration_travelling_aboad_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/administration_travelling_aboad_card_desciption_view"
+            android:layout_marginLeft="@dimen/default_margin_vertical"
+            android:layout_marginRight="@dimen/default_margin_vertical"
+            android:layout_marginTop="20dp" />
+    </RelativeLayout>
+
+</LinearLayout>

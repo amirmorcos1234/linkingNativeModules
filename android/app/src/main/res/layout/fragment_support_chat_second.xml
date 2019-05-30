@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--ro.vodafone.mcare.android.ui.views.nonscrollable.NonScrollAbleListView
+        android:id="@+id/nseListView"
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/nseListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="#ebebeb" />
+
+    <!--<ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView-->
+        <!--android:id="@+id/vodafoneTextView4"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:clickable="false"-->
+        <!--android:focusable="false"-->
+        <!--android:padding="16dp"-->
+        <!--android:text="Nu ai găsit informația de care ai nevoie în întrebările de mai sus?\n\nAtunci click pe butonul de mai jos pentru a intra în legatură cu unul dintre consultanții noştri."-->
+        <!--android:textColor="@color/dark_gray_text_color"-->
+        <!--android:textSize="@dimen/medium_text_size"-->
+        <!--customAttrs:vodafoneTextStyle="vodafoneRG" />-->
+
+    <!--<ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton-->
+        <!--android:id="@+id/nextStep"-->
+        <!--style="@style/CardPrimaryButton"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_margin="16dp"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:background="@drawable/selector_button_background_card_primary"-->
+        <!--android:focusable="false"-->
+        <!--android:text="Pasul următor"-->
+        <!--android:textAllCaps="false"-->
+        <!--android:textColor="@color/pay_bill_white_color" />-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+
+</LinearLayout>

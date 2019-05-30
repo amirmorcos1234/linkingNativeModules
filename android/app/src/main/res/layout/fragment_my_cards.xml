@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_background_gray"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/card_horizontal_margin"
+    android:paddingTop="@dimen/card_vertical_margin"
+    android:paddingRight="@dimen/card_horizontal_margin"
+    android:paddingBottom="@dimen/card_vertical_margin"
+    tools:context=".ui.myCards.MyCardsFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_shadow"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/my_credit_card_padding"
+        android:paddingTop="@dimen/card_vertical_padding"
+        android:paddingRight="@dimen/my_credit_card_padding"
+        android:paddingBottom="@dimen/card_vertical_padding">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:text="@string/item_my_cards"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="2dp"
+                app:srcCompat="@drawable/ic_lock_outline_black" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/card_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/card_vertical_margin"
+            android:paddingBottom="12dp">
+
+            <RelativeLayout
+                android:id="@+id/no_cards_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/card_background_gray"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/card_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="8dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_credit_card_red" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/no_cards_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_toEndOf="@+id/card_image"
+                        android:foregroundGravity="bottom"
+                        android:gravity="center"
+                        android:text="@string/no_cards"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="22sp"
+                        customAttrs:vodafoneTextStyle="vodafoneRG" />
+                </LinearLayout>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/add_cards_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/card_image"
+                    android:layout_alignParentStart="false"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:text="@string/save_cards"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/add_card"
+            style="@style/CardPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:text="@string/add_card"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/button_text_size" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/max_cards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="22dp"
+            android:text="@string/deduct_string"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <LinearLayout
+            android:id="@+id/terms_and_conditions_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:orientation="horizontal">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prin adăugare acceptați "
+                android:textColor="#333333"
+                android:textSize="13sp"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/terms_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/terms_and_conditions"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="13sp"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Vodafone."
+                android:textColor="#333333"
+                android:textSize="13sp"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

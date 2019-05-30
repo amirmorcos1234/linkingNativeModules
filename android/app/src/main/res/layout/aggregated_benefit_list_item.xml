@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <ImageView
+        android:id="@+id/benefit_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/benefit_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="default_benefit_name"
+        android:textColor="@color/dark_gray_text_color"
+        android:textSize="@dimen/small_text_size"
+        customAttrs:vodafoneTextStyle="vodafoneRG"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/benefit_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/dark_gray_text_color"
+            android:textSize="@dimen/small_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/amount_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:text="eu"
+            android:textColor="@color/dark_gray_text_color"
+            android:textSize="@dimen/small_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

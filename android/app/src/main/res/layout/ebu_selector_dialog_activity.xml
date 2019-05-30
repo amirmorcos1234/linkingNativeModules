@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selectro_dialog_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/semi_transparent_background_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/service_selector_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_corner_select_dialog"
+        android:orientation="vertical">
+
+        <!--Header Container-->
+        <RelativeLayout
+            android:id="@+id/ebu_selector_dialog_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:minHeight="48dp"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp">
+
+            <ImageView
+                android:id="@+id/ebu_selector_back_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:clickable="true"
+                android:src="@drawable/chevron_left_48" />
+
+            <TextView
+                android:id="@+id/ebu_selector_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/ebu_selector_back_button"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/ebu_selector_back_button"
+                android:text="@string/service_selector_tittle"
+                android:textColor="@color/blackNormal"
+                android:textSize="18dp"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/title_separator_line"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background_gray_light"
+                android:layout_below="@id/ebu_selector_title"/>
+
+            <ImageView
+                android:id="@+id/close_selector_image_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignBaseline="@+id/ebu_selector_back_button"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:src="@drawable/close_48" />
+
+            <ImageView
+                android:id="@+id/select_dialog_search_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignBaseline="@+id/ebu_selector_back_button"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/close_selector_image_image"
+                android:clickable="true"
+                android:src="@drawable/search" />
+
+            <RelativeLayout
+                android:id="@+id/select_dialog_search_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_dialog_search_image"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/selector_search_background"
+                    android:rotation="45"
+                    android:scaleType="center" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/imageView"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/selector_search_background"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:padding="5dp">
+
+                    <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+                        android:id="@+id/select_dialog_search_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/default_input_border"
+                        android:gravity="center_vertical"
+                        android:hint="Caută un număr"
+                        android:maxLines="1"
+                        android:minHeight="40dp"
+                        android:paddingLeft="14dp"
+                        android:paddingRight="14dp"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="@color/gray_input_text"
+                        android:textSize="@dimen/login_page_labels_text_size" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/ebu_selector_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ebu_selector_dialog_button_container"
+            android:layout_below="@+id/ebu_selector_dialog_header"
+            android:focusable="false">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ebu_selector_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RelativeLayout
+                android:id="@+id/select_dialog_error_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ro.vodafone.mcare.android.ui.views.CardErrorLayout
+                    android:id="@+id/error_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ebu_selector_dialog_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="10dp">
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/ebu_selector_change_identity_button"
+                style="@style/CardPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:minHeight="40dp"
+                android:text=" Schimbă identitatea " />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

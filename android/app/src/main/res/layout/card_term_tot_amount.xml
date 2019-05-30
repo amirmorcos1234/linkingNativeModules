@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue_chart_top_color"
+    android:id="@+id/bill_history_card_container">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/tab_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/blue_circle"
+            android:padding="10dp"
+            android:src="@drawable/ratings_or_favourite_48"
+            android:layout_centerVertical="true" />
+        <LinearLayout
+            android:layout_width="0dp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tab_icon"
+            android:layout_marginStart="@dimen/general_margin"
+            app:layout_constraintEnd_toStartOf="@id/arrow"
+            android:orientation="vertical">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/tab_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Date label"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="18sp"
+                android:visibility="visible"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/aditional_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:text="Aditional text label"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="18dp"
+                android:visibility="gone"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="cost label"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="18dp"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/chevron_down_48"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/term_expand_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@color/expandable_list_view_background">
+
+    </LinearLayout>
+
+</LinearLayout>

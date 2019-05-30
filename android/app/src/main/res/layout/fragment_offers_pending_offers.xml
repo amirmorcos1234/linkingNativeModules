@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/pay_bill_top_margin"
+    android:paddingLeft="@dimen/pay_bill_horizontal_pading"
+    android:paddingRight="@dimen/pay_bill_horizontal_pading"
+    android:paddingTop="@dimen/pay_bill_top_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="20"
+        android:background="@color/general_background_light_gray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_shadow"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/pay_bill_container_vertical_pading"
+            android:paddingLeft="@dimen/pay_bill_container_horizontal_pading"
+            android:paddingRight="@dimen/pay_bill_container_horizontal_pading"
+            android:paddingTop="@dimen/pay_bill_container_vertical_pading">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/msisdnPendingOffers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="0724101311"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:defaultBorderColor="gray"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/offer_valability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/accepted_offers_contract_validity"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:defaultBorderColor="gray"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/contractDurationPendingOffers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/offer_valability"
+                    android:text="24luni"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:defaultBorderColor="gray"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/offer_number_pending_offers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/accepted_offers_offer_number"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:defaultBorderColor="gray"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/proposalIdPendingOffers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/offer_number_pending_offers"
+                    android:text="12345"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:defaultBorderColor="gray"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/privacy_policy_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/accepted_offers_dated"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:defaultBorderColor="gray"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/creationDatePendingOffers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/privacy_policy_title1"
+                    android:layout_alignBottom="@+id/privacy_policy_title1"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/privacy_policy_title1"
+                    android:text="04.07.2016"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:defaultBorderColor="gray"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+            </RelativeLayout>
+
+            <!-- Separator line-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_container_layout_margin">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/separator_line_height"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/pay_bill_separator_line_color" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_container_layout_margin"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/redirect_contrat_details_pending_offers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/lvExp1"
+                        android:layout_width="330dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:orientation="horizontal"
+                        android:text="@string/accepted_offers_contract_details"
+                        android:textColor="@color/pay_bill_bold_text_color"
+                        android:textSize="@dimen/pay_bill_text_size"
+                        customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignBottom="@+id/lvExp1"
+                        android:layout_alignEnd="@+id/lvExp1"
+                        android:src="@drawable/right_red_arrow" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/fragment_settings_privacy_policy.xml"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/expandableCardList1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:animateLayoutChanges="true"
+                        android:divider="@null"
+                        android:groupIndicator="@null"
+                        android:listSelector="@android:color/transparent"
+                        android:text="@string/privacy_policy_information"
+                        android:textColor="@color/pay_bill_bold_text_color" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_container_layout_margin">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/separator_line_height"
+                    android:background="@color/pay_bill_separator_line_color" />
+
+            </RelativeLayout>
+
+            <!-- Terms And Conditions Checkbox Input-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/terms_and_conditions_checkbox_pending_offers"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:button="@drawable/terms_and_conditions_checkbox_selector"
+                    android:gravity="center_vertical" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/terms_and_conditions_checkbox_label_po"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14dp"
+                    android:gravity="left"
+                    android:text="@string/register_input_terms_and_conditions_label"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/login_page_labels_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/supported_clausesterms_checkbox_po"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:button="@drawable/terms_and_conditions_checkbox_selector"
+                    android:gravity="center_vertical" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/supported_clausesterms_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/proposals_pending_general_t_c"
+                    android:textColor="@color/blackNormal"
+                    android:textSize="14sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            </RelativeLayout>
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/accept_offers_button"
+                style="@style/CardPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_page_view_elements_height"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/selector_button_background_card_primary"
+                android:text="@string/proposals_pending_button_accept"
+                android:textSize="@dimen/login_page_labels_text_size" />
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/refuse_offers_button"
+                style="@style/CardSecondaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_page_view_elements_height"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/selector_button_background_card_secondary"
+                android:text="@string/proposals_pending_button_refuse"
+                android:textColor="@color/whiteNormalTextColor"
+                android:textSize="@dimen/login_page_labels_text_size"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

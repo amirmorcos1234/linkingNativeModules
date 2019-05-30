@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_fragment_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_background_light_gray">
+
+    <RelativeLayout
+        android:id="@+id/active_devices_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ro.vodafone.mcare.android.card.VodafoneGenericCard
+            android:id="@+id/vtv_informative_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/vtv_informative_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/card_horizontal_margin"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="@dimen/medium_text_size" />
+
+        </ro.vodafone.mcare.android.card.VodafoneGenericCard>
+
+        <ro.vodafone.mcare.android.ui.views.ExpandableAdapterBackedLinearLayout
+            android:id="@+id/active_devices_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vtv_informative_card"
+            android:paddingLeft="@dimen/default_margin_vertical"
+            android:paddingRight="@dimen/default_margin_vertical" />
+
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/reset_pin_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/active_devices_list"
+            android:visibility="gone"
+            android:layout_marginTop="9dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/pay_bill_text_size" />
+
+        <ro.vodafone.mcare.android.card.VodafoneGenericCard
+            android:id="@+id/reset_pin_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/card_vertical_margin"
+            android:paddingBottom="@dimen/card_vertical_margin"
+            android:layout_below="@+id/reset_pin_label"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/default_padding_vertical"
+                android:paddingBottom="@dimen/default_padding_vertical"
+                android:paddingStart="@dimen/default_padding_horizontal"
+                android:paddingEnd="@dimen/default_padding_horizontal">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/reset_pin_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_padding_vertical"
+                android:layout_marginBottom="@dimen/default_padding_vertical"
+                android:gravity="center"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="@dimen/medium_text_size" />
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/reset_pin_button"
+                style="@style/CardPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text_size" />
+
+            </LinearLayout>
+
+        </ro.vodafone.mcare.android.card.VodafoneGenericCard>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/active_offers_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/active_devices_container"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/active_offers_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/pay_bill_text_size" />
+
+        <ro.vodafone.mcare.android.card.activeServices.ActiveServicesViewGroup
+            android:id="@+id/active_offers_viewgroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/beo_button_redirect"
+            style="@style/CardSecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="14dp"
+            android:textSize="@dimen/medium_text_size"
+            android:visibility="gone" />
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/vodafone_tv_app_redirect_button"
+            style="@style/CardPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="14dp"
+            android:textSize="@dimen/medium_text_size"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>

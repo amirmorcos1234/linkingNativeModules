@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/identity_selector_main_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/semi_transparent_background_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_corner_select_dialog"
+        android:layout_margin="@dimen/general_margin">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/select_identity_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/general_margin"
+            android:textColor="@color/blackNormal"
+            android:textSize="@dimen/login_page_title_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <View
+            android:id="@+id/title_separator_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/select_identity_title"
+            android:background="@color/background_gray_light"/>
+
+        <RelativeLayout
+            android:id="@+id/no_identities_warning_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_opacity_90"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/default_padding_vertical"
+            android:paddingLeft="@dimen/default_padding_horizontal"
+            android:paddingRight="@dimen/default_padding_horizontal"
+            android:paddingTop="@dimen/default_padding_vertical"
+            android:layout_marginLeft="@dimen/default_margin_horizontal"
+            android:layout_marginRight="@dimen/default_margin_horizontal"
+            android:layout_marginTop="@dimen/default_margin_vertical"
+            android:layout_marginBottom="@dimen/default_margin_vertical"
+            android:layout_below="@+id/select_identity_title"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/warning_triangle_imageview"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:src="@drawable/yellow_error_triangle"/>
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/warning_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/warning_triangle_imageview"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/whiteNormalTextColor"
+                android:textSize="@dimen/login_page_labels_text_size"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/footer_buttons_group_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/select_identity_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CardPrimaryButton"/>
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/cancel_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/CardSecondaryButton"/>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/identity_selector_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/select_identity_title"
+            android:layout_above="@+id/footer_buttons_group_layout"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

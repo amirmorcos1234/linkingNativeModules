@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/customSecondId"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_background_light_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/customFirstId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/general_background_light_gray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_shadow"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/default_margin_horizontal"
+            android:layout_marginRight="@dimen/default_margin_horizontal"
+            android:layout_marginTop="@dimen/default_margin_horizontal"
+            android:paddingBottom="@dimen/default_padding_vertical"
+            android:paddingLeft="@dimen/default_padding_horizontal"
+            android:paddingRight="@dimen/default_padding_horizontal"
+            android:paddingTop="@dimen/default_padding_vertical">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Numele serviciului tău "
+                android:textColor="@color/blackNormal"
+                android:textSize="18sp"
+
+                />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="ex: Telefonul Andreei"
+                android:textColor="@color/blackNormal"
+
+                />
+
+            <ro.vodafone.mcare.android.ui.views.TooltipError
+                android:id="@+id/tooltipError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                customAttrs:errorTextDefaultMessage="@string/register_error_message_invalid_characters_username" />
+
+
+            <RelativeLayout
+                android:id="@+id/relativeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/gray_input_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+                    android:id="@+id/newServiceName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/default_input_height"
+                    android:layout_toStartOf="@+id/charCount"
+                    android:nextFocusUp="@id/newServiceName"
+                    android:nextFocusLeft="@id/newServiceName"
+                    android:background="@drawable/empty"
+                    android:gravity="center_vertical"
+                    android:hint=" Adaugă un nume "
+                    android:maxLength="16"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:maxLines="1"
+                    android:lines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/login_page_labels_text_size"
+                    customAttrs:defaultBorderColor="gray"
+                    customAttrs:type="billAmount" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/charCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:text="15"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

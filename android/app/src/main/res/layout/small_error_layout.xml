@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/small_error_conatiner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/black_opacity_90">
+
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/no_offers"
+        android:layout_centerVertical="true"
+        android:id="@+id/imageView6" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/error_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/proposals_pending_no_offers"
+        android:textColor="@color/whiteNormalTextColor"
+        android:textSize="@dimen/login_page_labels_text_size"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/imageView6" />
+
+</RelativeLayout>

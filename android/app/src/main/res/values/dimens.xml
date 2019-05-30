@@ -1,0 +1,177 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="top_menu_size">64dp</dimen>
+    <dimen name="default_input_height">40dp</dimen>
+    <dimen name="big_input_height">160dp</dimen>
+
+
+    <!--Application default-->
+    <dimen name="default_padding_vertical">15dp</dimen>
+    <dimen name="default_padding_horizontal">15dp</dimen>
+    <dimen name="default_margin_vertical">12dp</dimen>
+    <dimen name="default_margin_horizontal">12dp</dimen>
+    <dimen name="default_margin_card_vertical">6dp</dimen>
+
+
+
+    <!--guilotine-->
+    <dimen name="guillotine_small_margin">24dp</dimen>
+    <dimen name="guillotine_medium_margin">48dp</dimen>
+    <dimen name="guillotine_large_margin">20dp</dimen>
+    <dimen name="guillotine_divider_height">40dp</dimen>
+
+    <dimen name="guillotine_item_text_size">25sp</dimen>
+    <dimen name="guillotine_actionbar_background_view_height">35dp</dimen>
+    <dimen name="global_menu_avatar_size">64dp</dimen>
+
+    <!-- Login Page-->
+    <dimen name="login_page_vertical_margin">10dp</dimen>
+    <dimen name="login_page_vertical_layout_margin">18dp</dimen>
+    <dimen name="login_page_vertical_view_margin">8dp</dimen>
+    <dimen name="login_page_view_elements_height">38dp</dimen>
+    <dimen name="login_page_fragment_horisontal_margin">14dp</dimen>
+    <dimen name="separator_line_height">1dp</dimen>
+    <dimen name="ebu_login_big_margin">26dp</dimen>
+
+    <dimen name="title_top_margin">15dp</dimen>
+    <dimen name="title_bottom_margin">15dp</dimen>
+
+    <!-- Text sizes. -->
+    <dimen name="login_page_title_size">22sp</dimen>
+    <dimen name="login_page_labels_text_size">14sp</dimen>
+    <dimen name="login_page_small_text_size">12dp</dimen>
+    <dimen name="privacy_policy_label_text_size">17sp</dimen>
+    <!--Splash Screen-->
+    <dimen name="splashscreen_text_size">20sp</dimen>
+
+    <!--Semitransparent container sizes-->
+    <dimen name="semitransparent_container_pading">30dp</dimen>
+    <dimen name="semitransparent_container_horizontal_margin">14dp</dimen>
+    <dimen name="semitransparent_container_vertical_margin">18dp</dimen>
+
+    <!--Pay Bill dimension-->
+    <dimen name="pay_bill_horizontal_margin">15dp</dimen>
+    <dimen name="pay_bill_top_margin">16dp</dimen>
+    <dimen name="pay_bill_bottom_margin">10dp</dimen>
+    <dimen name="pay_bill_horizontal_pading">12dp</dimen>
+    <dimen name="pay_bill_vertical_pading">12dp</dimen>
+    <dimen name="pay_bill_container_vertical_pading">15dp</dimen>
+    <dimen name="pay_bill_container_horizontal_pading">15dp</dimen>
+    <dimen name="overlay_regular_border">11dp</dimen>
+    <dimen name="overlay_second_border">19dp</dimen>
+    <dimen name="pay_bill_container_layout_margin">12dp</dimen>
+    <dimen name="pay_bill_header_height">100dp</dimen>
+    <dimen name="pay_bill_title_top_margin">30dp</dimen>
+    <dimen name="pay_bill_view_elements_vertical_margin">8dp</dimen>
+    <dimen name="pay_bill_option_page_button_height">86dp</dimen>
+    <dimen name="pay_bill_option_page_button_line_weith">6dp</dimen>
+    <dimen name="pay_bill_option_page_red_arrow_heigth">22dp</dimen>
+    <dimen name="settings_red_arrow_heigth">24dp</dimen>
+    <dimen name="pay_bill_generic_button_height">42dp</dimen>
+    <dimen name="pay_bill_generic_input_height">30dp</dimen>
+    <dimen name="pay_bill_text_size">18sp</dimen>
+    <dimen name="overlay_title_text_size">24sp</dimen>
+    <dimen name="pay_bill_litle_text_size">15dp</dimen>
+    <dimen name="pay_bill_text_margin">4dp</dimen>
+    <!--Cost control-->
+    <dimen name="cost_control_widget_gauge">177dp</dimen>
+    <dimen name="cost_control_widget_gauge_textview_size">125dp</dimen>
+    <dimen name="cost_control_widget_white_layer">170dp</dimen>
+    <dimen name="cost_control_widget_white_layer_textview_size">120dp</dimen>
+
+    <dimen name="text_spacer">16dp</dimen>
+    <dimen name="text_margin_top">4dp</dimen>
+    <dimen name="text_margin_bottom">4dp</dimen>
+    <dimen name="text_size">15sp</dimen>
+    <dimen name="settings_page_about_size">14dp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="medium_text_size">17sp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+    <dimen name="large_text_size">20sp</dimen>
+    <dimen name="overlay_text_title_size">28sp</dimen>
+
+    <!--credit plus widget-->
+    <dimen name="credit_plus_component_width">52dp</dimen>
+    <dimen name="credit_plus_component_heigth">52dp</dimen>
+    <dimen name="credit_plus_component_credit_plus_image_margin">13dp</dimen>
+    <dimen name="credit_plus_text_label_height">15dp</dimen>
+    <dimen name="credit_plus_text_value_heigth">22dp</dimen>
+
+    <!--Call Details-->
+    <dimen name="adapter_horizontal_margin">10dp</dimen>
+
+    <!--Generic Size-->
+    <dimen name="card_horizontal_margin">12dp</dimen>
+    <dimen name="card_vertical_margin">16dp</dimen>
+    <dimen name="card_horizontal_padding">16dp</dimen>
+    <dimen name="card_vertical_padding">18dp</dimen>
+    <dimen name="inside_card_layout_vertical_margin">18dp</dimen>
+    <dimen name="inside_card_view_element_vertical_margin">12dp</dimen>
+    <dimen name="inside_card_view_element_litle_margin">5dp</dimen>
+    <dimen name="inside_card_separator_line_margin">25dp</dimen>
+
+    <!--Text Size-->
+    <dimen name="card_field_name_text_size">16dp</dimen>
+    <dimen name="card_button_text_size">15dp</dimen>
+    <dimen name="card_hint_text_size">14dp</dimen>
+
+    <!--TODO remove-->
+    <dimen name="three_grid_unit">24dp</dimen>
+    <dimen name="one_and_a_half_grid_unit">12dp</dimen>
+
+    <!--Custom SwitchButton-->
+    <dimen name="ksw_md_thumb_ripple_size">42dp</dimen>
+    <dimen name="ksw_md_thumb_solid_inset">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset_top">11dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_inset_bottom">10dp</dimen>
+    <dimen name="ksw_md_thumb_solid_size">20dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_size">21dp</dimen>
+    <dimen name="ksw_md_thumb_shadow_offset">2dp</dimen>
+
+    <!--Navigationn Menu-->
+    <dimen name="design_navigation_icon_size" tools:override="true">32dp</dimen>
+
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <!--General dimensions-->
+    <dimen name="general_margin_start">10dp</dimen>
+    <dimen name="general_margin">10dp</dimen>
+    <dimen name="general_padding">10dp</dimen>
+    <dimen name="general_margin_end">10dp</dimen>
+    <dimen name="general_half_margin">5dp</dimen>
+
+    <!-- Spacing -->
+    <dimen name="screen_horizontal_spacing">16dp</dimen>
+    <!-- Scout -->
+    <dimen name="message_bubble_margin_top">8dp</dimen>
+    <dimen name="message_timestamp_margin_bottom">12dp</dimen>
+    <dimen name="message_timestamp_margin_top">8dp</dimen>
+
+    <!-- Selectable Items -->
+    <dimen name="selectable_rounded_rect_corner_radius">3dp</dimen>
+    <dimen name="selectable_rounded_rect_corner_radius_large">12dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="normal_card_inside_text">15sp</dimen>
+    <dimen name="chat_bubble_size">52dip</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">64dp</dimen>
+
+    <!-- Support window dimensions. -->
+    <dimen name="support_hint_top_margin">3dp</dimen>
+    <dimen name="support_hint_left_padding">20dp</dimen>
+    <dimen name="support_hint_top_padding">10dp</dimen>
+
+    <!-- Permission Fragment dimension-->
+    <dimen name="parent_padding">12dp</dimen>
+    <dimen name="add_msisdn_padding">14dp</dimen>
+    <dimen name="button_padding">-12dp</dimen>
+
+    <!-- Unlimited Italy Fragment dimensions-->
+    <dimen name="parent_card_padding">15dp</dimen>
+
+    <dimen name="my_credit_card_padding">20dp</dimen>
+
+</resources>

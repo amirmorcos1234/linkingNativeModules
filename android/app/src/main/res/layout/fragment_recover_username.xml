@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+
+    <!-- Semi-transparent layout-->
+    <LinearLayout
+        android:id="@+id/recover_username_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/semitransparent_container_vertical_margin"
+        android:layout_marginLeft="@dimen/semitransparent_container_horizontal_margin"
+        android:layout_marginRight="@dimen/semitransparent_container_horizontal_margin"
+        android:animateLayoutChanges="true"
+        android:background="@color/semitransparent_layout_color"
+        android:orientation="vertical"
+        android:padding="@dimen/semitransparent_container_pading"
+        android:visibility="visible">
+
+        <!-- Phone Number Error -->
+        <ro.vodafone.mcare.android.ui.views.TooltipError
+            android:id="@+id/phone_number_error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            customAttrs:errorTextDefaultMessage="@string/register_error_message_invalid_phone_number" />
+
+        <!-- Phone Number Field + Label -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recover_username_telephone_number_label"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:textSize="@dimen/login_page_labels_text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+                    android:id="@+id/telephone_number_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_page_view_elements_height"
+                    android:background="@drawable/default_input_border"
+                    android:hint="@string/recover_username_telephone_number_hint"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:textColorHint="@color/gray_input_text"
+                    android:textSize="@dimen/login_page_labels_text_size"
+                    customAttrs:type="phone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- EMAIL Error -->
+        <ro.vodafone.mcare.android.ui.views.TooltipError
+            android:id="@+id/email_error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            customAttrs:errorTextDefaultMessage="@string/register_error_message_email_address" />
+
+        <!-- Email Adress Field + Label -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_view_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recover_username_email_adress_label"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:textSize="@dimen/login_page_labels_text_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+                <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+                    android:id="@+id/email_adress_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_page_view_elements_height"
+                    android:background="@drawable/default_input_border"
+                    android:hint="@string/recover_username_email_adress_hint"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:textColorHint="@color/gray_input_text"
+                    android:textSize="@dimen/login_page_labels_text_size"
+                    customAttrs:type="email" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- Send Button -->
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/send_username_button"
+            style="@style/VFNudgePrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin"
+            android:enabled="false"
+            android:text="@string/recover_username_button_label"
+            android:textSize="@dimen/login_page_labels_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

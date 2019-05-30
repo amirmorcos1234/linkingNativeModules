@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_faq"
+        android:icon="@drawable/comment_48"
+        android:title="@string/title_faq" />
+
+    <item
+        android:id="@+id/item_chat"
+        android:icon="@drawable/chat_48"
+        android:title="Chat" />
+
+    <item
+        android:id="@+id/item_email"
+        android:icon="@drawable/mail_new_48"
+        android:title="@string/title_email" />
+
+
+
+</menu>

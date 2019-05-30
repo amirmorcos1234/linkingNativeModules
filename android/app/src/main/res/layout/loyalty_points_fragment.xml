@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_background_light_gray"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/enroll_in_program"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/card_vertical_margin"
+        android:layout_marginStart="@dimen/card_vertical_margin"
+        android:layout_marginTop="@dimen/card_vertical_margin" />
+
+
+    <RelativeLayout
+        android:id="@+id/gain_loyalty_points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enroll_in_program"
+        android:layout_marginEnd="@dimen/card_vertical_margin"
+        android:layout_marginStart="@dimen/card_vertical_margin" />
+
+
+    <!--ListView
+        android:layout_marginStart="@dimen/card_horizontal_margin"
+        android:layout_marginEnd="@dimen/card_horizontal_margin"
+        android:layout_marginTop="@dimen/card_vertical_margin"
+        android:layout_marginBottom="@dimen/card_vertical_margin"
+        android:id="@+id/loyalty_cards_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView-->
+</RelativeLayout>

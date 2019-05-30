@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/general_background_light_gray">
+
+    <!--Calendar Container-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Istoric Tranzactii Block" />
+
+
+        </LinearLayout>
+
+        <!--Triangle Container-->
+        <LinearLayout
+            android:id="@+id/triangle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="18dp">
+
+            <ro.vodafone.mcare.android.ui.utils.DrawingTriangle
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Content Container-->
+    <LinearLayout
+        android:id="@+id/general_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_shadow"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingBottom="@dimen/default_padding_vertical"
+        android:paddingLeft="@dimen/default_padding_horizontal"
+        android:paddingRight="@dimen/default_padding_horizontal"
+        android:paddingTop="@dimen/default_padding_vertical"
+        android:layout_marginLeft="@dimen/default_margin_horizontal"
+        android:layout_marginRight="@dimen/default_margin_horizontal"
+        android:layout_marginTop="@dimen/default_margin_vertical"
+        android:layout_marginBottom="@dimen/default_margin_vertical">
+
+
+        <!--No results found -->
+        <ro.vodafone.mcare.android.ui.views.ExpandableAdapterBackedLinearLayout
+            android:id="@+id/top_up_history_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/no_history_results_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="18dp"
+            android:paddingRight="18dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp">
+
+                <ImageView
+                    android:id="@+id/error_circle"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/info_circle" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/no_results_heder_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="@dimen/large_text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/no_history_results_content_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--System Error-->
+        <ro.vodafone.mcare.android.ui.views.CardErrorLayout
+            android:id="@+id/history_system_error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/instructional_message_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal" />
+
+
+        <!--ListView Content-->
+
+        <!--android:childDivider="#FFFFFF"-->
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

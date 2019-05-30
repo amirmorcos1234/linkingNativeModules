@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay_background"
+    android:paddingLeft="20dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentTop="true"
+    android:paddingRight="20dp">
+
+    <ImageView
+        android:id="@+id/travelling_aboard_confirmation_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:clickable="true"
+        android:src="@drawable/close"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/travelling_aboard_confirmation_tittle_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tittle text"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="50dp"/>
+
+
+    <TextView
+        android:id="@+id/travelling_aboard_confirmation_content_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="contentText"
+        android:textColor="@color/white"
+        android:layout_below="@+id/travelling_aboard_confirmation_tittle_text"
+        android:layout_alignParentStart="true" />
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/travelling_aboard_confirmation_container"
+        style="@style/CardPrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:text="Administrează serviciile"
+        android:textSize="@dimen/button_text_size"
+        android:layout_above="@+id/travelling_aboard_confirmation_back_container"
+        android:layout_marginBottom="@dimen/default_margin_horizontal"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/travelling_aboard_confirmation_back_container"
+        style="@style/OverlaySecondaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="true"
+        android:text="Administrează serviciile"
+        android:textSize="@dimen/button_text_size"
+        android:layout_marginBottom="26dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+</RelativeLayout>

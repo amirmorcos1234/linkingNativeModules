@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_opacity_50"
+    android:orientation="vertical">
+
+
+    <ro.vodafone.mcare.android.ui.DynamicColorImageView
+        android:id="@+id/overlayDismissButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:clickable="true"
+
+        android:gravity="top"
+        android:src="@drawable/close_icon"
+        app:drawableColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/overlay_secondary_btn_disabled"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/newPic"
+            style="@style/OverlaySecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/selector_button_background_overlay_secondary"
+            android:minHeight="45dp"
+            android:text="Poză nouă"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/selectPic"
+            style="@style/OverlaySecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/selector_button_background_overlay_secondary"
+            android:minHeight="45dp"
+            android:text="Alege o poză"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/resetPic"
+            style="@style/OverlaySecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/selector_button_background_overlay_secondary"
+            android:minHeight="45dp"
+            android:text=" Redă poză inițială "
+            android:textAllCaps="false" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

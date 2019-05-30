@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue_chart_top_color"
+    android:id="@+id/bill_history_card_container">
+
+    <View
+        android:id="@+id/button_line"
+        android:layout_height="wrap_content"
+        android:layout_width="6dp"
+        android:layout_alignParentLeft="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/button_line"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:background="@color/card_background_white"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/dark_gray_text_color"
+            android:text="Date label"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:textSize="30dp"
+            android:textColor="@color/dark_gray_text_color"
+            android:text="0.00 Lei"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:layout_centerVertical="true"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/aditional_cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:textSize="16dp"
+            android:textColor="@color/dark_gray_text_color"
+            android:text="Aditional cost label"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/bill_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/dark_gray_text_color"
+            android:text="Plata efectuata pe 7 ianuarie"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/card_image"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/right_red_arrow"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

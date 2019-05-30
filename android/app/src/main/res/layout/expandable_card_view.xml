@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blacktransparent"
+        android:padding="14dp">
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:minHeight="50dp"
+            android:src="@drawable/red_vertical_line"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="5dp"
+            android:visibility="visible"
+            android:layout_above="@+id/margin"
+            android:layout_alignParentTop="true"
+            android:forceHasOverlappingRendering="true" />
+
+        <RelativeLayout
+            android:id="@+id/textContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/line"
+            android:layout_marginEnd="40dp"
+            >
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/highTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Credit utilizat"
+                android:textColor="@color/grey_170_decimal"
+                android:textSize="17sp"
+                android:visibility="visible"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/priceTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@color/white_text_color"
+                customAttrs:vodafoneTextStyle="vodafoneRGBD"
+                android:layout_below="@id/highTextView"
+                android:text="$25.00"/>
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/lowTextView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:visibility="gone"
+                android:textColor="@color/grey_170_decimal"
+                customAttrs:vodafoneTextStyle="vodafoneRG"
+                android:layout_below="@id/priceTextView"
+                android:text="in ultimele 30 de zile"/>
+
+        </RelativeLayout>
+
+        <ro.vodafone.mcare.android.ui.DynamicColorImageView
+            android:id="@+id/arrow_indicator"
+            android:layout_width="32dp"
+            android:layout_alignTop="@+id/textContainer"
+            android:layout_alignBottom="@+id/textContainer"
+            android:layout_height="32dp"
+            android:src="@drawable/chevron_down_48"
+            customAttrs:drawableColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+        <View android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:id="@+id/margin"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textContainer"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/favorite_number_container_item"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:background="@color/card_background_white">
+
+        <TextView
+            android:id="@+id/favorite_number_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toLeftOf="@+id/remove_favorite_number_button"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:textSize="16dp"
+            android:textColor="@color/dark_gray_text_color"
+            android:gravity="center_vertical"
+            android:text="item"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:id="@+id/remove_favorite_number_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/delete_48"/>
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</LinearLayout>

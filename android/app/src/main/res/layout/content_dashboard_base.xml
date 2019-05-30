@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/inside_scrollView_dashboard"
+    android:orientation="vertical">
+
+    <ro.vodafone.mcare.android.widget.VoiceOfVodafoneWidget
+        android:id="@+id/dashboard_vov_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"/>
+
+    <ro.vodafone.mcare.android.widget.avatar.DashboardMenuAvatar
+        android:id="@+id/dashboard_menu_avatar_widget"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dashboard_vov_widget"
+        android:clickable="true"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/dashboard_vov_widget"/>
+
+    <View
+        android:id="@+id/center_right_to_dashboard_separator"
+        android:layout_centerHorizontal="true"
+        android:layout_width="1dp"
+        android:layout_height="1dp"/>
+
+    <!--android:animateLayoutChanges="true"-->
+    <ro.vodafone.mcare.android.ui.views.nonscrollable.NonScrollExpandableListView
+        android:id="@+id/expandableCardList"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:groupIndicator="@null"
+        android:divider="@null"
+        android:layout_marginBottom="20dp"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:app="http://schemas.android.com/tools">
+    <color name="colorPrimary">#ff2121</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FFF</color>
+    <!--general colors-->
+    <color name="general_background_light_gray">#ebebeb</color>
+
+    <color name="snackBarBackgroundColor">#99000000</color>
+
+    <color name="blacktransparent">#99000000</color>
+    <color name="disabledChat">#969696</color>
+
+    <color name="black_transparent_c0">#c0000000</color>
+
+    <color name="loyaltyTransparentRed">#CCFF0000</color>
+
+    <color name="vodafoneRed">#FFCA1A02</color>
+    <color name="whiteNormalTextColor">#FFFFFF</color>
+    <color name="authentificationColor">#FF9C2AA0</color>
+    <color name="blackNormal">#000000</color>
+    <color name="darkBlue">#003366</color>
+    <color name="vodafonegrey">#f2f2f2</color>
+    <color name="turqoise">#009999</color>
+    <color name="guillotine_background">#444153</color>
+    <color name="guillotine_background_dark">#383547</color>
+    <color name="selected_item_color">#30d1d5</color>
+    <color name="darkGrey">#d1d1e0</color>
+    <!--for the floatingDrawer/DashBoardMenu -->
+    <color name="paint_color">#FF5722</color>
+    <color name="orange_300">#FF8A65</color>B
+
+    <color name="white_transparent_low">#68FFFFFF</color>
+
+    <color name="grey_300">#ffE0E0E0</color>
+    <color name="grey_400">#BDBDBD</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_170_decimal">#AAAAAA</color>
+    <color name="support_window_grey">#ebebeb</color>
+
+    <!--Login page colors -->
+    <color name="inactive_button_color">#4a4d4e</color>
+    <color name="red_button_color">#c40c0c</color>
+    <color name="grey_button_color">#999999</color>
+    <color name="inactive_button_text_color">#666666</color>
+    <color name="separator_line_color">#55574e</color>
+    <!--40 - prefix of color id = 25% Opacity -->
+    <color name="error_message_bg_color">#26ffffff</color>
+    <color name="simple_red">#fF0000</color>
+    <!--99 - prefix of color id = 60% Opacity -->
+    <color name="semitransparent_layout_color">#99000000</color>
+    <color name="locked_input_border_color">#40ffffff</color>
+    <!--33 - prefix of color id = 20% Opacity -->
+    <color name="locked_input_text_color">#33ffffff</color>
+    <color name="login_page_background_color">#26000000</color>
+    <color name="remember_me_checkbox">#FFFFFF</color>
+
+    <!--Seamless page colors -->
+    <color name="button_border_color">#55574e</color>
+    <color name="gray_button_color">#afafaf</color>
+    <color name="gray_button_text_color">#333333</color>
+    <color name="gray_input_text">#BDBDBD</color>
+
+
+    <color name="purple">#7f007f</color>
+
+    <color name="progress_bar_background_color">#66000000</color>
+
+    <color name="terms_and_conditions_bar">#aa5c3b06</color>
+
+    <color name="custom_input_hint_color">#808080</color>
+
+    <!--Pay Bill -->
+    <color name="pay_bill_option_button_line_color">#007e92</color>
+    <color name="pay_bill_white_color">#ffffff</color>
+    <color name="pay_bill_separator_line_color">#cccccc</color>
+    <color name="pay_bill_red_button_color">#e60000</color>
+    <color name="pay_bill_bold_text_color">#000000</color>
+    <color name="pay_bill_gray_button_color">#afafaf</color>
+    <color name="pay_bill_error_layout_color">#333333</color>
+    <color name="pay_bill_inactive_button_color">#666666</color>
+    <color name="pay_bill_selector_semi_transparent_background">#8C000000</color>
+
+    <color name="purple_settings">#050005</color>
+
+    <color name="green_check_mark_color">#a8b400</color>
+
+    <color name="semi_transparent_background_color">#99000000</color>
+    <color name="selector_background">#f4f4f4</color>
+    <color name="selector_search_background">#cccccc</color>
+
+    <!--White Opacity-->
+    <color name="white_opacity_60">#99ffffff</color>
+    <color name="white_opacity_70">#B3ffffff</color>
+    <color name="white_opacity_80">#CCffffff</color>
+    <color name="white_opacity_90">#E6ffffff</color>
+
+    <!--Black Opacity-->
+    <color name="black_opacity_10">#0D000000</color>
+    <color name="black_opacity_25">#3E000000</color>
+    <color name="black_opacity_50">#7d000000</color>
+    <color name="black_opacity_60">#99000000</color>
+    <color name="black_opacity_70">#B3000000</color>
+    <color name="black_opacity_80">#CC000000</color>
+    <color name="black_opacity_90">#E6000000</color>
+
+    <color name="widget_warning_icon_color">#eb9700</color>
+
+
+    <color name="selected_tab_indicator_color">#e60000</color>
+    <color name="unselected_tab_indicator_color">#cccccc</color>
+    <color name="tab_title_color">#666666</color>
+    <color name="list_view_divired_color">#dbdbdb</color>
+
+    <!--Developer guide colors-->
+
+    <!--Buttons - on cards-->
+    <color name="card_primary_btn_default">#E60000</color>
+    <color name="card_primary_btn_on_tap">#990000</color>
+    <color name="card_primary_btn_disabled">#CCCCCC</color>
+
+    <color name="card_secondary_btn_default">#666666</color>
+    <color name="card_secondary_btn_on_tap">#333333</color>
+    <color name="card_secondary_btn_disabled">#CCCCCC</color>
+
+    <color name="card_tertiary_btn_default">#FFFFFF</color>
+    <color name="card_tertiary_btn_on_tap">#F4F4F4</color>
+    <color name="card_tertiary_btn_disabled">#CCCCCC</color>
+
+    <color name="card_quaternary_btn_default">#adadae</color>
+    <color name="card_quaternary_btn_on_tap">#a6a6a9</color>
+    <color name="card_quaternary_btn_disabled">#CCCCCC</color>
+
+    <!--Buttons - on overlays-->
+    <color name="overlay_primary_btn_default">#BD0000</color>
+    <color name="overlay_primary_btn_on_tap">#990000</color>
+    <color name="overlay_primary_btn_disabled">#666666</color>
+
+    <color name="overlay_secondary_btn_default">#AFAFAF</color>
+    <color name="overlay_secondary_btn_on_tap">#CCCCCC</color>
+    <color name="overlay_secondary_btn_disabled">#666666</color>
+
+    <color name="overlay_tertiary_btn_default">#333333</color>
+    <color name="overlay_tertiary_btn_on_tap">#515151</color>
+    <color name="overlay_tertiary_btn_disabled">#666666</color>
+
+    <!--Buttons -on page nudges-->
+    <color name="nudge_primary_btn_default">#BD0000</color>
+    <color name="nudge_primary_btn_on_tap">#990000</color>
+
+    <color name="nudge_secondary_btn_default">#AFAFAF</color>
+    <color name="nudge_secondary_btn_on_tap">#CCCCCC</color>
+
+    <!--Buttons - on heroes -->
+    <color name="on_heroes_primary_btn_default">#BD0000</color>
+    <color name="on_heroes_primary_btn_on_tap">#990000</color>
+    <color name="on_heroes_primary_btn_disabled">#666666</color>
+
+    <color name="on_heroes_secondary_btn_default">#AFAFAF</color>
+    <color name="on_heroes_secondary_btn_on_tap">#CCCCCC</color>
+    <color name="on_heroes_secondary_btn_disabled">#666666</color>
+
+    <color name="on_heroes_tertiary_btn_default_transparent">#00FFFFFF</color>
+    <color name="on_heroes_tertiary_btn_on_tap_op_35">#59000000</color>
+    <color name="on_heroes_tertiary_btn_disabled">#666666</color>
+
+    <!--Buttons stroke-->
+    <color name="gray_stroke_btn">#999999</color>
+    <color name="light_gray_stroke_btn">#CCCCCC</color>
+
+    <!-- Text colors -->
+    <color name="white_text_color">#FFFFFF</color>
+    <color name="dark_gray_text_color">#333333</color>
+    <color name="gray_text_color">#666666</color>
+    <color name="light_gray_text_color">#999999</color>
+    <color name="subheading_text_color_gray">#4A4D4E</color>
+
+    <!-- Strokes color -->
+    <color name="lightblue_stroke">#00B0CA</color>
+    <color name="green_stroke">#428600</color>
+    <color name="red_stroke">#BD0000</color>
+    <color name="light_gray_stroke">#CCCCCC</color>
+
+    <!-- Error field background in Form Fields - on cards -->
+    <color name="on_cards_error_field_bg">#333333</color>
+    <color name="on_overlays_error_field_bg">#4A4D4E</color>
+
+    <!--Background colors-->
+    <color name="dark_gray_background">#333333</color>
+
+    <!--Icons in Form Fields -->
+    <color name="innactive_icon_gray">#CCCCCC</color>
+    <color name="v_icon_green">#428600</color>
+    <color name="x_icon_red">#BD0000</color>
+    <color name="attention_icon_orange">#FECB00</color>
+
+    <!-- Voice of Vodafone colors-->
+    <color name="vodafone_voice_circle_op_40">#66FFFFFF</color>
+    <color name="vodafone_voice_circle_white">#FFFFFF</color>
+    <color name="vodafone_voice_red_line">#E60000</color>
+
+    <!--Usage dial-->
+    <color name="circle_stroke_white">#FFFFFF</color>
+
+    <!--Scroll(fixed header)-->
+    <color name="scroll_black_background_op_80">#CC000000</color>
+    <color name="scroll_black_background_op_45">#73000000</color>
+
+    <!--Side menu-->
+    <color name="side_menu_icon_white">#FFFFFF</color>
+    <color name="side_menu_gray_stroke">#9d9d9d</color>
+
+    <!--Overlays-->
+    <color name="overlay_background">#333333</color>
+    <color name="overlay_white_close_icon">#FFFFFF</color>
+    <color name="overlay_background_translucent">#5d4d4d</color>
+    <color name="overlay_grey_view">#707070</color>
+
+    <!--Swipe to delete-->
+    <color name="delete_btn_light_gray">#CCCCCC</color>
+    <color name="delete_icon_btn_gray">#999999</color>
+    <color name="delete_btn_text_dark_gray">#666666</color>
+
+    <!--Pull and refresh-->
+    <color name="pull_refresh_background">#222222</color>
+    <color name="pull_refresh_circle">#4A4D4E</color>
+
+    <!--Nudges-->
+    <color name="nudge_dark_gray_background">#333333</color>
+    <color name="nudge_close_icon_white">#FFFFFF</color>
+
+    <!--Cards-->
+    <color name="card_background_white">#FFFFFF</color>
+    <color name="card_background_gray">#ebebeb</color>
+    <color name="card_stroke_light_gray">#CCCCCC</color>
+    <color name="card_circle_icon_red">#E60000</color>
+    <color name="card_circle_icon_gray">#EBEBEB</color>
+    <color name="card_signpost_grey_line">#4A4D4E</color>
+    <color name="card_signpost_chevron_red">#E60000</color>
+    <color name="card_signpost_avatar_circle">#333333</color>
+    <color name="card_title_purple">#5E2750</color>
+    <color name="support_card_bottom_background">#E3E3E3</color>
+
+    <!--Search results-->
+    <color name="results_dark_gray_background">#4A4D4E</color>
+
+    <!--Product cards-->
+    <color name="product_cards_red_color_primary">#E60000</color>
+    <color name="product_cards_red_color_secondary">#33E60000</color>
+    <color name="product_cards_gray_tertiary">#CCCCCC</color>
+
+    <color name="product_cards_payg_primary">#990000</color>
+    <color name="product_cards_payg_secondary_op_20">#33990000</color>
+
+    <color name="product_card_primary_purple">#5E2750</color>
+    <color name="product_card_secondary_purple_op_20">#335E2750</color>
+
+    <color name="product_card_primary_dark_blue">#007C92</color>
+    <color name="product_card_secondary_dark_blue_op_20">#33007C92</color>
+
+
+    <!--Need revision in color code!  #00BOCA - wrong code -->
+    <color name="product_card_primary_oceanblue">#00B0CA</color>
+    <color name="product_card_secondary_oceanblue_op_20">#3300B0CA</color>
+
+    <color name="product_card_purple_stroke">#5E2750</color>
+    <color name="product_card_purple__light_purple_stroke">#DFD4DC</color>
+    <color name="product_card_purple__light_gray_stroke">#CCCCCC</color>
+
+    <!--Second level pages -->
+    <color name="drop_shadow_black_op_45">#73000000</color>
+    <color name="drop_shadow_black_op_35">#59000000</color>
+
+    <!-- Cards -  Your messages-->
+    <color name="red_color_message_circle">#E60000</color>
+    <color name="call_details_send_report_tittle_color">#c084c1</color>
+    <color name="call_details_send_report_tittle_background">#ebebeb</color>
+
+    <!--SwitchButton-->
+    <color name="ksw_md_ripple_normal">#1E000000</color>
+    <color name="ksw_md_ripple_checked">#33019285</color>
+    <color name="ksw_md_solid_shadow">#33000000</color>
+    <color name="ksw_md_solid_normal">#ECECEC</color>
+    <color name="ksw_md_solid_checked">#028091</color>
+    <color name="ksw_md_solid_disable">#FFFFFF</color>
+    <color name="ksw_md_solid_checked_disable">#aaaaaa</color>
+
+    <!--Chart colors-->
+    <color name="blue_chart_header">#FF3CB0C8</color>
+
+    <!--Card chart colors-->
+    <color name="blue_chart_bottom_color">#0f7180</color>
+    <color name="blue_chart_top_color">#1cb8cf</color>
+    <color name="purple_chart_color">#9c2aa0</color>
+    <color name="chart_grid_color">#f3f3f3</color>
+
+    <!--Retention-->
+    <color name="purple_title_color">#800080</color>
+
+    <!--Beo Activation Background-->
+    <color name="beo_activation_background">#343434</color>
+
+    <!--Beo Incompatible Offer View Background-->
+    <color name="beo_incompatible_offer_view_background">#4a4d4e</color>
+
+    <!--Active Services image Color-->
+    <color name="active_services_icon_green_bg">#86be41</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="background_black">#000000</color>
+    <color name="background_gray_lightest">#F3F3F9</color>
+    <color name="background_gray_light">#BFBFBF</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="background_navy">#353556</color>
+    <color name="background_gray">#BDBDBD</color>
+    <color name="background_blue">#202089</color>
+    <color name="background_gray_darkest">#82898D</color>
+    <color name="stroke_blue_lightest">#E8E8F3</color>
+    <color name="selector_black_pressed">#1F000000</color>
+    <color name="text_navy">#353556</color>
+    <color name="text_navy_transparent_50">#80353556</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_gray_darkest">#82898D</color>
+    <color name="text_black">#000000</color>
+    <color name="text_pink">#F21E75</color>
+    <color name="text_blue">#202089</color>
+    <color name="text_blue_lightest">#AAAAFF</color>
+    <color name="roaming_active_background">#007e92</color>
+    <color name="roaming_in_active_background">#999999</color>
+
+    <color name="roaming_tariffes_background">#4a4d4e</color>
+
+    <color name="black_bakground_storage_option">#4b4e4f</color>
+
+    <color name="expandable_list_view_background">#f3f4f4</color>
+
+    <color name="webview_back_button_disabled">#e3e3e3</color>
+    <color name="webview_back_button_enabled">#e60000</color>
+
+    <color name="green_tax_price">#8dc21b</color>
+
+    <color name="rvSeparatorColor">@color/grey_300</color>
+    <color name="ion_grey">#cccccc</color>
+    <color name="ion_focus">#00b0ca</color>
+    <color name="roaming_offer_name">#494d4e</color>
+    <color name="roaming_offer_cost">#760576</color>
+</resources>
+

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Semi-transparent layout-->
+    <LinearLayout
+        android:id="@+id/confirm_profile_step1_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:animateLayoutChanges="true"
+        android:background="@color/scroll_black_background_op_45"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/semitransparent_container_pading"
+        android:paddingLeft="@dimen/semitransparent_container_pading"
+        android:paddingRight="@dimen/semitransparent_container_pading"
+        android:paddingTop="@dimen/semitransparent_container_pading"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/more_text_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/confirm_profile_first_step_page_tittle_label"
+                android:textColor="@color/whiteNormalTextColor"
+                android:textSize="@dimen/login_page_labels_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+        </LinearLayout>
+
+        <!-- Phone-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin"
+            android:orientation="vertical">
+
+            <!--Invalid Phone Message-->
+            <LinearLayout
+                android:id="@+id/invalid_phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/error_message_border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_alert" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/errorTextMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register_error_message_invalid_phone_number"
+                        android:textColor="@color/whiteNormalTextColor"
+                        android:textSize="@dimen/login_page_labels_text_size" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/triangle" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_input_phone_label"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:textSize="@dimen/login_page_labels_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+            </LinearLayout>
+
+            <!-- Phone Input-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+                    android:id="@+id/phone_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_page_view_elements_height"
+                    android:background="@drawable/default_input_border"
+                    android:hint="@string/confirm_profile_telephone_number_hint"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:maxLines="1"
+                    android:textColorHint="@color/grey_500"
+                    android:textSize="@dimen/login_page_labels_text_size"
+                    customAttrs:type="vfPhone"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Email-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin"
+            android:orientation="vertical">
+
+            <!--Invalid Email Message-->
+
+            <LinearLayout
+                android:id="@+id/invalid_email_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/error_message_border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_alert" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/confirm_profile_email_error_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register_error_message_email_address"
+                        android:textColor="@color/whiteNormalTextColor"
+                        android:textSize="@dimen/login_page_labels_text_size" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/triangle" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_view_margin">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_input_email_address_label"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:textSize="@dimen/login_page_labels_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+            </LinearLayout>
+
+
+            <!-- Email Input-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/login_page_vertical_layout_margin"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+                    android:id="@+id/email_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/login_page_view_elements_height"
+                    android:background="@drawable/default_input_border"
+                    android:hint="@string/register_input_email_address_hint"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:maxLines="1"
+                    android:textColorHint="@color/grey_500"
+                    customAttrs:type="email"
+                    android:textSize="@dimen/login_page_labels_text_size"/>
+            </LinearLayout>
+
+            <!-- Invalid Terms And Conditions Message -->
+
+            <LinearLayout
+                android:id="@+id/invalid_checkbox_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/error_message_border"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_alert" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register_error_message_terms_checkbox"
+                        android:textColor="@color/whiteNormalTextColor"
+                        android:textSize="@dimen/login_page_labels_text_size" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/triangle" />
+
+
+            </LinearLayout>
+
+
+            <!-- Terms And Conditions Checkbox Input-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                    <CheckBox
+                        android:id="@+id/terms_and_conditions_checkbox"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:button="@drawable/terms_and_conditions_checkbox_selector"
+                        android:gravity="center_vertical" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/terms_and_conditions_checkbox_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/whiteNormalTextColor"
+                        android:textSize="@dimen/login_page_labels_text_size"
+                        customAttrs:vodafoneTextStyle="vodafoneRG" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Second Step Button -->
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/confirm_profile_second_step_button"
+            android:layout_width="match_parent"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/register_button_next_step_label"
+            style="@style/OverlayPrimaryButton"/>
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/confirm_profile_dismiss_button"
+            android:layout_width="match_parent"
+            android:textAllCaps="false"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_profile_dialog_positive"
+            style="@style/OverlaySecondaryButton"/>
+
+        <!-- Dismiss Step Button -->
+
+    </LinearLayout>
+
+</ScrollView>

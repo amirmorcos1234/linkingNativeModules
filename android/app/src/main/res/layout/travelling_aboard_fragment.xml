@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:name="ro.vodafone.mcare.android.ui.fragments.travelingAboard.TravellingAbroadFragment">
+
+    <!--Content Container-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/general_background_light_gray"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/country_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Bine ai venit în Franta"
+            android:textColor="@color/purple"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <ro.vodafone.mcare.android.card.travelling.RoamingStatusCard
+            android:id="@+id/roaming_activation_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/country_tittle" />
+
+
+        <RelativeLayout
+            android:id="@+id/roaming_tarrifes_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/roaming_activation_card"
+            android:layout_marginTop="0dp"/>
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/offers_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/roaming_tarrifes_container"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/offers_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="28dp" />
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/recommended_offer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/offers_layout" />
+        </android.support.design.widget.CoordinatorLayout>
+
+
+        <ro.vodafone.mcare.android.ui.fragments.travelingAboard.TravellingRomaingOptionsViewGroup
+            android:id="@+id/active_options_groupview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/offers_container"
+            android:visibility="invisible">
+        </ro.vodafone.mcare.android.ui.fragments.travelingAboard.TravellingRomaingOptionsViewGroup>
+
+        <TextView
+            android:id="@+id/travelling_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/active_options_groupview"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="where are you going ????"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/button_text_size" />
+
+        <ro.vodafone.mcare.android.card.travelling.RoamingCountryInputCard
+            android:id="@+id/country_input_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/travelling_question" />
+
+        <TextView
+            android:id="@+id/more_info_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/country_input_card"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="More info pls"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/button_text_size" />
+
+        <RelativeLayout
+            android:id="@+id/travelling_aboad_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/more_info_label"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="13dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

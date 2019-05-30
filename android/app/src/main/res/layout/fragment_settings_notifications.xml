@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/general_background_light_gray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+            android:background="@drawable/border_shadow"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/default_margin_horizontal"
+            android:layout_marginRight="@dimen/default_margin_horizontal"
+            android:layout_marginTop="@dimen/default_margin_horizontal"
+            android:paddingBottom="@dimen/default_padding_vertical"
+            android:paddingLeft="@dimen/default_padding_horizontal"
+            android:paddingRight="@dimen/default_padding_horizontal"
+            android:paddingTop="@dimen/default_padding_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/pay_bill_white_color"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/linearLayout"
+                        android:layout_alignParentEnd="true"
+                        android:id="@+id/linearLayout4"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <ro.vodafone.mcare.android.widget.SwitchButton.SwitchButton
+                        android:id="@+id/notificationCardButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/Color1SwitchStyle"
+
+                        android:layout_alignParentTop="true"
+                        android:layout_toStartOf="@+id/linearLayout4" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true">
+
+                        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                            android:id="@+id/notificationTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DEFAULT TEXT"
+                            android:textColor="@color/pay_bill_bold_text_color"
+                            android:textSize="@dimen/pay_bill_text_size"
+                            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- Separator line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_container_layout_margin">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/separator_line_height"
+                    android:background="@color/pay_bill_separator_line_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/pay_bill_text_margin"
+                        android:paddingBottom="16dp"
+                        android:text="@string/notifications_message1"
+                        android:textColor="@color/pay_bill_bold_text_color"
+                        android:textSize="@dimen/settings_page_about_size"
+                        customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/pay_bill_text_margin"
+                        android:text="@string/notifications_message2"
+                        android:textColor="@color/pay_bill_bold_text_color"
+                        android:textSize="@dimen/settings_page_about_size"
+                        customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/voucher_notification_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+            android:background="@drawable/border_shadow"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/default_margin_horizontal"
+            android:layout_marginRight="@dimen/default_margin_horizontal"
+            android:layout_marginTop="@dimen/default_margin_horizontal"
+            android:paddingBottom="@dimen/default_padding_vertical"
+            android:paddingLeft="@dimen/default_padding_horizontal"
+            android:paddingRight="@dimen/default_padding_horizontal"
+            android:paddingTop="@dimen/default_padding_vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/pay_bill_white_color"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                >
+
+
+                <ro.vodafone.mcare.android.widget.SwitchButton.SwitchButton
+                    android:id="@+id/notificationLoyaltyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/Color1SwitchStyle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"/>
+
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/notificationLoyaltyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vodafone XXXXX"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    android:textSize="@dimen/pay_bill_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"/>
+
+
+
+            </RelativeLayout>
+
+            <!-- Separator line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_container_layout_margin">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/separator_line_height"
+                    android:background="@color/pay_bill_separator_line_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/loyalty_notifications_description_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/pay_bill_text_margin"
+                        android:paddingBottom="16dp"
+                        android:text="Bifând această opțiune, vei primi notificări privind ultimele oferte, recomandări și mesaje relevante din Programul XXXXX, direct pe pagina principală a telefonului. Debifând această opțiune, vei primi în continuare notificări generale din aplicația My Vodafone."
+                        android:textColor="@color/pay_bill_bold_text_color"
+                        android:textSize="@dimen/settings_page_about_size"
+                        customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

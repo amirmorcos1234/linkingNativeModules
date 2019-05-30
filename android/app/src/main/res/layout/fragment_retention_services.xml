@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_background_light_gray"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/general_background_light_gray"
+        android:layout_height="match_parent">
+        <ro.vodafone.mcare.android.ui.views.vodafoneSpinner.VodafoneSpinner
+            customAttrs:layout_widthPercent="60%"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="13dp"
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:visibility="visible"
+            customAttrs:textTint="@color/dark_gray_text_color"
+            customAttrs:defaultValue="Sortare dupa pret">
+        </ro.vodafone.mcare.android.ui.views.vodafoneSpinner.VodafoneSpinner>
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:layout_width="match_parent"
+            android:text="Filtrare"
+            android:id="@+id/filter_button"
+            style="@style/CardTertiaryButton"
+            android:textAllCaps="false"
+            android:layout_height="44dp"
+            android:layout_toEndOf="@+id/spinner"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="13dp" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/card_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="80dp"
+            android:layout_below="@+id/filter_button">
+        </LinearLayout>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+
+</android.support.percent.PercentRelativeLayout>

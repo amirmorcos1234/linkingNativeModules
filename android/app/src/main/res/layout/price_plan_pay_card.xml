@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/tools"
+    android:id="@+id/general_card_group_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <ro.vodafone.mcare.android.ui.views.textviews.AutoResizeTextView
+        android:id="@+id/card_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:lines="1"
+        android:text="Oferte pentru tine"
+        android:textColor="@color/blackNormal"
+        android:textSize="20sp"
+        font:vodafoneTextStyle="3" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/card_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ai produse sau servicii aduagate in cos"
+        android:textColor="@color/blackNormal"
+        android:textSize="18sp"
+        font:vodafoneTextStyle="vodafoneRG" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/card_primaryButton"
+            style="@style/CardPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/general_margin"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="@dimen/general_margin"
+            android:text="Vezi oferta abonamente" />
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/card_secondaryButton"
+            style="@style/OverlaySecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/general_margin"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="@dimen/general_margin"
+            android:text="Vezi oferta telefoane" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

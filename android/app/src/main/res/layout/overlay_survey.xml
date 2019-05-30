@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/general_margin"
+        android:background="#333333">
+        <RelativeLayout
+            android:id="@+id/survey_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:layout_marginLeft="@dimen/general_margin"
+            android:layout_marginRight="@dimen/general_margin">
+
+            <ImageView
+                android:id="@+id/survey_x_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:src="@drawable/close" />
+
+
+            <!--Texts container-->
+            <RelativeLayout
+                android:id="@+id/survey_texts_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/survey_x_close"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/survey_title_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20sp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="20dp"/>
+
+                <TextView
+                    android:id="@+id/survey_message_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/survey_title_label"
+                    android:textSize="15sp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"/>
+
+            </RelativeLayout>
+
+            <!--Button Container-->
+            <LinearLayout
+                android:id="@+id/survey_buttons_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/survey_texts_container"
+                android:layout_marginTop="40dp"
+
+                >
+
+                <Button
+                    android:id="@+id/survey_no_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:textAllCaps="false"
+                    android:textAlignment="center"
+                    style="@style/CardSecondaryButton"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="0dp" />
+
+                <Button
+                    android:id="@+id/survey_yes_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textSize="15sp"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center_vertical"
+                    style="@style/CardPrimaryButton"
+                    android:layout_marginEnd="0dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

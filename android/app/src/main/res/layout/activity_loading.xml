@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ro.vodafone.mcare.android.ui.activities.LoadingActivity">
+    <ImageView
+        android:id="@+id/splashscreen"
+        style="@style/ImageView.VodafoneIcon"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/loadingContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.AutoResizeTextView
+            android:id="@+id/loadingTextView"
+            android:text="@string/onboarding_configuring_text"
+            android:textSize="26sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/whiteNormalTextColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:layout_above="@+id/progress_view"/>
+        <ProgressBar
+            android:id="@+id/progress_view"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:indeterminateBehavior="cycle"
+            android:indeterminate="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerInParent="true"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

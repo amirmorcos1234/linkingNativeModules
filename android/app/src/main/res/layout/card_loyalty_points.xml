@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/loyalty_total_received"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/loyalty_points_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/inside_card_view_element_vertical_margin"
+            android:layout_centerVertical="true"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:layout_toStartOf="@+id/loyalty_points">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/loyalty_total_points_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loyalty_points"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="@dimen/medium_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/loyalty_last_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loyalty_total_points_label"
+                android:text="Ultima actualizare:"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="@dimen/small_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/loyalty_total_points_date"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/dark_gray_text_color"
+                customAttrs:vodafoneTextStyle="vodafoneRG"
+                android:layout_below="@id/loyalty_last_update"
+                android:layout_alignStart="@id/loyalty_last_update"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/loyalty_points_container"
+            android:background="?android:attr/listDivider"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/loyalty_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:paddingTop="14dp"
+            android:layout_marginEnd="35dp"
+            android:text="9999p"
+            android:textColor="@color/dark_gray_text_color"
+            android:textSize="@dimen/medium_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+    </RelativeLayout>
+
+    <ro.vodafone.mcare.android.ui.views.ExpandableAdapterBackedLinearLayout
+        android:id="@+id/loyalty_points_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/card_background_white"
+        android:childDivider="@color/expandable_list_view_background"
+        >
+
+    </ro.vodafone.mcare.android.ui.views.ExpandableAdapterBackedLinearLayout>
+
+
+</LinearLayout>

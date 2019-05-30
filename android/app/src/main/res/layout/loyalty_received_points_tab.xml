@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/card_background_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/loyalty_total_received"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/total_points_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_vertical_margin"
+            android:layout_marginBottom="@dimen/card_vertical_margin"
+            android:layout_marginStart="@dimen/inside_card_view_element_vertical_margin"
+            android:layout_marginEnd="@dimen/inside_card_view_element_vertical_margin"
+            android:textColor="@color/dark_gray_text_color"
+            android:textSize="@dimen/medium_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/loyalty_received_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/inside_card_view_element_vertical_margin"
+            android:text="9999p"
+            android:textColor="@color/dark_gray_text_color"
+            android:textSize="@dimen/medium_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+    </RelativeLayout>
+
+    <ro.vodafone.mcare.android.ui.views.AdapterBackedLinearLayout
+        android:id="@+id/loyalty_received_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

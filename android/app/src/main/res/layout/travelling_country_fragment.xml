@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--Content Container-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/general_background_light_gray"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <ro.vodafone.mcare.android.card.travelling.RoamingStatusCard
+            android:id="@+id/roaming_status_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/country_roaming_tarrifes_content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/roaming_status_card"
+            android:layout_marginTop="0dp" />
+
+        <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/offers_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/country_roaming_tarrifes_content_container"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/offers_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="28dp" />
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/recommended_offer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_anchor="@id/offers_layout" />
+        </android.support.design.widget.CoordinatorLayout>
+
+        <TextView
+            android:id="@+id/country_travelling_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/offers_container"
+            android:layout_marginLeft="@dimen/card_horizontal_padding"
+            android:layout_marginRight="@dimen/card_horizontal_padding"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:text="where are you going ????"
+            android:textColor="@color/purple"
+            android:textSize="@dimen/pay_bill_text_size" />
+
+        <ro.vodafone.mcare.android.card.travelling.RoamingCountryInputCard
+            android:id="@+id/roaming_country_input_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/country_travelling_question" />
+
+    </RelativeLayout>
+</LinearLayout>

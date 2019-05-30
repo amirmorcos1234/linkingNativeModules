@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="6dp"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1a1b1b"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/current_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/whiteNormalTextColor"
+            android:text="Actualizat la : 7 ianuarie 2017"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="10dp"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/cost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textColor="@color/whiteNormalTextColor"
+            android:text="234 Lei"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:layout_marginBottom="10dp"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/bill_due_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/whiteNormalTextColor"
+            android:text="Scadenţă factură: 27 ianuarie 2017"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:layout_marginBottom="16dp"/>
+
+
+        <LinearLayout
+            android:id="@+id/is_passed_due_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_height="@dimen/separator_line_height"
+                android:layout_width="match_parent"
+                android:background="#515555"
+                android:layout_marginBottom="16dp"/>
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/is_passed_due_date_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/whiteNormalTextColor"
+                android:text="Plătește la timp pentru a evita suspendarea serviciilor tale"
+                customAttrs:vodafoneTextStyle="vodafoneRG"
+                android:layout_marginBottom="16dp"/>
+
+        </LinearLayout>
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/pay_bill_button"
+            style="@style/CardPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/paybill"
+            android:textSize="@dimen/button_text_size"
+            android:enabled="true"
+            customAttrs:vodafoneTextStyle ="vodafoneRG"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

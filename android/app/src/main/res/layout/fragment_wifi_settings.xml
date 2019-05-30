@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Semi-transparent layout-->
+    <LinearLayout
+        android:id="@+id/wifi_settings_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/semitransparent_layout_color"
+        android:layout_marginLeft="@dimen/login_page_fragment_horisontal_margin"
+        android:layout_marginRight="@dimen/login_page_fragment_horisontal_margin"
+        android:layout_marginBottom="@dimen/login_page_vertical_layout_margin"
+        android:paddingLeft="@dimen/semitransparent_container_pading"
+        android:paddingRight="@dimen/semitransparent_container_pading"
+        android:paddingTop="@dimen/semitransparent_container_pading"
+        android:paddingBottom="@dimen/semitransparent_container_pading"
+        android:animateLayoutChanges="true"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/skip_usual_registration_precess_label"
+                android:textColor="@color/whiteNormalTextColor"
+                android:textSize="@dimen/login_page_labels_text_size"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/vodafone_remember_your_details_label"
+                android:textColor="@color/whiteNormalTextColor"
+                android:textSize="@dimen/login_page_labels_text_size"/>
+
+        </LinearLayout>
+
+        <!--Turn wifi off red button-->
+
+           <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+               android:id="@+id/wifi_setting_button"
+               style="@style/VFNudgePrimaryButton"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="@string/wifi_settings_button_label"
+               android:textSize="@dimen/login_page_labels_text_size"
+               android:layout_marginBottom="@dimen/login_page_vertical_layout_margin"
+               android:enabled="true"
+               customAttrs:vodafoneTextStyle ="vodafoneRG"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/dont_wont_turn_off_wifi_label"
+                android:textColor="@color/whiteNormalTextColor"
+                android:textSize="@dimen/login_page_labels_text_size"/>
+
+        </LinearLayout>
+
+        <!--Login and register buttons-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin">
+
+            <!-- Login Button -->
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/login_button"
+                style="@style/OverlayTertiaryButton"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/loginButtonLabel"
+
+                android:textSize="14sp"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <!-- Register Button -->
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/register_button"
+                style="@style/OverlayTertiaryButton"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:text="@string/register_button_label"
+                android:layout_marginEnd="0dp"
+                android:textSize="14sp"
+                android:gravity="center"
+                customAttrs:vodafoneTextStyle ="vodafoneRG"/>
+
+
+        </LinearLayout>
+
+        <!-- Separator line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_height="@dimen/separator_line_height"
+                android:layout_width="match_parent"
+                android:background="@color/separator_line_color"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

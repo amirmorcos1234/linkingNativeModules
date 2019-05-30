@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/parent_viewgroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ro.vodafone.mcare.android.ui.header.NavigationHeader
+            android:id="@+id/navigation_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:id="@+id/billing_overview_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/card_background_gray"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/total_payment_card_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Total de plată"
+                android:textColor="@color/purple"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <ro.vodafone.mcare.android.card.totalPayment.TotalPaymentCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+            </ro.vodafone.mcare.android.card.totalPayment.TotalPaymentCard>
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/card_background_gray"
+                android:orientation="vertical"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:visibility="gone">
+
+                <ro.vodafone.mcare.android.ui.fragments.settings.SettingsCardArrow
+                    android:id="@+id/payment_agreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ro.vodafone.mcare.android.ui.fragments.settings.SettingsCardArrow>
+
+                <ro.vodafone.mcare.android.ui.fragments.settings.SettingsCardArrow
+                    android:id="@+id/payment_confirmation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </ro.vodafone.mcare.android.ui.fragments.settings.SettingsCardArrow>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/no_bill_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_shadow"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/default_padding_vertical"
+                android:paddingLeft="@dimen/default_padding_horizontal"
+                android:paddingRight="@dimen/default_padding_horizontal"
+                android:paddingTop="@dimen/default_padding_vertical"
+                android:layout_marginLeft="@dimen/default_margin_horizontal"
+                android:layout_marginRight="@dimen/default_margin_horizontal"
+                android:layout_marginTop="@dimen/default_margin_vertical"
+                android:layout_marginBottom="@dimen/default_margin_vertical"
+                android:visibility="gone">
+
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/error_circle"
+                            android:layout_width="55dp"
+                            android:layout_height="55dp"
+                            android:src="@drawable/info_circle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="20dp">
+
+                        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                            android:id="@+id/error_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/dark_gray_text_color"
+                            android:textSize="@dimen/large_text_size"
+                            android:text="Momentan nu există facturi emise pe cont"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/previvios_bills_card_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Facturi anterioare"
+                android:textColor="@color/purple"
+                android:textSize="20sp" />
+
+            <ro.vodafone.mcare.android.card.billHistory.BillHistoryViewGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ro.vodafone.mcare.android.card.billHistory.BillHistoryViewGroup>
+
+            <ro.vodafone.mcare.android.card.billingGraphSection.BillingGraphCard
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ro.vodafone.mcare.android.card.billingGraphSection.BillingGraphCard>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</ScrollView>

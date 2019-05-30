@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pay_own_bill_button"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pay_bill_option_page_button_height"
+    android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+    android:background="@drawable/border_shadow"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <View
+        android:layout_width="@dimen/pay_bill_option_page_button_line_weith"
+        android:layout_height="match_parent"
+        android:background="@color/pay_bill_option_button_line_color" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pay_bill_white_color"
+        android:paddingLeft="@dimen/default_padding_horizontal"
+        android:paddingRight="@dimen/default_padding_horizontal">
+
+        <LinearLayout
+            android:id="@+id/textContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/settingsCardButton"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/cardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="DEFAULT TEXT"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+
+            <ro.vodafone.mcare.android.ui.views.textviews.AutoResizeTextView
+                android:id="@+id/cardSubtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MODIFY IN FRAG sdvsdv sdfdsf sdfsdf sdf sdfsfdsdf sdfsdf"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+
+        <ro.vodafone.mcare.android.widget.SwitchButton.SwitchButton
+            android:id="@+id/settingsCardButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:theme="@style/Color1SwitchStyle" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/general_background_light_gray">
+
+    <ro.vodafone.mcare.android.card.VodafoneGenericCard
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/pay_bill_container_horizontal_pading"
+            android:paddingRight="@dimen/pay_bill_container_horizontal_pading">
+
+            <ro.vodafone.mcare.android.ui.views.CardErrorLayout
+                android:id="@+id/error_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="0dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/title_section_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/section_title_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="Option name"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="18sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/offer_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="default"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="16sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cost_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/cost_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="Option cost"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="18sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/offer_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="default"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="16sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contract_duration_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/duration_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="Perioada contractuală"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="18sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD"
+                    android:visibility="gone"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/duration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_services_details_start_date"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_services_details_end_date"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contract_period_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/contract_period_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="Perioada contractuală"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/contract_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/contract_details_duration_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:visibility="visible"
+                android:orientation="vertical">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/contract_details_valability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="Contract valabil de la:"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="18sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/contract_details_valability_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/contract_details_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perioada contractuală expiră la:"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/contract_details_period_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/contract_details_expired"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </ro.vodafone.mcare.android.card.VodafoneGenericCard>
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/go_to_my_offers"
+        style="@style/CardPrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:text="Ofertele mele"
+        customAttrs:vodafoneTextStyle="vodafoneRG"
+        android:visibility="gone"/>
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+    android:id="@+id/go_to_accepted_offers"
+    style="@style/CardSecondaryButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+    android:layout_marginStart="14dp"
+    android:layout_marginEnd="14dp"
+    android:text="Vezi oferte acceptate"
+    customAttrs:vodafoneTextStyle="vodafoneRG"
+    android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/expandable_cards_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    </LinearLayout>
+
+</LinearLayout>

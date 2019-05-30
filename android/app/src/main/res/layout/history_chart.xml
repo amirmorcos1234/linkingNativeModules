@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ro.vodafone.mcare.android.widget.charts.GraphHistory xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/graph_view"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    app:egFixedBarWidth="true"
+    app:egBarWidth="7dp"
+    app:egBarMargin="15dp"
+    app:egLegendHeight="30dp"
+    app:barChartColor="@color/blue_chart_header"
+    app:legendColor="@color/grey_300"
+    app:titleText="@string/graph_history_default_title"
+    app:showTitle="true"
+    android:layout_height="wrap_content" />

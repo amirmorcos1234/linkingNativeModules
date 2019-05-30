@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray_background">
+
+    <!--Header Container-->
+    <RelativeLayout
+        android:id="@+id/filter_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/filter_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:src="@drawable/close" />
+
+        <TextView
+            android:id="@+id/filter_reset_filters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filter_close"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Filtre"
+            android:textColor="@color/whiteNormalTextColor"
+            android:textSize="25sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/call_details_filter_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/primaryButton"
+        android:layout_below="@+id/filter_header_container"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+
+        <!--Services Types-->
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/category_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Selectează categoriile"
+            android:textColor="@color/white"
+            android:textSize="19sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/optionsGridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/category_title_text_view"
+            android:layout_above="@+id/optionsGridContainer"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:id="@+id/optionsGridContainer"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/title_optionsGridLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Selectează ofertele"
+                android:textColor="@color/white"
+                android:textSize="19sp" />
+
+            <android.support.v7.widget.GridLayout
+                android:id="@+id/optionsGridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="@dimen/general_half_margin"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"
+                app:alignmentMode="alignBounds"
+                app:columnCount="2"
+                app:rowOrderPreserved="false"
+                app:useDefaultMargins="true">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/grid_layout_firstOptionBtn"
+                    style="@style/FilterSelectionCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_above="@+id/secondaryButton"
+                    android:layout_marginTop="@dimen/general_padding"
+                    android:paddingEnd="@dimen/general_padding"
+                    android:paddingStart="@dimen/general_padding"
+                    android:text="Active"
+                    app:layout_columnWeight="1" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/grid_layout_secondOptionBtn"
+                    style="@style/FilterSelectionCheckBox"
+                    android:layout_width="0dp"
+                    android:layout_above="@+id/secondaryButton"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginTop="@dimen/general_padding"
+                    android:paddingEnd="@dimen/general_margin"
+                    android:paddingStart="@dimen/general_padding"
+                    android:text="Expirate"
+                    app:layout_columnWeight="1" />
+            </android.support.v7.widget.GridLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <!--Button Container-->
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/primaryButton"
+        style="@style/OverlayPrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/secondaryButton"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:enabled="false"
+        android:text="Aplică filtre" />
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/secondaryButton"
+        style="@style/OverlaySecondaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:text="Resetează" />
+</RelativeLayout>

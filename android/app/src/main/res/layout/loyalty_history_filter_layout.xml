@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay_background"
+    android:fillViewport="true"
+    android:paddingBottom="@dimen/overlay_regular_border"
+    android:paddingLeft="@dimen/overlay_regular_border"
+    android:paddingRight="@dimen/overlay_regular_border"
+    android:paddingTop="@dimen/overlay_regular_border">
+
+    <RelativeLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/close_overlay"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/close_48_white" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="45dp"
+            android:text="@string/loyalty_filter"
+            android:textAlignment="center"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/overlay_text_title_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttons_container"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/overlay_second_border"
+            android:paddingEnd="@dimen/overlay_second_border">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/period_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Perioada"
+                android:textColor="@color/text_white"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:id="@+id/period_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/period_text_view"
+                android:layout_marginTop="20dp">
+
+                <ro.vodafone.mcare.android.custom.CustomEditText
+                    android:id="@+id/filter_text_from"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/view2"
+                    android:paddingStart="10dp"
+                    android:hint="Alege perioada"
+                    android:text="Button_From"
+                    android:textSize="16sp"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textColorHint="@color/light_gray_text_color" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true" />
+
+                <ro.vodafone.mcare.android.custom.CustomEditText
+                    android:id="@+id/filter_text_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@id/view2"
+                    android:textSize="16sp"
+                    android:paddingStart="10dp"
+                    android:hint="Alege perioada"
+                    android:text="Button_To"
+                    android:textColor="@color/light_gray_text_color"
+                    android:textColorHint="@color/light_gray_text_color" />
+
+            </RelativeLayout>
+
+            <ro.vodafone.mcare.android.ui.fragments.loyaltyPoints.LoyaltyPointsFilter
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/period_buttons"
+                android:layout_marginTop="20dp" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:layout_alignParentBottom="true">
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/apply_filters_button"
+            style="@style/OverlayPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/call_details_apply_filter_button_label"
+            android:textSize="@dimen/button_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/reset_filters_button"
+            style="@style/OverlaySecondaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/apply_filters_button"
+            android:layout_marginBottom="10dp"
+            android:text="@string/loyalty_cancel_button"
+            android:textSize="@dimen/button_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+

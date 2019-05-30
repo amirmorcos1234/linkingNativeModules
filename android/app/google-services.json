@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "80932561719",
+    "firebase_url": "https://myvodafone-447d6.firebaseio.com",
+    "project_id": "myvodafone-447d6",
+    "storage_bucket": "myvodafone-447d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80932561719:android:b6378e19615a2a30",
+        "android_client_info": {
+          "package_name": "ro.vodafone.mcare.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "80932561719-12jeov5mmmgf5imbv5lq9728ocu2ggg3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ro.vodafone.mcare.android",
+            "certificate_hash": "1bd4aa66d4658061013623e15c38852769c1886a"
+          }
+        },
+        {
+          "client_id": "80932561719-738uke73sl6vmc685hi08ifj9pf2p9o6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlQjdTZzhJZDhXdYns_ka6FSx-XGWBR0Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "80932561719-738uke73sl6vmc685hi08ifj9pf2p9o6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "80932561719-jkjakjt80et03env1dnoft8f9fog2rmq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ro.vodafone.myvodafone",
+                "app_store_id": "468772675"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

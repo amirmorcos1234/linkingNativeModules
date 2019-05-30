@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/overlay_regular_border"
+    android:paddingLeft="@dimen/overlay_regular_border"
+    android:paddingRight="@dimen/overlay_regular_border"
+    android:paddingTop="@dimen/overlay_regular_border"
+    android:background="@color/overlay_background"
+    >
+
+    <!--Header-->
+    <RelativeLayout
+        android:id="@+id/select_dialog_tittle_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/overlayDismissButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:src="@drawable/close_icon" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp"
+            android:weightSum="1">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/overlayTitle"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="DEFAULT TITLE"
+                android:textColor="@color/pay_bill_white_color"
+                android:textSize="@dimen/overlay_title_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="DEFAULT TEXT"
+                android:textColor="@color/pay_bill_white_color"
+                android:textSize="@dimen/pay_bill_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/txtTimerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/overlay_grey_view"
+            android:visibility="visible">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/txtTimerHour"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/pay_bill_white_color"
+                    android:textSize="@dimen/overlay_title_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="10dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#fff" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/txtTimerMinute"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/pay_bill_white_color"
+                    android:textSize="@dimen/overlay_title_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text=":"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#fff" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/txtTimerSecond"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/pay_bill_white_color"
+                    android:textSize="@dimen/overlay_title_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/buttonKeepOn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginBottom="20dp"
+                style="@style/OverlayPrimaryButton"
+                android:text="@string/overlayButtonkeepOn"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </RelativeLayout >
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/dark_gray_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/call_details_filter_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <!--Header Container-->
+            <RelativeLayout
+                android:id="@+id/filter_header_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/filter_close"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:src="@drawable/close" />
+
+                <TextView
+                    android:id="@+id/filter_reset_filters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/filter_close"
+                    android:textSize="25sp"
+                    android:layout_marginTop="20dp"
+                    android:text="Filtre"
+                    android:textColor="@color/whiteNormalTextColor" />
+
+            </RelativeLayout>
+
+            <!--Services Types-->
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:text="Selectează brand-ul"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="19sp"
+                android:textColor="@color/white"/>
+
+            <ro.vodafone.mcare.android.ui.views.nonscrollable.NonScrollAbleGridView
+                android:id="@+id/optionsGridView"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                android:horizontalSpacing="10dp"
+                android:verticalSpacing="10dp"/>
+        </LinearLayout>
+
+    <!--Button Container-->
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/primaryButton"
+        style="@style/OverlayPrimaryButton"
+        android:layout_above="@+id/secondaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="Aplică filtre"
+        android:layout_marginTop="20dp" />
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/secondaryButton"
+        android:layout_marginBottom="20dp"
+        android:text="Toate telefoanele"
+        style="@style/OverlaySecondaryButton"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</ScrollView>
+
+
+

@@ -1,0 +1,149 @@
+{
+  "lastModified": "2018-03-13T07:45:08.057Z",
+  "marketingCloud": {
+    "org": "271622CE52785AC50A490D4D@AdobeOrg"
+  },
+  "target": {
+    "clientCode": "vodafoneromania",
+    "timeout": 5
+  },
+  "audienceManager": {
+    "server": "",
+    "analyticsForwardingEnabled": false,
+    "timeout": 5
+  },
+  "acquisition": {
+    "server": "c00.adobe.com",
+    "appid": "fc60b3c99aee6838da4c0cfab44727028f6b9147ec92d1cc92c9ac07baf9e236"
+  },
+  "analytics": {
+    "rsids": "vodmcarenew",
+    "server": "vodafoneromania.sc.omtrdc.net",
+    "ssl": true,
+    "offlineEnabled": false,
+    "charset": "UTF-8",
+    "lifecycleTimeout": 300,
+    "privacyDefault": "optedin",
+    "batchLimit": 0,
+    "timezone": "+03",
+    "timezoneOffset": 180,
+    "referrerTimeout": 5,
+    "backdateSessionInfo": false,
+    "poi": [
+      [
+        "Vodafone HQ",
+        44.479409,
+        26.102308,
+        50
+      ],
+      [
+        "Promenada",
+        44.4784595,
+        26.1025344,
+        20
+      ]
+    ]
+  },
+  "messages": [
+    {
+      "messageId": "7a158451-28af-4384-8b71-d676a2ac283e",
+      "template": "fullscreen",
+      "payload": {
+        "html": "<!DOCTYPE html><html><head><meta charset=\"utf-8\" /><title></title><style>.ams-message{display:block;font-size:14px;font-family:\"Helvetica Neue\",Helvetica,Arial,sans-serif;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.ams-message a{text-decoration:none}.ams-message-button{position:relative;display:inline-block;white-space:nowrap;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;min-width:20px;line-height:44px;height:44px;padding:0 13px;color:#fff;text-align:center;outline:none;margin:0;background-color:#999;border-style:solid;border-width:0 1px 0 1px;border-color:#999;cursor:pointer;}.ams-message-button::after{content:'';display:block;position:absolute;width:100%;height:1px;background-color:rgba(255,255,255,0.3);top:1px;left:0}.ams-message-button.ams-button-confirm{background-color:#007ccf;border-color:#007ccf;}.ams-message-button.ams-button-confirm:hover,.ams-message-button.ams-button-confirm:active{background-color:#0268a0;border-color:#0268a0}.ams-message-button:hover,.ams-message-button:active{background-color:#666;border-color:#666;}.ams-message-button:hover::after,.ams-message-button:active::after{display:none}.ams-message-button:focus{outline:none}.ams-fullscreen-modal{width:100%;height:100%}.ams-fullscreen-wrapper{position:absolute;top:0;width:100%;height:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:215px 0 130px;overflow:hidden;}.ams-fullscreen-wrapper::before{content:'';display:inline-block;height:100%;vertical-align:middle}.ams-fullscreen-image{position:absolute;top:0;left:0;width:100%;height:195px;-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background-repeat:no-repeat;background-position:center}.ams-fullscreen-text{position:relative;display:inline-block;vertical-align:middle;width:100%;text-align:center;padding:0 44px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word}.ams-fullscreen-title{display:block;font-size:22px;padding-bottom:20px}.ams-fullscreen.is-theme-dark .ams-fullscreen-title{color:#fff}.ams-fullscreen.is-theme-dark .ams-fullscreen-content{color:#c4c4c4}.ams-fullscreen.is-theme-light .ams-fullscreen-title{color:#3a3a3a}.ams-fullscreen.is-theme-light .ams-fullscreen-content{color:#757575}.ams-fullscreen-buttons{position:absolute;bottom:0;left:0;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0 44px 30px}.ams-fullscreen .ams-message-button{position:relative;display:block;width:100%;height:32px;line-height:32px}.ams-fullscreen-confirm{margin-bottom:16px}.ams-fullscreen{width:100%;height:100%;position:absolute;top:0;left:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}.ams-fullscreen.is-modal-true::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(18,17,18,0.4)}.ams-fullscreen.is-modal-true .ams-fullscreen-modal{position:absolute;top:0;left:0;width:auto;height:auto;top:5%;left:10%;right:10%;bottom:5%}.ams-fullscreen.is-modal-true.is-landscape .ams-fullscreen-modal{top:10%;bottom:10%}.ams-fullscreen.has-no-confirm .ams-fullscreen-confirm{display:none !important}.ams-fullscreen.has-no-cancel .ams-fullscreen-cancel{display:none !important}.ams-fullscreen.has-no-cancel .ams-fullscreen-confirm{margin:0 !important}.ams-fullscreen.has-no-image .ams-fullscreen-image{display:none}.ams-fullscreen.has-no-image .ams-fullscreen-wrapper{padding:30px 0 135px}.ams-fullscreen.has-no-image .ams-fullscreen-title{padding-bottom:25px}.ams-fullscreen.is-theme-dark .ams-fullscreen-modal{background-color:#282828}.ams-fullscreen.is-theme-light .ams-fullscreen-modal{background-color:#ededed}.ams-fullscreen.is-landscape .ams-fullscreen-image{height:100%;width:75%;border:none}.ams-fullscreen.is-landscape .ams-fullscreen-wrapper{right:0;width:304px;padding:25px 0 135px;}.ams-fullscreen.is-landscape .ams-fullscreen-wrapper::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%}.ams-fullscreen.is-landscape .ams-fullscreen-title{padding-bottom:25px}.ams-fullscreen.is-landscape.is-theme-dark .ams-fullscreen-wrapper{background:rgba(40,40,40,0.7);}.ams-fullscreen.is-landscape.is-theme-dark .ams-fullscreen-wrapper::before{background:-webkit-linear-gradient(left, rgba(40,40,40,0), #282828 30%, #282828);background:-moz-linear-gradient(left, rgba(40,40,40,0), #282828 30%, #282828);background:-o-linear-gradient(left, rgba(40,40,40,0), #282828 30%, #282828);background:-ms-linear-gradient(left, rgba(40,40,40,0), #282828 30%, #282828);background:linear-gradient(to right, rgba(40,40,40,0), #282828 30%, #282828)}.ams-fullscreen.is-landscape.is-theme-light .ams-fullscreen-wrapper{background:rgba(237,237,237,0.7);}.ams-fullscreen.is-landscape.is-theme-light .ams-fullscreen-wrapper::before{background:-webkit-linear-gradient(left, rgba(237,237,237,0), #ededed 30%, #ededed);background:-moz-linear-gradient(left, rgba(237,237,237,0), #ededed 30%, #ededed);background:-o-linear-gradient(left, rgba(237,237,237,0), #ededed 30%, #ededed);background:-ms-linear-gradient(left, rgba(237,237,237,0), #ededed 30%, #ededed);background:linear-gradient(to right, rgba(237,237,237,0), #ededed 30%, #ededed)}.ams-fullscreen.is-landscape.has-no-image .ams-fullscreen-wrapper{padding:30px 0 118px;right:auto;width:100%}.ams-fullscreen.is-landscape.has-no-image .ams-fullscreen-title{padding-bottom:30px}.ams-fullscreen.is-landscape.has-no-image .ams-fullscreen-buttons{padding-bottom:44px}.ams-fullscreen.is-landscape.has-no-image .ams-message-button{width:38%;width:-webkit-calc(50% - 22px);width:calc(50% - 22px);height:44px;line-height:44px}.ams-fullscreen.is-landscape.has-no-image .ams-fullscreen-confirm{float:left;margin-bottom:0}.ams-fullscreen.is-landscape.has-no-image .ams-fullscreen-cancel{float:right}.ams-fullscreen.is-portrait.is-tablet .ams-fullscreen-text,.ams-fullscreen.is-landscape.is-tablet .ams-fullscreen-text{padding:0 60px}.ams-fullscreen.is-portrait.is-tablet .ams-fullscreen-title,.ams-fullscreen.is-landscape.is-tablet .ams-fullscreen-title{padding-bottom:40px;font-size:48px}.ams-fullscreen.is-portrait.is-tablet .ams-fullscreen-content,.ams-fullscreen.is-landscape.is-tablet .ams-fullscreen-content{font-size:18px}.ams-fullscreen.is-portrait.is-tablet .ams-fullscreen-buttons,.ams-fullscreen.is-landscape.is-tablet .ams-fullscreen-buttons{padding:0 0 60px;text-align:center}.ams-fullscreen.is-portrait.is-tablet .ams-message-button,.ams-fullscreen.is-landscape.is-tablet .ams-message-button{font-size:18px;height:44px;line-height:44px}.ams-fullscreen.is-portrait.is-tablet .ams-fullscreen-image{height:529px}.ams-fullscreen.is-portrait.is-tablet .ams-fullscreen-wrapper{padding:569px 0 144px}.ams-fullscreen.is-portrait.is-tablet .ams-message-button{width:238px;display:inline-block}.ams-fullscreen.is-portrait.is-tablet .ams-fullscreen-confirm{margin:0 60px 0 0}.ams-fullscreen.is-landscape.is-tablet .ams-fullscreen-wrapper{width:40%;padding:40px 0 212px}.ams-fullscreen.is-landscape.is-tablet .ams-fullscreen-title{font-size:32px}.ams-fullscreen.is-landscape.is-tablet .ams-fullscreen-confirm{margin-bottom:24px}.ams-fullscreen.is-landscape.is-tablet .ams-fullscreen-buttons{padding:0 60px 60px}.ams-fullscreen.is-landscape.is-tablet.has-no-image .ams-fullscreen-buttons{padding:0 0 60px}.ams-fullscreen.is-portrait.is-tablet.has-no-image .ams-fullscreen-wrapper{padding:40px 0 144px;width:100%}.ams-fullscreen.is-landscape.is-tablet.has-no-image .ams-fullscreen-wrapper{padding:40px 0 144px;width:100%}.ams-fullscreen.is-landscape.is-tablet.has-no-image .ams-message-button{width:320px;display:inline-block;float:none}.ams-fullscreen.is-landscape.is-tablet.has-no-image .ams-fullscreen-confirm{margin:0 60px 0 0}</style></head><body><div class=\"ams-message ams-fullscreen-theme ams-fullscreen is-theme-dark is-modal-false has-no-image has-no-offlineImageUrl has-no-confirm has-no-destinationLink has-no-url is-portrait is-phone\"><div class=\"ams-fullscreen-modal\"><div class=\"ams-fullscreen-image\" style=\"background-image: url(&#34;&#34;);\"></div><div class=\"ams-fullscreen-wrapper\"><div class=\"ams-fullscreen-text\"><div class=\"ams-fullscreen-title\">Lucram la imbunatatirea sistemelor pentru ca tu sa ai cea mai buna experienta</div><div class=\"ams-fullscreen-content\">Din acest motiv, in perioada 3 februarie, ora 13.00 – 5 februarie, ora 8.00 nu vei putea efectua plati in in MyVodafone, in magazinele Vodafone sau la partenerii nostri. In acest interval vei putea achita factura exclusiv in locatiile Paypoint si doar in baza datelor facturii si a codului de client, primite prin SMS. Vei putea achita online din nou din 5 februarie. Iti multumim pentru intelegere!</div></div><div class=\"ams-fullscreen-buttons\"><a href=\"adbinapp://confirm/?url=\" class=\"ams-fullscreen-confirm ams-message-button ams-button-confirm\"></a><a href=\"adbinapp://cancel\" class=\"ams-fullscreen-cancel ams-message-button\">Renunta</a></div></div></div></div><script>(window.onresize=function(){var d=document,h=d.documentElement,m=d.body.firstChild,s=' ',c=s+m.className+s,w=h.clientWidth,f=' is-phone ',t=' is-tablet ',l=' is-landscape ',p=' is-portrait ';m.className=c.replace(f,s).replace(t,s).replace(l,s).replace(p,s)+(w<768?f:t)+(w>h.clientHeight?l:p).replace(/^\\s+|\\s+$/g,'')})()</script></body></html>\n",
+        "assets": []
+      },
+      "showOffline": true,
+      "showRule": "always",
+      "endDate": 2524730400,
+      "startDate": 0,
+      "audiences": [],
+      "triggers": [
+        {
+          "key": "pageName",
+          "matches": "co",
+          "values": [
+            "mcare:pay bill"
+          ]
+        },
+        {
+          "key": "a.LaunchEvent",
+          "matches": "ex",
+          "values": null
+        }
+      ]
+    },
+    {
+      "messageId": "d4723e44-300e-48dc-ba5b-a58b84527d8e",
+      "template": "fullscreen",
+      "payload": {
+        "html": "<!DOCTYPE html>\n<!--\nOVERVIEW\nThis will cover the best practices and limitations for creating custom message templates and give you the ability to create messages on your own.\n\nJAVASCRIPT\nExternal scripts are not recommended because they will not be available if the device is offline. Scripts should be defined in the document using the appropriate <script> tags and we recommend minifying the source to reduce the total size of the document to save on disk space and download time.\n\nCSS\nExternal style sheets are not recommended because they will not be available if the device is offline. Styles should be defined in the document using the appropriate <style> tags and we recommend minifying the source to reduce the total size of the document to save on disk space and download time. The CSS below is not minified to preserve readability.\n\nIMAGES\nImages that are expected to be displayed within the message should be defined in a custom meta tag(name=ADBMessageAssets). This helps ensure a good experience for users that are presented with the message even when offline or with a slow connection. It enables each device to cache the images ahead of time to support a good experience. Serving images through a CDN is recommended.\n<meta name=\"ADBMessageAssets\" content='[\n\t[ \"http://foo.bar/baz.jpg\", \"fallback.jpg\" ],\n\t[ \"http://foo.bar/nofallback.jpg\" ]\n]' />\nThe original image url should be defined 1st followed by an optional mapping to a local image reference.\n\nCLICK/TOUCH HANDLING\nYour custom HTML page must contain one or both of the following types of links:\nClick-Through\nadbinapp://confirm/?url=http://www.yoursite.com\nThis will close the message and redirect to the URL parameter.\nCancel\nadbinapp://cancel\nThis will close the message.\n\nPREVIEW WINDOW\nThe preview window within Adobe Mobile Services is not a device simulator. There are inconsistencies between the preview window and the devices that the message will be displayed on. It's possible that the preview window will fail to display the message properly, but work as designed on devices. We recommend testing the in app message directly on the targeted devices.\n-->\n<html>\n<head>\n\t<meta charset=\"utf-8\" />\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0\"/>\n\t<meta name=ADBMessageAssets content='[\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-adobe?scl=1\" ],\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-bg-phone-landscape?scl=1\" ],\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-bg-phone-portrait?scl=1\" ],\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-bg-tablet-landscape?scl=1\" ],\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-bg-tablet-portrait?scl=1\" ],\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-text-information-s?scl=1&fmt=png-alpha\" ],\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-text-information-l?scl=1&fmt=png-alpha\" ],\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-button-learn-more-s?scl=1&fmt=png-alpha\" ],\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-button-learn-more-l?scl=1&fmt=png-alpha\" ],\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-button-no-thanks-s?scl=1&fmt=png-alpha\" ],\n\t\t[ \"https://s7d9.scene7.com/is/image/mcmobile/ink-button-no-thanks-l?scl=1&fmt=png-alpha\" ]\n\t]' />\n\t<title></title>\n\t<style>\n\t\thtml,body { margin:0;padding:0;text-align:center;background-color:#E8EAE9;width:100%;height:100%;\n\t\t\t-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none; }\n\t\ta { text-decoration:none; }\n\t\timg { display:none; }\n\t\t.text { position:absolute; }\n\t\t.logo { position:absolute;background:url('https://s7d9.scene7.com/is/image/mcmobile/ink-adobe?scl=1') no-repeat center;background-size:contain;width:123px;height:207px; }\n\t\t.background { position:absolute;background-position:center;background-repeat:no-repeat;background-size:cover;width:100%;top:0px;bottom:0px; }\n\t\t.button-container { position:absolute;bottom:0px;right:0px;left:0px;display:none;background-color:#FFF; }\n\t\t/* Phones landscape */\n\t\t@media only screen and (max-width:767px) and (orientation:landscape) {\n\t\t\t.background { background-image:url('https://s7d9.scene7.com/is/image/mcmobile/ink-bg-phone-landscape?scl=1'); }\n\t\t\t.logo { bottom:0px;left:35px; }\n\t\t\t.button-container { display:block;height:auto;background-color:transparent;left:auto;right:35px;bottom:35px; }\n\t\t\t.button-small { display:block;margin-left:auto;margin-right:auto;margin-top:20px; }\n\t\t}\n\t\t/* Phones portrait */\n\t\t@media only screen and (max-width:767px) and (orientation:portrait) {\n\t\t\t.background { bottom:200px;background-image:url('https://s7d9.scene7.com/is/image/mcmobile/ink-bg-phone-portrait?scl=1'); }\n\t\t\t.logo { bottom:200px;right:35px; }\n\t\t\t.button-container { display:block;height:200px; }\n\t\t\t.button-small { display:block;margin-left:auto;margin-right:auto;margin-top:30px; }\n\t\t}\n\t\t/* Phones portrait and landscape */\n\t\t@media only screen and (max-width :767px) {\n\t\t\t.text { top:25px;left:35px; }\n\t\t\t.logo { height:103px;width:60px; }\n\t\t\t.information-small { display:block; }\n\t\t}\n\t\t/* Tablets landscape */\n\t\t@media only screen and (min-width:768px) and (orientation:landscape) {\n\t\t\t.background { background-image:url('https://s7d9.scene7.com/is/image/mcmobile/ink-bg-tablet-landscape?scl=1'); }\n\t\t\t.logo { bottom:0px;left:60px; }\n\t\t\t.button-container { display:block;height:auto;background-color:transparent;left:auto;right:60px;bottom:60px; }\n\t\t\t.button-large { display:block;margin-left:auto;margin-right:auto;margin-top:20px; }\n\t\t}\n\t\t/* Tablets portrait */\n\t\t@media only screen and (min-width:768px) and (orientation:portrait) {\n\t\t\t.background { bottom:150px;background-image:url('https://s7d9.scene7.com/is/image/mcmobile/ink-bg-tablet-portrait?scl=1'); }\n\t\t\t.logo { bottom:150px;right:60px; }\n\t\t\t.button-container { display:block;height:150px; }\n\t\t\t.button-large { display:inline-block;margin-top:45px;margin-left:10px;margin-right:10px; }\n\t\t}\n\t\t/* Tablets portrait and landscape */\n\t\t@media only screen and (min-width:768px) {\n\t\t\t.text { top:60px;left:60px; }\n\t\t\t.information-large { display:block; }\n\t\t}\n\t</style>\n</head>\n<body>\n<div class=\"background\"></div>\n<div class=\"text\">\n\t<img class=\"information-small\" src=\"https://s7d9.scene7.com/is/image/mcmobile/ink-text-information-s?scl=1&fmt=png-alpha\"/>\n\t<img class=\"information-large\" src=\"https://s7d9.scene7.com/is/image/mcmobile/ink-text-information-l?scl=1&fmt=png-alpha\"/>\n</div>\n<div class=\"logo\"></div>\n<div class=\"button-container\">\n\t<a href=\"adbinapp://confirm/?url=http://www.adobe.com/products/ink-and-slide.html\">\n\t\t<img class=\"button-small\" src=\"https://s7d9.scene7.com/is/image/mcmobile/ink-button-learn-more-s?scl=1&fmt=png-alpha\"/>\n\t\t<img class=\"button-large\" src=\"https://s7d9.scene7.com/is/image/mcmobile/ink-button-learn-more-l?scl=1&fmt=png-alpha\"/>\n\t</a>\n\t<a href=\"adbinapp://cancel\">\n\t\t<img class=\"button-small\" src=\"https://s7d9.scene7.com/is/image/mcmobile/ink-button-no-thanks-s?scl=1&fmt=png-alpha\"/>\n\t\t<img class=\"button-large\" src=\"https://s7d9.scene7.com/is/image/mcmobile/ink-button-no-thanks-l?scl=1&fmt=png-alpha\"/>\n\t</a>\n</div>\n</body>\n</html>",
+        "assets": [
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-adobe?scl=1"
+          ],
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-bg-phone-landscape?scl=1"
+          ],
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-bg-phone-portrait?scl=1"
+          ],
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-bg-tablet-landscape?scl=1"
+          ],
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-bg-tablet-portrait?scl=1"
+          ],
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-text-information-s?scl=1&fmt=png-alpha"
+          ],
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-text-information-l?scl=1&fmt=png-alpha"
+          ],
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-button-learn-more-s?scl=1&fmt=png-alpha"
+          ],
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-button-learn-more-l?scl=1&fmt=png-alpha"
+          ],
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-button-no-thanks-s?scl=1&fmt=png-alpha"
+          ],
+          [
+            "https://s7d9.scene7.com/is/image/mcmobile/ink-button-no-thanks-l?scl=1&fmt=png-alpha"
+          ]
+        ]
+      },
+      "showOffline": false,
+      "showRule": "always",
+      "endDate": 2524730400,
+      "startDate": 0,
+      "audiences": [
+        {
+          "key": "a.loc.poi",
+          "matches": "eq",
+          "values": [
+            "Vodafone HQ"
+          ]
+        }
+      ],
+      "triggers": [
+        {
+          "key": "a.LaunchEvent",
+          "matches": "ex",
+          "values": null
+        },
+        {
+          "key": "prop46",
+          "matches": "eq",
+          "values": [
+            "e1eb879ee9bd21e7fe64d6ee55dd94cf"
+          ]
+        }
+      ]
+    }
+  ],
+  "remotes": {
+    "analytics.poi": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-55d32c6f6237390017001232.json",
+    "messages": "https://assets.adobedtm.com/b213090c5204bf94318f4ef0539a38b487d10368/scripts/satellite-55d32c6f3435385094000ccf.json"
+  }
+}

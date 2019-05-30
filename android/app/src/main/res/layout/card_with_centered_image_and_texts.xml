@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ro.vodafone.mcare.android.ui.DynamicColorImageView
+        android:id="@+id/card_imageView"
+        android:padding="@dimen/general_padding"
+        android:src="@drawable/tick_48"
+        app:drawableColor="@color/v_icon_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="344dp"
+        android:layout_height="100dp"
+        android:layout_marginRight="@dimen/general_margin"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="@dimen/general_margin"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/card_imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/text_container"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/general_margin"
+        android:layout_marginEnd="@dimen/general_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="@dimen/general_margin"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="@dimen/general_margin"
+        android:padding="@dimen/general_margin"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/textview_first"
+            android:text="test 1"
+            android:textAlignment="center"
+            android:textSize="@dimen/mediumTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            app:vodafoneTextStyle="vodafoneRGBD"/>
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/textview_second"
+            android:text="test 2"
+            android:textAlignment="center"
+            android:textSize="@dimen/mediumTextSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

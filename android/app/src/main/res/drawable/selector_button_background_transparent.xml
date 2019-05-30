@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_button_background_transparent_default"
+        android:state_enabled="true"
+        android:state_pressed="false" />
+
+    <item android:drawable="@drawable/shape_button_background_transparent_taped"
+        android:state_enabled="true"
+        android:state_pressed="true" />
+
+    <item android:drawable="@color/on_heroes_tertiary_btn_disabled" android:state_enabled="false" />
+</selector>

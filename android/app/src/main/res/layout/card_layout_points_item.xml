@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/points">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/card_horizontal_margin"
+            android:gravity="center">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/loyalty_item_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="default_header"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="@dimen/medium_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/loyalty_item_subtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loyalty_item_header"
+                android:text="default_subtext"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="@dimen/small_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/inside_card_view_element_vertical_margin"
+        android:text="9999pt"
+        android:textColor="@color/dark_gray_text_color"
+        android:textSize="@dimen/medium_text_size"
+        customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+</RelativeLayout>

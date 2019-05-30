@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pay_bill_white_color"
+        android:orientation="horizontal"
+        >
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/textLeft"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginStart="15dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:layout_toStartOf="@+id/icon_circle"
+            android:layout_centerVertical="true"
+            android:textAlignment="textEnd"
+            android:textColor="@color/blackNormal"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            tools:text="This is left text, description of the current price plan on several lines"
+            />
+
+        <View
+            android:id="@+id/purpleline"
+            android:layout_width="2dp"
+            android:layout_height="80dp"
+            android:background="@color/purple"
+            android:layout_centerHorizontal="true"
+            android:visibility="visible"
+            android:forceHasOverlappingRendering="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <View
+            android:id="@+id/icon_circle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle"/>
+
+        <ImageView
+            android:id="@+id/image"
+            tools:background="@drawable/ic_roaming"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/textRight"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/medium_text_size"
+            android:layout_marginEnd="15dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:layout_toEndOf="@+id/icon_circle"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:textColor="@color/blackNormal"
+            customAttrs:vodafoneTextStyle="vodafoneRGBD"
+            tools:text="$25.00 "
+             />
+
+    </RelativeLayout>
+
+</LinearLayout>

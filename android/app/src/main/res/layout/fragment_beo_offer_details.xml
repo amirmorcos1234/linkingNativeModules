@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ro.vodafone.mcare.android.card.VodafoneGenericCard
+        android:id="@+id/offer_description_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:paddingStart="@dimen/default_padding_horizontal"
+            android:paddingEnd="@dimen/default_padding_horizontal">
+
+            <RelativeLayout
+                android:id="@+id/wrong_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/content_description_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wrong_container">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/content_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:text="Offers Description"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/duration_label"
+                    android:layout_below="@+id/content_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="@dimen/large_text_size"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/activation_date"
+                    android:layout_below="@+id/duration_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="@dimen/medium_text_size"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/deactivation_date"
+                    android:layout_below="@+id/activation_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="@dimen/medium_text_size"
+                    android:visibility="gone"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+                <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                    android:id="@+id/beo_activate_offer_container"
+                    style="@style/CardPrimaryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/deactivation_date"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="@dimen/default_padding_horizontal"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="default_button_text" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ro.vodafone.mcare.android.card.VodafoneGenericCard>
+
+    <ro.vodafone.mcare.android.card.offers.ExpandableWebViewCard
+        android:id="@+id/expandable_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+    </ro.vodafone.mcare.android.card.offers.ExpandableWebViewCard>
+
+</LinearLayout>

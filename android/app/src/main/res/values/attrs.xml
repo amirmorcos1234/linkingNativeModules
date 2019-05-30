@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <declare-styleable name="VodafoneText">
+            <attr name="vodafoneTextStyle" format="enum">
+                <enum name="vodafoneRG" value="0" />
+                <enum name="vodafoneLT" value="1" />
+                <enum name="canaroExtraBold" value="2" />
+                <enum name="vodafoneRGBD" value="3" />
+            </attr>
+        </declare-styleable>
+
+    <declare-styleable name="VoiceOfVodafoneNotification">
+
+        <attr name="headline" format="string" localization="suggested" />
+        <attr name="message" format="string" localization="suggested" />
+
+        <attr name="showLeftButton" format="boolean" />
+        <attr name="showRightButton" format="boolean" />
+
+        <attr name="leftButtonText" format="string" />
+        <attr name="rightButtonText" format="string" />
+
+        <attr name="textColor" format="color" />
+
+        <attr name="textSize" format="dimension" />
+        <attr name="imageHeigth" format="dimension" />
+        <attr name="buttonColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ExpandableAdapterBackedLinearLayout">
+        <attr name="childrenDividerMode" format="integer"  />
+        <attr name="childrenDivider" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="BubbleMenuButton">
+
+        <attr name="notifications_number" format="string" localization="suggested" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="SettingsCustomView">
+        <attr name="title" format="string" localization="suggested" />
+        <attr name="subtext" format="string" localization="suggested" />
+
+        <attr name="switchButton" format="string" />
+
+
+    </declare-styleable>
+
+    <declare-styleable name="VodafoneSpinner">
+        <attr name="arrowTint" format="color" />
+        <attr name="hideArrow" format="boolean" />
+        <attr name="backgroundSelector" format="integer" />
+        <attr name="textTint" format="color" />
+        <attr name="defaultValue" format="string" />
+    </declare-styleable>
+
+    <style name="Color1SwitchStyle">
+        <item name="colorControlActivated">@color/lightblue_stroke</item>
+    </style>
+
+
+    <!--SwitchButton-->
+    <declare-styleable name="SwitchButton">
+        <attr name="kswThumbDrawable" format="reference" />
+        <attr name="kswThumbColor" format="color|reference" />
+        <attr name="kswThumbMargin" format="dimension|reference" />
+        <attr name="kswThumbMarginTop" format="dimension|reference" />
+        <attr name="kswThumbMarginBottom" format="dimension|reference" />
+        <attr name="kswThumbMarginLeft" format="dimension|reference" />
+        <attr name="kswThumbMarginRight" format="dimension|reference" />
+        <attr name="kswThumbWidth" format="dimension|reference" />
+        <attr name="kswThumbHeight" format="dimension|reference" />
+        <attr name="kswThumbRadius" format="dimension|reference" />
+        <attr name="kswBackRadius" format="dimension|reference" />
+        <attr name="kswBackDrawable" format="reference" />
+        <attr name="kswBackColor" format="color|reference" />
+        <attr name="kswFadeBack" format="boolean" />
+        <attr name="kswBackMeasureRatio" format="float" />
+        <attr name="kswAnimationDuration" format="integer" />
+        <attr name="kswTintColor" format="color|reference" />
+        <attr name="kswTextOn" format="string" />
+        <attr name="kswTextOff" format="string" />
+        <attr name="kswTextMarginH" format="dimension" />
+        <attr name="kswAutoAdjustTextPosition" format="boolean" />
+        <attr name="kswGdprSwitchStyle" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CreditPlusWidget">
+        <attr name="singleText" format="boolean" />
+        <attr name="components_size" format="dimension" />
+        <attr name="image_plus_margin" format="dimension" />
+        <attr name="text_left_padding" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="GraphHistory">
+        <attr name="barChartColor" format="color|reference" />
+        <attr name="titleColor" format="color|reference" />
+        <attr name="legendColor" format="color|reference" />
+        <attr name="titleText" format="string" />
+        <attr name="showTitle" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="DynamicColorImageView">
+        <attr name="drawableColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TooltipError">
+        <attr name="errorTextDefaultMessage" format="string" />
+    </declare-styleable>
+
+
+    <!-- API specific theme attributes 14+ -->
+    <declare-styleable name="AppThemeAttributes">
+        <attr name="selectableCircleDrawable" format="reference" />
+        <attr name="selectableCircleDrawableColored" format="reference" />
+        <attr name="selectableCircleDrawableInverse" format="reference" />
+        <attr name="selectableRectDrawable" format="reference" />
+        <attr name="selectableRectDrawableColored" format="reference" />
+        <attr name="selectableRectDrawableInverse" format="reference" />
+        <attr name="selectableRoundedRectDrawable" format="reference" />
+        <attr name="selectableRoundedRectDrawableColored" format="reference" />
+        <attr name="selectableRoundedRectDrawableInverse" format="reference" />
+        <attr name="selectableRoundedRectDrawableInverseLargeRadius" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="FixedAspectRatioImageView">
+        <attr name="widthToHeightRatio" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="FixedAspectRatioRoundedImageView">
+        <attr name="roundedImageView_widthToHeightRatio" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="SlyceMessagingTheme">
+        <attr name="backgroundColor" format="color" />
+        <attr name="timestampTextColor" format="color" />
+        <attr name="localBubbleBackground" format="color" />
+        <attr name="localBubbleTextColor" format="color" />
+        <attr name="externalBubbleBackground" format="color" />
+        <attr name="externalBubbleTextColor" format="color" />
+        <attr name="snackbarBackground" format="color" />
+        <attr name="snackbarTitleColor" format="color" />
+        <attr name="snackbarButtonColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CropOverlayView">
+        <attr name="guideLines" format="boolean"/>
+        <attr name="drawCircle" format="boolean"/>
+        <attr name="marginTop" format="dimension"/>
+        <attr name="marginSide" format="dimension"/>
+        <attr name="minWidth" format="dimension"/>
+        <attr name="maxWidth" format="dimension"/>
+        <attr name="cornerRadius" format="dimension"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="overlayColor" format="color"/>
+    </declare-styleable>
+
+
+
+</resources>

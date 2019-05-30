@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:background="@drawable/border_shadow">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginBottom="10dp">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/minorCardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textSize="18sp"
+                android:text="Title"
+                android:layout_centerVertical="true"
+                android:textColor="@color/pay_bill_bold_text_color"
+                customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+
+            <ro.vodafone.mcare.android.widget.SwitchButton.SwitchButton
+                android:id="@+id/minorCardSwitchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                customAttrs:kswGdprSwitchStyle="true"/>
+
+        </RelativeLayout>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/cardSubtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="16sp"
+            android:text="Subtitle"
+            android:layout_centerVertical="true"
+            android:textColor="@color/pay_bill_bold_text_color"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/cardSubtext2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_alignParentLeft="true"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/pay_bill_bold_text_color"
+            android:visibility="gone"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <LinearLayout
+            android:id="@+id/editLayoutContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="gone"
+            android:background="#ececec">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/editGuardianDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentLeft="true"
+                android:textSize="16sp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/pay_bill_bold_text_color"
+                customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/phoneNumberLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16sp"
+                    android:text="Telefon reprezentant legal:"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/emailAddressLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16sp"
+                    android:text="Email reprezentant legal:"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/emailAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="25dp">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/birthdayLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16sp"
+                    android:text="Dată naştere minor:"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRGBD"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+            </LinearLayout>
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/editGardian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:text="Editează"
+                android:textSize="16dp"
+                style="@style/CardSecondaryButton"
+                customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

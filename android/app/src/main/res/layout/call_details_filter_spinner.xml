@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Custom spinner item layout -->
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="15dp"
+	android:gravity="center"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:textColor="@color/blackNormal"
+    android:background="@android:color/white" />

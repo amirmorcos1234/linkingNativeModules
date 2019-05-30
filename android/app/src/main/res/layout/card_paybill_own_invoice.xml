@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pay_bill_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/pay_bill_container_vertical_pading"
+    android:paddingLeft="@dimen/pay_bill_container_horizontal_pading"
+    android:paddingRight="@dimen/pay_bill_container_horizontal_pading"
+    android:paddingTop="@dimen/pay_bill_container_vertical_pading"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:id="@+id/bill_not_paied_under_due_date_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_container_layout_margin"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/pay_bill_text_margin"
+            android:text="@string/pay_bill_after_due_date_message"
+            android:textColor="@color/pay_bill_bold_text_color"
+            android:textSize="@dimen/pay_bill_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+    </LinearLayout>
+
+    <!--Amount to pay-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_container_layout_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_text_margin"
+                android:text="@string/pay_bill_amount"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/amount_to_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/pay_bill_text_margin"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_litle_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pay_bill_tva"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_litle_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Client code layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_container_layout_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_text_margin"
+                android:text="@string/pay_bill_client_code"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/client_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/pay_bill_text_margin"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_litle_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Bill Number Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_container_layout_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_text_margin"
+                android:text="@string/pay_bill_number"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/bill_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/pay_bill_text_margin"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_litle_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--Due date layout-->
+    <LinearLayout
+        android:id="@+id/due_date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_container_layout_margin"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_text_margin"
+                android:text="@string/pay_bill_due_date"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/due_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/pay_bill_text_margin"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_litle_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Separator line-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_container_layout_margin">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/separator_line_height"
+            android:background="@color/pay_bill_separator_line_color" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_container_layout_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="@dimen/pay_bill_horizontal_margin"
+            android:background="@drawable/gray_circle"
+            android:gravity="center"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/security_icon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/security_48" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_text_margin"
+                android:text="@string/card_de_credit"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cards_container"
+                android:orientation="vertical"
+                ></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_new_card_container"
+                android:orientation="vertical"
+
+                ></LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/pay_own_bill_button"
+        style="@style/CardPrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:enabled="true"
+        android:text="@string/pay_bill_button"
+        android:textSize="@dimen/button_text_size"
+        customAttrs:vodafoneTextStyle="vodafoneRG" />
+</LinearLayout>
+

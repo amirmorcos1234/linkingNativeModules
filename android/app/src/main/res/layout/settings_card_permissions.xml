@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/border_shadow">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginBottom="10dp">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/cardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textSize="18sp"
+                android:text="Title"
+                android:layout_centerVertical="true"
+                android:textColor="@color/pay_bill_bold_text_color"
+                customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+            <RelativeLayout
+                android:id="@+id/switchContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true">
+
+                <ro.vodafone.mcare.android.widget.SwitchButton.SwitchButton
+                    android:id="@+id/cardSwitchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    customAttrs:kswGdprSwitchStyle="true"/>
+
+                <RelativeLayout
+                    android:id="@+id/cardSwitchButtonContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/cardSwitchButtonMiddleImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/specify_state_enabled">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:id="@+id/tapContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <View
+                            android:id="@+id/tapLeftCardSwitchButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <View
+                            android:id="@+id/tapRightCardSwitchButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginBottom="@dimen/pay_bill_container_layout_margin">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/separator_line_height"
+                android:background="@color/pay_bill_separator_line_color" />
+
+        </LinearLayout>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/cardSubtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="16sp"
+            android:text="Subtitle"
+            android:textColor="@color/pay_bill_bold_text_color"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <LinearLayout
+            android:id="@+id/itemsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/itemContainer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/itemTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="18sp"
+                    android:text="Title"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+                <RelativeLayout
+                    android:id="@+id/switchContainer1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+
+                    <ro.vodafone.mcare.android.widget.SwitchButton.SwitchButton
+                        android:id="@+id/itemSwitchButton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        customAttrs:kswGdprSwitchStyle="true"/>
+
+                    <RelativeLayout
+                        android:id="@+id/itemSwitchButton1Container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/itemSwitchButton1MiddleImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/specify_state_enabled">
+                        </ImageView>
+
+                        <LinearLayout
+                            android:id="@+id/tapContainer1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <View
+                                android:id="@+id/tapLeftItemSwitchButton1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+
+                            <View
+                                android:id="@+id/tapRightItemSwitchButton1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/itemContainer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/itemTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="18sp"
+                    android:text="Title"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+                <RelativeLayout
+                    android:id="@+id/switchContainer2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+
+                    <ro.vodafone.mcare.android.widget.SwitchButton.SwitchButton
+                        android:id="@+id/itemSwitchButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        customAttrs:kswGdprSwitchStyle="true"/>
+
+                    <RelativeLayout
+                        android:id="@+id/itemSwitchButton2Container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/itemSwitchButton2MiddleImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/specify_state_enabled">
+                        </ImageView>
+
+                        <LinearLayout
+                            android:id="@+id/tapContainer2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <View
+                                android:id="@+id/tapLeftItemSwitchButton2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+
+                            <View
+                                android:id="@+id/tapRightItemSwitchButton2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/itemContainer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/itemTitle3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="18sp"
+                    android:text="Title"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+                <RelativeLayout
+                    android:id="@+id/switchContainer3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+
+                    <ro.vodafone.mcare.android.widget.SwitchButton.SwitchButton
+                        android:id="@+id/itemSwitchButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        customAttrs:kswGdprSwitchStyle="true"/>
+
+                    <RelativeLayout
+                        android:id="@+id/itemSwitchButton3Container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/itemSwitchButton3MiddleImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/specify_state_enabled">
+                        </ImageView>
+
+                        <LinearLayout
+                            android:id="@+id/tapContainer3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <View
+                                android:id="@+id/tapLeftItemSwitchButton3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+
+                            <View
+                                android:id="@+id/tapRightItemSwitchButton3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/itemContainer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/itemTitle4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="18sp"
+                    android:text="Title"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/pay_bill_bold_text_color"
+                    customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+                <RelativeLayout
+                    android:id="@+id/switchContainer4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true">
+
+                    <ro.vodafone.mcare.android.widget.SwitchButton.SwitchButton
+                        android:id="@+id/itemSwitchButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        customAttrs:kswGdprSwitchStyle="true"/>
+
+                    <RelativeLayout
+                        android:id="@+id/itemSwitchButton4Container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/itemSwitchButton4MiddleImage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/specify_state_enabled">
+                        </ImageView>
+
+                        <LinearLayout
+                            android:id="@+id/tapContainer4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <View
+                                android:id="@+id/tapLeftItemSwitchButton4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+
+                            <View
+                                android:id="@+id/tapRightItemSwitchButton4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/seeDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginBottom="@dimen/pay_bill_container_layout_margin">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/separator_line_height"
+                    android:background="@color/pay_bill_separator_line_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/expandableContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                            android:id="@+id/seeDetailsLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/pay_bill_text_margin"
+                            android:text="@string/see_details_text"
+                            android:textColor="@color/pay_bill_bold_text_color"
+                            android:textSize="@dimen/pay_bill_text_size"
+                            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                        <ImageView
+                            android:id="@+id/extendSeeDetails"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/settings_red_arrow_heigth"
+                            android:layout_height="@dimen/settings_red_arrow_heigth"
+                            android:src="@drawable/right_red_arrow_down" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/toBeShown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:background="#ececec"
+                    android:visibility="gone">
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/textToShow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:animateLayoutChanges="true"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:divider="@null"
+                        android:groupIndicator="@null"
+                        android:textColor="@color/pay_bill_bold_text_color"
+                        android:listSelector="@android:color/transparent"
+                        android:text="Text eregegerg" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

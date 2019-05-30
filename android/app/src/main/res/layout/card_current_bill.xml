@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <View
+            android:id="@+id/button_line"
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/blue_chart_top_color" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/users_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/white_border_circle"
+            android:src="@drawable/landline_or_call_48"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/button_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/users_icon"
+            android:orientation="vertical">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/msisdn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="07903543436"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="20dp"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/arrow" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/separator_line_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/pay_bill_separator_line_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/expand_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/expandable_list_view_background">
+
+        <ro.vodafone.mcare.android.ui.views.ExpandableAdapterBackedLinearLayout
+            android:id="@+id/expandable_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:showDividers="middle"
+            android:dividerPadding="10dp"
+            android:divider="@drawable/list_divider"
+            app:childrenDivider="@drawable/list_divider"
+            app:childrenDividerMode="2"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

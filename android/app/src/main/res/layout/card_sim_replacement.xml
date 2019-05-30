@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:focusableInTouchMode="true">
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Schimbare cartelă SIM"
+        android:textSize="18sp"
+        android:textColor="@color/blackNormal"
+        android:layout_marginBottom="8dp"
+        app:vodafoneTextStyle="vodafoneRG"/>
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor ultrices diam, sit amet iaculis lorem malesuada non"
+        android:textColor="@color/blackNormal"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/sim_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:focusableInTouchMode="true">
+
+        <ro.vodafone.mcare.android.ui.views.TooltipError
+            android:id="@+id/sim_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/sim_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            tools:text="Seria SIM"
+            android:textSize="16sp"
+            android:textColor="@color/blackNormal"
+            android:layout_marginBottom="8dp"
+            app:vodafoneTextStyle="vodafoneRG"/>
+
+        <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+            android:id="@+id/sim_value_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_input_border"
+            android:hint="e.g. 8900411xxxxxxxxx"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:maxLength="19"
+            android:maxLines="1"
+            android:padding="14dp"
+            android:textColorHint="@color/gray_input_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phone_number_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:focusableInTouchMode="true">
+
+        <ro.vodafone.mcare.android.ui.views.TooltipError
+            android:id="@+id/phone_number_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/phone_number_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            tools:text="Număr de contact"
+            android:textSize="16sp"
+            android:textColor="@color/blackNormal"
+            android:layout_marginBottom="8dp"
+            app:vodafoneTextStyle="vodafoneRG"/>
+
+        <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+            android:id="@+id/phone_number_value_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/default_input_border"
+            android:hint="e.g. 0xxxxxxxxx"
+            android:textSize="14sp"
+            android:inputType="number"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:padding="14dp"
+            android:textColorHint="@color/gray_input_text" />
+
+    </LinearLayout>
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/card_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:text="Modifică seria SIM"
+        android:textSize="16sp"
+        android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+        android:enabled="false"
+        app:vodafoneTextStyle ="vodafoneRG"
+        style="@style/CardPrimaryButton"/>
+
+</LinearLayout>

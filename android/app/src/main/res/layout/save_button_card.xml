@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blackNormal"
+    android:padding="12dp">
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/saveButton"
+        style="@style/OverlayPrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:enabled="true"
+        android:text="@string/add_button_text"
+        android:textSize="@dimen/medium_text_size"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

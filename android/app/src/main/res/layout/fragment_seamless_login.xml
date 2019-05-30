@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!-- Semi-transparent layout-->
+    <LinearLayout
+        android:id="@+id/seamless_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/semitransparent_layout_color"
+        android:layout_marginLeft="@dimen/login_page_fragment_horisontal_margin"
+        android:layout_marginRight="@dimen/login_page_fragment_horisontal_margin"
+        android:layout_marginBottom="@dimen/login_page_vertical_layout_margin"
+        android:paddingLeft="@dimen/semitransparent_container_pading"
+        android:paddingRight="@dimen/semitransparent_container_pading"
+        android:paddingTop="@dimen/semitransparent_container_pading"
+        android:paddingBottom="40dp"
+        android:animateLayoutChanges="true"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/login_easier_with_vodafone_label"
+                android:textColor="@color/whiteNormalTextColor"
+                android:textSize="@dimen/login_page_labels_text_size"/>
+
+        </LinearLayout>
+
+
+        <!--Enter red button-->
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/enter_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_page_view_elements_height"
+            style="@style/OverlayPrimaryButton"
+            android:textColor="@color/whiteNormalTextColor"
+            android:textSize="@dimen/login_page_labels_text_size"
+            android:text="@string/enter_buton_label"
+            android:layout_marginBottom="38dp"/>
+        <!--
+        <LinearLayout
+            android:id="@+id/enter_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginBottom="38dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_page_view_elements_height"
+
+                style="@style/OverlayPrimaryButton"
+                android:gravity="center_vertical">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/enter_buton_label"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:textSize="@dimen/login_page_labels_text_size"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/login_with_vdf_network_instead_wifi_label"
+                android:textColor="@color/whiteNormalTextColor"
+                android:textSize="@dimen/login_page_labels_text_size"/>
+
+        </LinearLayout>
+
+        <!-- Separator line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin">
+
+            <View
+                android:layout_height="@dimen/separator_line_height"
+                android:layout_width="match_parent"
+                android:background="@color/separator_line_color"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/login_page_vertical_layout_margin">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@string/login_with_vodafone_account_label"
+                android:textColor="@color/whiteNormalTextColor"
+                android:textSize="@dimen/login_page_small_text_size"/>
+
+        </LinearLayout>
+
+        <!--Authentification button-->
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/authentification_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_page_view_elements_height"
+            style="@style/OverlaySecondaryButton"
+            android:textColor="@color/gray_button_text_color"
+            android:text="@string/authentication_button_label"
+            android:textSize="@dimen/login_page_labels_text_size"/>
+        <!--
+        <LinearLayout
+            android:id="@+id/authentification_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/OverlaySecondaryButton"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/login_page_view_elements_height"
+
+                android:gravity="center_vertical">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/authentication_button_label"
+                    android:textColor="@color/gray_button_text_color"
+                    android:textSize="@dimen/login_page_labels_text_size"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        -->
+
+    </LinearLayout>
+
+</LinearLayout>

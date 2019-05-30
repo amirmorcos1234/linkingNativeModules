@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/card_background_gray"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/loyalty_program_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <ro.vodafone.mcare.android.card.loyaltyPoints.segmentCard.CustomerSegmentCard
+        android:id="@+id/customer_segment_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ro.vodafone.mcare.android.card.loyaltyPoints.LoyaltyPointsCard
+        android:id="@+id/loyalty_point_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/loyalty_offers_button"
+        style="@style/CardPrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/loyalty_offers_button" />
+
+    <RelativeLayout
+        android:id="@+id/loyalty_transactions_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="13dp" />
+
+    <RelativeLayout
+        android:id="@+id/gain_loyalty_points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="13dp" />
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/refuse_loyalty_program"
+        style="@style/CardSecondaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/loyalty_refuse_program" />
+
+
+</LinearLayout>

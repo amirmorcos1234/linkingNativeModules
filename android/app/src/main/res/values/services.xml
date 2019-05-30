@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 	Hosts -->
+    <string name="host_local">http://m.cms-ucm-agw.connex.ro</string>
+    <string name="host_dev">http://m.cms-ucm-agw.connex.ro</string>
+    <string name="host_dev2">http://m.cms-ucm-agw.connex.ro:8092</string>
+    <string name="host_dev_mock">http://mock.cms-ucm-agw.connex.ro/mock/</string>
+    <string name="host_st4">http://m.cms-web-dev-cns.connex.ro:8094</string>"
+    <string name="host_st3">http://m.cms-web-dev-cns.connex.ro:8093</string>
+    <string name="host_st2">http://m.cms-web-dev-cns.connex.ro:8090</string>
+    <string name="host_st">http://m.cms-web-dev-cns.connex.ro</string>
+    <string name="host_pet">https://m.portal-pet.vodafone.ro</string>
+    <string name="host_pet_ot">https://portal-pet-ot.vodafone.ro</string>
+    <string name="host_pet_ot_auth">https://auth-portal-pet-ot.vodafone.ro</string>
+    <string name="host_uat">http://m.portal-uat.vodafone.ro</string>
+    <string name="host_prod">https://m.vodafone.ro</string>
+    <string name="host_prod_auth">https://auth.vodafone.ro</string>
+
+    <!-- 	Domains -->
+    <string name="cookie_initial_domain_dev">http://cms-ucm-agw.connex.ro/</string>
+    <string name="cookie_domain_dev">.connex.ro</string>
+    <string name="cookie_initial_domain_dev2">http://cms-ucm-agw.connex.ro:8092/</string>
+    <string name="cookie_domain_dev2">.connex.ro</string>
+    <string name="cookie_initial_domain_st4">http://m.cms-web-dev-cns.connex.ro:8094</string>
+    <string name="cookie_initial_domain_st3">http://m.cms-web-dev-cns.connex.ro:8093</string>
+    <string name="cookie_initial_domain_st2">http://m.cms-web-dev-cns.connex.ro:8090</string>
+    <string name="cookie_initial_domain_st">http://m.cms-web-dev-cns.connex.ro</string>
+    <string name="cookie_initial_domain_local">http://m.cms-ucm-agw.connex.ro/</string>
+    <string name="cookie_domain_st2">.connex.ro</string>
+    <string name="cookie_domain_st">.connex.ro</string>
+    <string name="cookie_domain_st3">.connex.ro</string>
+    <string name="cookie_domain_st4">.connex.ro</string>
+    <string name="cookie_initial_domain_pet">http://m.portal-pet.vodafone.ro/</string>
+    <string name="cookie_domain_pet">.vodafone.ro</string>
+    <string name="cookie_initial_domain_pet_ot">https://portal-pet-ot.vodafone.ro/</string>
+    <string name="cookie_domain_pet_ot" tools:ignore="DuplicateDefinition">.vodafone.ro</string>
+    <string name="cookie_initial_domain_pet_ot_auth">https://auth-portal-pet-ot.vodafone.ro/</string>
+    <string name="cookie_domain_pet_ot_auth" tools:ignore="DuplicateDefinition">.vodafone.ro</string>
+    <string name="cookie_initial_domain_uat">http://m.portal-uat.vodafone.ro/</string>
+    <string name="cookie_domain_uat">.vodafone.ro</string>
+    <string name="cookie_initial_domain_prod">https://m.vodafone.ro/</string>
+    <string name="cookie_domain_prod">.vodafone.ro</string>
+    <string name="cookie_initial_domain_prod_auth">https://auth.vodafone.ro/</string>
+    <string name="cookie_domain_prod_auth">.vodafone.ro</string>
+
+    <string name="auto_uat">http://auth-portal-uat.vodafone.ro/</string>
+    <string name="auto_pet">http://auth-portal-pet.vodafone.ro/</string>
+    <string name="auto_pet_ot">http://auth-portal-pet-ot.vodafone.ro/</string>
+    <string name="auto_host_uat">http://auth-portal-uat.vodafone.ro</string>
+    <string name="auto_prod">http://auth.vodafone.ro/</string>
+
+    <!-- Certificates -->
+    <string name="cert_pet_ot">portal-pet-ot.vodafone.ro.crt</string>
+    <string name="cert_auto_pet_ot">auth-portal-pet-ot.vodafone.ro.crt</string>
+
+    <!-- My Vodafone EBU Redirect in mSite -->
+    <string name="msite_uri">/mobil/autentificare</string>
+
+</resources>

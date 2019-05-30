@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <stroke android:width="2dp" android:color="@color/light_gray_stroke_btn" />
+    <solid android:color="@color/overlay_tertiary_btn_on_tap"/>
+</shape>

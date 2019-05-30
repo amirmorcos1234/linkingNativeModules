@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_red"
+        android:orientation="horizontal">
+
+        <ro.vodafone.mcare.android.ui.DynamicColorImageView
+            android:id="@+id/closeButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:padding="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/close_48"
+            customAttrs:drawableColor="@color/red_color_message_circle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/closeButton"
+            android:layout_toStartOf="@+id/backButton"
+            android:orientation="vertical"
+           >
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/blackNormal"
+                android:textSize="@dimen/button_text_size"
+                android:textStyle="bold" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/subTitle"
+                android:layout_width="wrap_content"
+                android:maxLines="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blackNormal" />
+        </LinearLayout>
+
+        <ro.vodafone.mcare.android.ui.DynamicColorImageView
+            android:id="@+id/backButton"
+            android:layout_width="48dp"
+            android:scaleX="-1"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@+id/refreshButton"
+            android:layout_centerInParent="true"
+            android:padding="12dp"
+            android:src="@drawable/arrow_right_48"
+            customAttrs:drawableColor="@color/webview_back_button_disabled" />
+
+        <ro.vodafone.mcare.android.ui.DynamicColorImageView
+            android:id="@+id/refreshButton"
+            android:layout_width="48dp"
+            android:scaleX="-1"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:padding="12dp"
+            android:src="@drawable/refresh_48"
+            customAttrs:drawableColor="@color/red_color_message_circle" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

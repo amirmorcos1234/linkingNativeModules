@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:vodafoneFont="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/text_sim_group"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/default_padding_vertical"
+    android:paddingLeft="@dimen/default_padding_horizontal"
+    android:paddingRight="@dimen/default_padding_horizontal"
+    android:paddingTop="@dimen/default_padding_vertical">
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="dummy title"
+        android:textColor="@color/black_opacity_90"
+        android:textSize="17sp"
+        vodafoneFont:vodafoneTextStyle="vodafoneRG" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/details_tv"
+        android:textColor="@color/black_opacity_90"
+        android:text="dummy text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

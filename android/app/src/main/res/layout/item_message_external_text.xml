@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="@dimen/message_bubble_margin_top">
+
+    <FrameLayout
+        android:id="@+id/message_scout_text_image_view_avatar_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/message_scout_text_view_group_bubble"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/message_scout_text_image_view_avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:civ_fill_color="@color/red_color_message_circle" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/message_scout_text_view_group_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_toEndOf="@+id/message_scout_text_image_view_avatar_group"
+        android:background="@drawable/bubble_shape"
+        android:padding="16dp">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/message_scout_text_text_view_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/user_name"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:autoLink="web"
+            android:gravity="start"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            tools:text="You can get pizza at Zio's. It is located just beneath your office!" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/message_scout_text_text_view_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_toEndOf="@+id/user_name"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            tools:text="12:29pm" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            tools:text="Vodafone" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

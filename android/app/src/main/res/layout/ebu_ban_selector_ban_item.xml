@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f4f4f4"
+    android:orientation="vertical">
+
+    <ro.vodafone.mcare.android.ui.DynamicColorImageView
+        android:id="@+id/ban_item_drawable"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="12dp"
+        android:background="@drawable/black_circle"
+        android:src="@drawable/users_48"
+        customAttrs:drawableColor="@color/general_background_light_gray" />
+
+    <ro.vodafone.mcare.android.deprecated.CustomVodafoneLtTextView
+        android:id="@+id/ebu_selector_ban_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="12dp"
+        android:layout_toEndOf="@+id/ban_item_drawable"
+        android:text="aaaaaaaa"
+        android:textSize="17sp"
+        android:textColor="@color/blackNormal"
+        />
+
+    <ro.vodafone.mcare.android.ui.DynamicColorImageView
+        android:id="@+id/ban_item_arrow"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="12dp"
+        android:src="@drawable/chevron_right_48"
+        customAttrs:drawableColor="@color/grey_500" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:background="@color/grey_500" />
+
+
+</RelativeLayout>

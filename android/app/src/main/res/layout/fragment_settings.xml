@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="18dp">
+
+        <ro.vodafone.mcare.android.ui.utils.DrawingTriangle
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout-->
+
+    <ro.vodafone.mcare.android.ui.views.AdapterBackedLinearLayout
+        android:id="@+id/settingsListview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/general_background_light_gray"
+        android:clickable="false"
+        android:paddingBottom="@dimen/default_margin_vertical"
+        android:paddingLeft="@dimen/default_margin_horizontal"
+        android:paddingRight="@dimen/default_margin_horizontal"
+        android:paddingTop="@dimen/default_margin_vertical" />
+
+</LinearLayout>

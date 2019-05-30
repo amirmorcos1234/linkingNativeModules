@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ebebeb"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:id="@+id/account_specialist_cards_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:id="@+id/data_container"
+                android:background="@drawable/border_shadow"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/data_account_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Administrarea contului și asistență servicii de date, specialistul tău de cont"
+                    android:paddingTop="5dp"
+                    android:padding="5dp"
+                    android:textSize="18sp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"
+                    />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/data_account_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Andreea Popa"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/data_account_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="g@g.com"
+                    android:textColor="@color/text_blue"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/voice_container"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@drawable/border_shadow"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Administrarea contului și asistență servicii, specialistul tău de cont"
+                    android:textSize="18sp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginEnd="0dp"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/voice_account_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Andreea Popa"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                   android:id="@+id/voice_account_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="g@g.com"
+                    android:textColor="@color/text_blue"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

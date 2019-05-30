@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/card_background_gray"
+    android:paddingLeft="@dimen/card_horizontal_margin"
+    android:paddingTop="@dimen/card_horizontal_margin"
+    android:paddingRight="@dimen/card_horizontal_margin"
+    android:paddingBottom="@dimen/card_horizontal_margin">
+
+    <RadioButton
+        android:id="@+id/radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="5dp"
+        android:button="@drawable/radio_button_selector"
+        android:checked="true"
+        android:clickable="false"
+        android:visibility="gone" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/credit_card_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_toLeftOf="@+id/card_type_image"
+        android:layout_toEndOf="@id/radio_button"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/credit_card_expiration_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/credit_card_number"
+        android:layout_toLeftOf="@+id/card_type_image"
+        android:layout_toEndOf="@id/radio_button"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+    <ImageView
+        android:id="@+id/card_type_image"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="4dp"
+        android:scaleType="fitCenter" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/delete_card_text_view"
+        android:layout_width="50dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/card_type_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="4dp"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:textAlignment="center"
+        android:textColor="#007C92"
+        android:textSize="14sp"
+        customAttrs:vodafoneTextStyle="vodafoneRG" />
+</RelativeLayout>

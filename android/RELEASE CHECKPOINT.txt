@@ -1,0 +1,25 @@
+﻿﻿The purpose of this document is to prepare new_mcare_android project for PROD release.
+Please make sure to check all the steps below before building the signed APK for PROD environment:
+
+1. Increment the versionCode and versionName in --- build.gradle ---  file relative to the version in Google Play.
+2. Set environment in Hosts.java file environment to PROD.
+3. Set API secret in fabric.properties
+   a. uncomment the PROD version and comment the DEV version.
+4. If not exporting an obfuscated build, delete the existing /app/build and /build/proguard folders (
+   there is a bug in build tools that keeps the Proguard setting to true if Proguard has been previously run
+   on the project if the above folders are not deleted)
+
+!!! IMPORTANT
+5. If not exporting an obfuscated build, make sure that minifyEnabled is set to false in the "release" build config (or the build config that you are using)
+
+ ===== FINNALY ===
+6. Export Signed APK using the certificate under /keystore/
+
+The details for the "release" version are:
+    Keystore Path: Folder Android Keystore
+    keystore pass: vfmcarepass
+    key alias: vodafonemcare
+    Pass: vfmcarepass
+
+
+For non-production release please set versionCode and versionName according to current release version and commit it to git.

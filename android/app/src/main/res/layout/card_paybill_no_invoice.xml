@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/no_invoices_to_pay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/pay_bill_container_vertical_pading"
+    android:paddingLeft="@dimen/pay_bill_container_horizontal_pading"
+    android:paddingRight="@dimen/pay_bill_container_horizontal_pading"
+    android:paddingTop="@dimen/pay_bill_container_vertical_pading"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/check_mark"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/solved_48" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_bottom_margin">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/no_invoices_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/pay_bill_text_margin"
+            android:gravity="center"
+            android:text="@string/pay_bill_all_bill_is_paid"
+            android:textColor="@color/pay_bill_bold_text_color"
+            android:textSize="@dimen/pay_bill_litle_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRGBD" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/pay_bill_bottom_margin">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/issued_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/pay_bill_text_margin"
+            android:gravity="center"
+            android:text="Urmatoarea factura va fi emisa pe 15 Septembrie 2016"
+            android:textColor="@color/pay_bill_bold_text_color"
+            android:textSize="@dimen/pay_bill_litle_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+    </LinearLayout>
+
+</LinearLayout>

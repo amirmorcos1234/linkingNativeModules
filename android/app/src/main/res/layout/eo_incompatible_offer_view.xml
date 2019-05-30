@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/incompatible_view_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/beo_incompatible_offer_view_background"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+
+    <TextView
+        android:id="@+id/incompatible_offer_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/whiteNormalTextColor"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="text"/>
+
+    <TextView
+        android:id="@+id/incompatible_offer_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/whiteNormalTextColor"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/incompatible_offer_quantity"
+        android:layout_marginBottom="10dp"
+        android:text="text"/>
+
+</RelativeLayout>

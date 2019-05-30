@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ro.vodafone.mcare.android.ui.fragments.paybill.paybillviews.PaybillAnonymousCardView
+        android:id="@+id/paybill_anonymous_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ro.vodafone.mcare.android.ui.fragments.paybill.paybillviews.PaybillAnonymousCardView>
+
+
+    <ro.vodafone.mcare.android.card.VodafoneGenericCard
+        android:id="@+id/pay_own_bill_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/pay_bill_container_vertical_pading"
+            android:paddingLeft="@dimen/pay_bill_container_horizontal_pading"
+            android:paddingRight="@dimen/pay_bill_container_horizontal_pading"
+            android:paddingTop="@dimen/pay_bill_container_vertical_pading">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_container_layout_margin"
+                android:text="@string/pay_bill_do_you_want_pay_your_bill"
+                android:textColor="@color/pay_bill_bold_text_color"
+                android:textSize="@dimen/pay_bill_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <!-- Pay Another Bill Button -->
+
+            <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+                android:id="@+id/pay_another_bill_button"
+                style="@style/CardSecondaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+                android:layout_marginEnd="0dp"
+                android:layout_marginStart="0dp"
+                android:enabled="true"
+                android:text="@string/pay_bill_button"
+                android:textSize="@dimen/button_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+
+    </ro.vodafone.mcare.android.card.VodafoneGenericCard>
+
+</LinearLayout>

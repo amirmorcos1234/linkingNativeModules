@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.wefika.horizontalpicker.HorizontalPicker
+        android:id="@+id/horizontal_date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="none"
+        android:marqueeRepeatLimit="-1"
+        android:requiresFadingEdge="horizontal"
+        android:textColor="@color/blackNormal"
+        android:textSize="18sp"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/magnifierContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/transparent_circle_red_border"
+        android:orientation="horizontal">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/magnifiedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/blackNormal"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

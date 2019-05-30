@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/available_balance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/available_balance_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/your_services_cost_control_available_balance"
+            android:textColor="@color/dark_gray_background"
+            android:textSize="22sp"
+            android:paddingTop="@dimen/default_padding_vertical"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/expiration_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/available_balance_label"
+            android:layout_marginTop="3dp"
+            android:text="03.04.2015"
+            android:paddingBottom="@dimen/default_padding_vertical"
+            android:textColor="@color/dark_gray_background"
+            android:textSize="@dimen/medium_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/available_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/your_services_amount_eur"
+            android:textColor="@color/purple"
+            android:textSize="22sp"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/full_balance_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/expand_balance_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:paddingBottom="@dimen/card_vertical_margin"
+            android:paddingTop="@dimen/card_vertical_margin"
+            android:visibility="visible">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/button_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/your_services_cost_control_total_balance"
+                android:textColor="@color/dark_gray_background"
+                android:textSize="22sp"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/total_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="@string/your_services_amount_eur"
+                android:textColor="@color/purple"
+                android:textSize="22sp"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:id="@+id/balance_expanded_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expand_balance_button"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/separator_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/separator_line_height"
+                android:layout_below="@id/expand_balance_button"
+                android:background="@color/pay_bill_separator_line_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/available_credit_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/your_services_cost_control_available_balance"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="18sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/available_credit_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="@string/your_services_amount_eur"
+                    android:textColor="@color/purple"
+                    android:textSize="18sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/available_credit_expiration_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/available_credit_label"
+                    android:text="Expira la 22 Apr 2017"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="@dimen/small_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/secondary_balance_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/your_services_cost_control_secondary_balance"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="18sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/secondary_balance_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/your_services_amount_eur"
+                    android:textColor="@color/purple"
+                    android:textSize="18sp"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/secondary_balance_expiration_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/secondary_balance_label"
+                    android:text="Expira la 22 Apr 2017"
+                    android:textColor="@color/dark_gray_text_color"
+                    android:textSize="@dimen/small_text_size"
+                    customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+            </RelativeLayout>
+
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/secondary_balance_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/dark_gray_text_color"
+                android:textSize="@dimen/medium_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

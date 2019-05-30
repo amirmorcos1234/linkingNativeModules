@@ -1,0 +1,69 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://maven.google.com'
+        }
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+
+        //Tealium - Soasta
+        classpath 'com.soasta.mpulse:mpulse-android-gradle-plugin:2.2.3'
+
+        //firebase
+        classpath 'com.google.gms:google-services:4.1.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            // All of React Native (JS, Android binaries) is installed from npm
+            url "$rootDir/../node_modules/react-native/android"
+        }
+
+        maven {
+            url 'https://maven.google.com'
+        }
+
+        maven { url "https://jitpack.io" }
+        maven {
+            url "http://maven.tealiumiq.com/android/releases/"
+        }
+
+        //TODO local variables for fast run to be removed before prod release
+        //system set variables
+        maven {
+            url "https://nexus-vfgs.skytap-tss.vodafone.com/repository/maven-releases/"
+            credentials {
+                username "readuser"
+                password "z5/qgX.a"
+            }
+        }
+        maven {
+            url "https://nexus-vfgs.skytap-tss.vodafone.com/repository/maven-snapshots/"
+            credentials {
+                username "readuser"
+                password "z5/qgX.a"
+            }
+        }
+
+        flatDir {
+            dirs 'libs'
+        }
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_centerInParent="true">
+
+    <!--Content-->
+
+    <RelativeLayout
+        android:id="@+id/bubble_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/vov_white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:text="Good new. \nYou can update now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:textColor="@color/blackNormal"
+            android:id="@+id/bc_headline_textview"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginStart="17dp"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:text="You can update from \n12 Dec 2015"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bc_message_textView"
+            android:textSize="16sp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginStart="17dp"
+            android:textColor="@color/blackNormal"
+            android:layout_below="@+id/bc_headline_textview"
+            android:layout_marginTop="4dp"
+            customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bc_message_textView"
+            android:layout_alignStart="@+id/bc_message_textView"
+            android:layout_alignEnd="@+id/bc_message_textView"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/bubble_left_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/button_bubble_background"
+                android:text="Yes, please"
+                android:textAllCaps="false"
+                android:textColor="@color/blackNormal"
+                android:layout_marginEnd="10dp"
+                android:visibility="visible"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/bubble_right_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/button_bubble_background"
+                android:layout_marginStart="10dp"
+                android:text="Not now"
+                android:textAllCaps="false"
+                android:textColor="@color/blackNormal"
+                android:visibility="visible"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

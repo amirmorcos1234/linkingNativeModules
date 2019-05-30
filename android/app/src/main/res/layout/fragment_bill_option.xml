@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/general_background_light_gray"
+        android:paddingLeft="@dimen/pay_bill_horizontal_pading"
+        android:paddingRight="@dimen/pay_bill_horizontal_pading"
+        android:paddingTop="@dimen/pay_bill_top_margin"
+        android:paddingBottom="@dimen/pay_bill_top_margin"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/pay_own_bill_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_bill_option_page_button_height"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/pay_bill_bottom_margin"
+            android:background="@drawable/border_shadow">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_height="match_parent"
+                    android:layout_width="@dimen/pay_bill_option_page_button_line_weith"
+                    android:background="@color/pay_bill_option_button_line_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:background="@color/pay_bill_white_color"
+                android:paddingLeft="@dimen/pay_bill_container_horizontal_pading"
+                android:paddingRight="@dimen/pay_bill_container_horizontal_pading">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp">
+
+                            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pay_own_bill_button"
+                                android:textSize="@dimen/pay_bill_text_size"
+                                android:textColor="@color/pay_bill_bold_text_color"
+                                customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pay_own_bill_button_description"
+                                android:textColor="@color/pay_bill_bold_text_color"
+                                android:textSize="15dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/pay_bill_option_page_red_arrow_heigth"
+                            android:src="@drawable/right_red_arrow"
+
+                            />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/pay_another_bill_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pay_bill_option_page_button_height"
+            android:orientation="horizontal"
+            android:background="@drawable/border_shadow">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_height="match_parent"
+                    android:layout_width="@dimen/pay_bill_option_page_button_line_weith"
+                    android:background="@color/pay_bill_option_button_line_color"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:background="@color/pay_bill_white_color"
+                android:paddingLeft="@dimen/pay_bill_container_horizontal_pading"
+                android:paddingRight="@dimen/pay_bill_container_horizontal_pading">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp">
+
+                            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pay_another_bill_button"
+                                android:textSize="@dimen/pay_bill_text_size"
+                                android:textColor="@color/pay_bill_bold_text_color"
+                                customAttrs:vodafoneTextStyle="vodafoneRG"/>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pay_another_bill_button_description"
+                                android:textColor="@color/pay_bill_bold_text_color"
+                                android:textSize="15dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="@dimen/pay_bill_option_page_red_arrow_heigth"
+                            android:src="@drawable/right_red_arrow"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Separator line-->
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:vodafoneFont="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/pay_bill_container_layout_margin"
+    android:paddingTop="@dimen/pay_bill_container_layout_margin"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separator_line_height"
+        android:background="@color/pay_bill_separator_line_color" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/extra_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="dummy title"
+        android:textColor="@color/black_opacity_90"
+        android:textSize="17sp"
+        vodafoneFont:vodafoneTextStyle="vodafoneRG" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/extra_details_tv"
+        android:textColor="@color/black_opacity_90"
+        android:layout_marginBottom="10dp"
+        android:text="dummy text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black_opacity_70"
+    android:padding="14dp">
+
+<RelativeLayout
+    android:id="@+id/notExpandedGroup"
+    android:layout_width="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        android:padding="5dp"
+        android:layout_toStartOf="@+id/arrow_indicator"
+        android:orientation="vertical">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/currentServiceTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/grey_button_color"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:visibility="visible"
+            android:text="Abonamentul tău curent"/>
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/nameTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="@color/grey_300"
+            customAttrs:vodafoneTextStyle="vodafoneRG"
+            android:visibility="visible"
+            android:text=""/>
+
+
+    </LinearLayout>
+
+    <ro.vodafone.mcare.android.ui.DynamicColorImageView
+        android:id="@+id/arrow_indicator"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        customAttrs:drawableColor="@color/white"
+        android:src="@drawable/chevron_down_48"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
+
+<ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+    android:textColor="@color/white"
+    android:id="@+id/detailsTextView"
+    android:layout_marginStart="@dimen/general_margin_start"
+    android:textSize="15sp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/notExpandedGroup"/>
+
+
+</RelativeLayout>

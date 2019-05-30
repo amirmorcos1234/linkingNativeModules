@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/expandable_list_view_background"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:weightSum="2"
+    android:orientation="horizontal">
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/service_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/general_margin_end"
+        android:layout_weight="1"
+        android:textColor="@color/dark_gray_text_color"
+        android:textSize="16sp" />
+
+    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+        android:id="@+id/service_cost"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/general_margin_end"
+        android:layout_marginStart="@dimen/general_margin_end"
+        android:layout_weight="1"
+        android:textColor="@color/dark_gray_text_color"
+        android:textSize="16sp"
+        customAttrs:vodafoneTextStyle="vodafoneRGBD"
+        android:gravity="end"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>

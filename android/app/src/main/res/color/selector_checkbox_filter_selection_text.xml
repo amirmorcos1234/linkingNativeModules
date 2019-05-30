@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_checked="true" android:color="@color/text_black"/> <!-- checked -->
+    <item android:state_checked="true" android:state_enabled="false" app:alpha="?android:disabledAlpha" android:color="@color/text_black"/> <!-- checked, disabled -->
+    <item android:color="@color/white"/> <!-- anything else -->
+</selector>

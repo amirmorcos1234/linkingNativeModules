@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/general_background_light_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_margin_vertical"
+        android:layout_marginLeft="@dimen/default_margin_vertical"
+        android:layout_marginRight="@dimen/default_margin_vertical"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/border_shadow"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/default_padding_vertical"
+        android:paddingLeft="@dimen/default_padding_horizontal"
+        android:paddingRight="@dimen/default_padding_horizontal"
+        android:paddingTop="35dp">
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/statusTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textSize="@dimen/large_text_size"
+            android:textColor="@color/pay_bill_bold_text_color" />
+
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/electronicBillBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/pay_bill_bold_text_color"
+            android:textSize="@dimen/pay_bill_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+        <!-- Email address Error -->
+        <LinearLayout
+            android:id="@+id/email_error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_error_message_border"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/icon_alert"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="top"/>
+
+                <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                    android:id="@+id/email_error_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whiteNormalTextColor"
+                    android:textSize="@dimen/login_page_labels_text_size"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="18dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="12dp"
+                android:background="@drawable/black_triangle">
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_input_height"
+            android:hint="nume@exemplu.com"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:maxLines="1"
+            android:textColorHint="@color/blackNormal"
+            android:textSize="@dimen/login_page_labels_text_size"
+            android:background="@drawable/default_input_border"
+            customAttrs:defaultBorderColor="gray"
+            customAttrs:type="email" />
+
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/activateButton"
+            style="@style/CardPrimaryButton"
+            android:layout_width="match_parent"
+            android:textAllCaps="false"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_button_background_card_primary"
+            android:textColor="@color/pay_bill_white_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,540 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'realm-android'
+apply plugin: 'base'
+
+// disable SOASTA network instrumentation for Debug builds only
+if (!getGradle().getStartParameter().getTaskRequests().toString().toLowerCase().contains("debug")) {
+    apply plugin: 'com.soasta.mpulse.android'
+
+    mpulseAndroid {
+        //exclude NetPerform library from SOASTA instrumentation
+        exclude ~/.*netperform.*/
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com'
+        }
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://jitpack.io" }
+        maven { url "https://urbanairship.bintray.com/android" }
+        flatDir { dirs 'libs' }
+    }
+
+    dependencies {
+//        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'io.fabric.tools:gradle:1.27.0'
+        classpath "io.realm:realm-gradle-plugin:3.7.2"
+    }
+}
+
+
+repositories {
+    jcenter()
+    maven { url "https://github.com/adform/adform-tracking-android-sdk/raw/master/releases/" }
+    maven { url 'https://maven.fabric.io/public' }
+    //google()
+}
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "ro.vodafone.mcare.android"
+        minSdkVersion 19
+        targetSdkVersion 27
+        multiDexEnabled true
+        versionName VERSION_NAME
+
+        //versionCode  3211206
+        versionCode Integer.parseInt(defaultConfig.versionName.replace(".", ""))
+        ext.hostCertificates = []
+        ext.authCertificates = []
+        //default environment
+        ext.serverEnvironment = "ro.vodafone.mcare.android.client.Hosts.Environment.PROD_AUTH"
+
+        //this will inject the build options to our ro.vodafone.mcar.android.BuildConfig classbu
+        buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+        //this sets default SSL pinning to no certificates (disabled)
+        buildConfigField("String[]", "HOST_CERTIFICATES", '{}')
+        buildConfigField("String[]", "AUTH_CERTIFICATES", '{}')
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    dexOptions {
+//        incremental true
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("../keystore/Vodafone.keystore")
+            storePassword "vfmcarepass"
+            keyAlias "vodafonemcare"
+            keyPassword "vfmcarepass"
+        }
+
+        pet {
+            storeFile file("../keystore/Vodafone.keystore")
+            storePassword "vfmcarepass"
+            keyAlias "vodafonemcare"
+            keyPassword "vfmcarepass"
+        }
+
+        pet_ot_auth {
+            storeFile file("../keystore/Vodafone.keystore")
+            storePassword "vfmcarepass"
+            keyAlias "vodafonemcare"
+            keyPassword "vfmcarepass"
+        }
+
+        debug {
+            storeFile file("../keystore/Vodafone.keystore")
+            storePassword "vfmcarepass"
+            keyAlias "vodafonemcare"
+            keyPassword "vfmcarepass"
+        }
+
+        st1 {
+            storeFile file("../keystore/Vodafone.keystore")
+            storePassword "vfmcarepass"
+            keyAlias "vodafonemcare"
+            keyPassword "vfmcarepass"
+        }
+
+        st2 {
+            storeFile file("../keystore/Vodafone.keystore")
+            storePassword "vfmcarepass"
+            keyAlias "vodafonemcare"
+            keyPassword "vfmcarepass"
+        }
+
+        st4 {
+            storeFile file("../keystore/Vodafone.keystore")
+            storePassword "vfmcarepass"
+            keyAlias "vodafonemcare"
+            keyPassword "vfmcarepass"
+        }
+
+        dev {
+            storeFile file("../keystore/Vodafone.keystore")
+            storePassword "vfmcarepass"
+            keyAlias "vodafonemcare"
+            keyPassword "vfmcarepass"
+        }
+
+        dev2 {
+            storeFile file("../keystore/Vodafone.keystore")
+            storePassword "vfmcarepass"
+            keyAlias "vodafonemcare"
+            keyPassword "vfmcarepass"
+        }
+
+        uat {
+            storeFile file("../keystore/Vodafone.keystore")
+            storePassword "vfmcarepass"
+            keyAlias "vodafonemcare"
+            keyPassword "vfmcarepass"
+        }
+
+    }
+
+    buildTypes {
+        release {
+            ext.serverEnvironment = "ro.vodafone.mcare.android.client.Hosts.Environment.PROD_AUTH"
+            ext.hostCertificates = ["auth.vodafone.ro.pem","m.vodafone.ro.pem","m.vodafone.ro_old.pem","auth.vodafone.ro_old.pem"]
+            ext.authCertificates = ["auth.vodafone.ro.pem","m.vodafone.ro.pem","m.vodafone.ro_old.pem","auth.vodafone.ro_old.pem"]
+            buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+            buildConfigField("String[]", "HOST_CERTIFICATES", stringArray(ext.hostCertificates))
+            buildConfigField("String[]", "AUTH_CERTIFICATES", stringArray(ext.authCertificates))
+            buildConfigField("String", "TEALIUM_CONF", "\"prod\"")
+            manifestPlaceholders = [fabric_key     : getPropertyOrDefault("fabricApiKey", "3ace09a808feb69ede4e890fbfd3e0170bc2c4d4"),
+                                    fabricApiSecret: getPropertyOrDefault("fabricApiSecret", "f333a3c1530a91065a51eff79eaffcb992b80c3a2949540b16523528b1f3d10d")]
+            buildConfigField "boolean", "DELETE_REALM_IF_MIGRATION_NEEDED", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField("boolean", "ADOBE_DEBUG_CONFIG", "false")
+            ext.enableCrashlytics = true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            ext.serverEnvironment = SERVER_ENVIRONMENT
+            //using no certificates disables certificate pinning
+            ext.authCertificates = []
+            ext.hostCertificates = []
+            buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+            buildConfigField("String[]", "HOST_CERTIFICATES", stringArray(ext.hostCertificates))
+            buildConfigField("String[]", "AUTH_CERTIFICATES", stringArray(ext.authCertificates))
+            buildConfigField("String", "TEALIUM_CONF", "\"dev\"")
+            manifestPlaceholders = [fabric_key     : getPropertyOrDefault("fabricApiKey", "1d93bda626077505c73a030a6fbf5f9264c010dc"),
+                                    fabricApiSecret: getPropertyOrDefault("fabricApiSecret", "0841504a64cce186e777ba29f01b71f08561883efec788f828a0da756599324c")]
+            buildConfigField "boolean", "DELETE_REALM_IF_MIGRATION_NEEDED", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField("boolean", "ADOBE_DEBUG_CONFIG", "true")
+            ext.enableCrashlytics = true
+            ext.alwaysUpdateBuildId = false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        pet {
+            ext.serverEnvironment = "ro.vodafone.mcare.android.client.Hosts.Environment.PET"
+            ext.authCertificates = ["m.portal-pet.vodafone.ro.pem"]
+            ext.hostCertificates = ["m.portal-pet.vodafone.ro.pem"]
+            buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+            buildConfigField("String[]", "HOST_CERTIFICATES", stringArray(ext.hostCertificates))
+            buildConfigField("String[]", "AUTH_CERTIFICATES", stringArray(ext.authCertificates))
+            buildConfigField("String", "TEALIUM_CONF", "\"dev\"")
+            manifestPlaceholders = [fabric_key     : getPropertyOrDefault("fabricApiKey", "1d93bda626077505c73a030a6fbf5f9264c010dc"),
+                                    fabricApiSecret: getPropertyOrDefault("fabricApiSecret", "0841504a64cce186e777ba29f01b71f08561883efec788f828a0da756599324c")]
+            buildConfigField "boolean", "DELETE_REALM_IF_MIGRATION_NEEDED", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField("boolean", "ADOBE_DEBUG_CONFIG", "true")
+            ext.enableCrashlytics = true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.pet
+            aaptOptions.cruncherEnabled = false
+        }
+        pet_ot_auth {
+            ext.serverEnvironment = "ro.vodafone.mcare.android.client.Hosts.Environment.PET_OT_AUTH"
+            ext.hostCertificates = ["auth-portal-pet-ot.vodafone.ro.pem", "portal-pet-ot.vodafone.ro.pem", "m.vodafone.ro.pem", "auth.vodafone.ro.pem"]
+            ext.authCertificates = ["auth-portal-pet-ot.vodafone.ro.pem", "portal-pet-ot.vodafone.ro.pem", "m.vodafone.ro.pem", "auth.vodafone.ro.pem"]
+            buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+            buildConfigField("String[]", "HOST_CERTIFICATES", stringArray(ext.hostCertificates))
+            buildConfigField("String[]", "AUTH_CERTIFICATES", stringArray(ext.authCertificates))
+            buildConfigField("String", "TEALIUM_CONF", "\"dev\"")
+            manifestPlaceholders = [fabric_key     : getPropertyOrDefault("fabricApiKey", "1d93bda626077505c73a030a6fbf5f9264c010dc"),
+                                    fabricApiSecret: getPropertyOrDefault("fabricApiSecret", "0841504a64cce186e777ba29f01b71f08561883efec788f828a0da756599324c")]
+            buildConfigField "boolean", "DELETE_REALM_IF_MIGRATION_NEEDED", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField("boolean", "ADOBE_DEBUG_CONFIG", "true")
+            ext.enableCrashlytics = true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.pet_ot_auth
+            debuggable true
+        }
+        st1 {
+            ext.serverEnvironment = "ro.vodafone.mcare.android.client.Hosts.Environment.ST1"
+            //using no certificates disables certificate pinning
+            ext.authCertificates = []
+            ext.hostCertificates = []
+            buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+            buildConfigField("String[]", "HOST_CERTIFICATES", stringArray(ext.hostCertificates))
+            buildConfigField("String[]", "AUTH_CERTIFICATES", stringArray(ext.authCertificates))
+            buildConfigField("String", "TEALIUM_CONF", "\"dev\"")
+            manifestPlaceholders = [fabric_key     : getPropertyOrDefault("fabricApiKey", "1d93bda626077505c73a030a6fbf5f9264c010dc"),
+                                    fabricApiSecret: getPropertyOrDefault("fabricApiSecret", "0841504a64cce186e777ba29f01b71f08561883efec788f828a0da756599324c")]
+            buildConfigField "boolean", "DELETE_REALM_IF_MIGRATION_NEEDED", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField("boolean", "ADOBE_DEBUG_CONFIG", "true")
+            ext.enableCrashlytics = true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.st1
+            debuggable true
+        }
+        st2 {
+            ext.serverEnvironment = "ro.vodafone.mcare.android.client.Hosts.Environment.ST2"
+            //using no certificates disables certificate pinning
+            ext.authCertificates = []
+            ext.hostCertificates = []
+            buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+            buildConfigField("String[]", "HOST_CERTIFICATES", stringArray(ext.hostCertificates))
+            buildConfigField("String[]", "AUTH_CERTIFICATES", stringArray(ext.authCertificates))
+            buildConfigField("String", "TEALIUM_CONF", "\"dev\"")
+            manifestPlaceholders = [fabric_key     : getPropertyOrDefault("fabricApiKey", "1d93bda626077505c73a030a6fbf5f9264c010dc"),
+                                    fabricApiSecret: getPropertyOrDefault("fabricApiSecret", "0841504a64cce186e777ba29f01b71f08561883efec788f828a0da756599324c")]
+            buildConfigField "boolean", "DELETE_REALM_IF_MIGRATION_NEEDED", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField("boolean", "ADOBE_DEBUG_CONFIG", "true")
+            ext.enableCrashlytics = true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.st2
+            debuggable true
+        }
+        st4 {
+            ext.serverEnvironment = "ro.vodafone.mcare.android.client.Hosts.Environment.ST4"
+            //using no certificates disables certificate pinning
+            ext.authCertificates = []
+            ext.hostCertificates = []
+            buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+            buildConfigField("String[]", "HOST_CERTIFICATES", stringArray(ext.hostCertificates))
+            buildConfigField("String[]", "AUTH_CERTIFICATES", stringArray(ext.authCertificates))
+            buildConfigField("String", "TEALIUM_CONF", "\"dev\"")
+            manifestPlaceholders = [fabric_key     : getPropertyOrDefault("fabricApiKey", "1d93bda626077505c73a030a6fbf5f9264c010dc"),
+                                    fabricApiSecret: getPropertyOrDefault("fabricApiSecret", "0841504a64cce186e777ba29f01b71f08561883efec788f828a0da756599324c")]
+            buildConfigField "boolean", "DELETE_REALM_IF_MIGRATION_NEEDED", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField("boolean", "ADOBE_DEBUG_CONFIG", "true")
+            ext.enableCrashlytics = true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.st4
+            debuggable true
+        }
+        dev {
+            ext.serverEnvironment = "ro.vodafone.mcare.android.client.Hosts.Environment.DEV"
+            //using no certificates disables certificate pinning
+            ext.authCertificates = []
+            ext.hostCertificates = []
+            buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+            buildConfigField("String[]", "HOST_CERTIFICATES", stringArray(ext.hostCertificates))
+            buildConfigField("String[]", "AUTH_CERTIFICATES", stringArray(ext.authCertificates))
+            buildConfigField("String", "TEALIUM_CONF", "\"dev\"")
+            manifestPlaceholders = [fabric_key: getPropertyOrDefault("fabricApiKey", "1d93bda626077505c73a030a6fbf5f9264c010dc")]
+            buildConfigField "boolean", "DELETE_REALM_IF_MIGRATION_NEEDED", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField("boolean", "ADOBE_DEBUG_CONFIG", "true")
+            ext.enableCrashlytics = true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.dev
+            debuggable true
+        }
+        dev2 {
+            ext.serverEnvironment = "ro.vodafone.mcare.android.client.Hosts.Environment.DEV2"
+            //using no certificates disables certificate pinning
+            ext.authCertificates = []
+            ext.hostCertificates = []
+            buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+            buildConfigField("String[]", "HOST_CERTIFICATES", stringArray(ext.hostCertificates))
+            buildConfigField("String[]", "AUTH_CERTIFICATES", stringArray(ext.authCertificates))
+            buildConfigField("String", "TEALIUM_CONF", "\"dev\"")
+            manifestPlaceholders = [fabric_key: getPropertyOrDefault("fabricApiKey", "1d93bda626077505c73a030a6fbf5f9264c010dc")]
+            buildConfigField "boolean", "DELETE_REALM_IF_MIGRATION_NEEDED", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField("boolean", "ADOBE_DEBUG_CONFIG", "true")
+            ext.enableCrashlytics = true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.dev2
+            debuggable true
+        }
+        uat {
+            ext.serverEnvironment = "ro.vodafone.mcare.android.client.Hosts.Environment.UAT"
+            //using no certificates disables certificate pinning
+            ext.authCertificates = []
+            ext.hostCertificates = []
+            buildConfigField("ro.vodafone.mcare.android.client.Hosts.Environment", "SERVER_ENVIRONMENT", ext.serverEnvironment)
+            buildConfigField("String[]", "HOST_CERTIFICATES", stringArray(ext.hostCertificates))
+            buildConfigField("String[]", "AUTH_CERTIFICATES", stringArray(ext.authCertificates))
+            buildConfigField("String", "TEALIUM_CONF", "\"dev\"")
+            manifestPlaceholders = [fabric_key     : getPropertyOrDefault("fabricApiKey", "1d93bda626077505c73a030a6fbf5f9264c010dc"),
+                                    fabricApiSecret: getPropertyOrDefault("fabricApiSecret", "0841504a64cce186e777ba29f01b71f08561883efec788f828a0da756599324c")]
+            buildConfigField "boolean", "DELETE_REALM_IF_MIGRATION_NEEDED", "true"
+            buildConfigField "boolean", "USE_CRASHLYTICS", "true"
+            buildConfigField("boolean", "ADOBE_DEBUG_CONFIG", "true")
+            ext.enableCrashlytics = true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.uat
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+afterEvaluate {
+    tasks.matching {
+        it.name.startsWith('dex')
+    }.each { dx ->
+        if (dx.additionalParameters == null) {
+            dx.additionalParameters = []
+        }
+        dx.additionalParameters += '--multi-dex'
+        dx.additionalParameters += "--main-dex-list=$projectDir/multidex.keep".toString()
+    }
+}
+
+android {
+    lintOptions {
+        disable "ResourceType"
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation "com.facebook.react:react-native:0.57.1"
+
+
+    // Urban Airship SDK
+    implementation 'com.urbanairship.android:urbanairship-sdk:9.5.6'
+
+    // Recommended for in-app messaging
+    implementation 'com.android.support:cardview-v7:27.1.1'
+
+    // Recommended for location services
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+
+    //Branch.io SDK
+
+    //    implementation 'io.branch.sdk.android:library:2.0.0'
+
+    //Floating drawer @link: https://github.com/mxn21/FlowingDrawer
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.daimajia.easing:library:1.0.1@aar'
+    implementation 'com.daimajia.androidanimations:library:1.1.3@aar'
+    implementation 'com.github.bmarrdev:android-DecoView-charting:v1.2'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:percent:27.1.1'
+    implementation 'com.android.support:gridlayout-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.daimajia.slider:library:1.1.5@aar'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.2'
+    implementation 'com.github.clans:fab:1.6.2'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.flyco.dialog:FlycoDialog_Lib:1.3.2@aar'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.wdullaer:materialdatetimepicker:2.3.0'
+    testImplementation 'junit:junit:4.12'
+
+    //butterknife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    /*rx android and retrofit*/
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.1.6'
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+
+    //gson convertor
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+
+    //scalar convertor
+    implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
+
+    //retrofit interceptor
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+    //crashlytics
+    implementation('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+
+    //swagger annotations
+    implementation 'io.swagger:swagger-annotations:1.5.9'
+
+    //easy animations https://github.com/2359media/EasyAndroidAnimations
+//    implementation 'com.github.2359media:EasyAndroidAnimations:0.8'
+    implementation 'com.daasuu:EasingInterpolator:1.0.0'
+    implementation 'com.facebook.fresco:fresco:1.0.1'
+
+    //https://github.com/florent37/ViewAnimator
+    implementation 'com.github.florent37:viewanimator:1.0.5'
+    implementation 'com.android.support:multidex:1.0.2'
+
+    //swipe layout to action   // https://github.com/daimajia/AndroidSwipeLayout
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+
+    //Tealium SDK integration
+
+    //Tealium direct gradle
+    implementation 'com.tealium:library:5.0.4'
+
+    //Tealium local aar
+    implementation(name: 'tealium.lifecycle-5.0.4', ext: 'aar')
+
+    //Soasta
+    implementation('com.soasta.mpulse:mpulse-android:2.2.3') {
+        exclude module: 'httpclient'
+        exclude module: 'httpcore'
+        exclude module: 'commons-logging'
+        exclude module: 'json'
+    }
+
+    //https://github.com/blackfizz/EazeGraph
+    implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
+
+    //START: Vodafone dependency rewritten not to use VDF maven
+    implementation(name: 'notifications-1.8', ext: 'aar')
+    implementation 'net.danlew:android.joda:2.9.5.1'
+    implementation 'com.lsurvila.utils.animatedexpandablelistview:library:0.2'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    implementation 'com.squareup.okhttp3:okhttp:3.6.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+
+    // https://github.com/blazsolar/HorizontalPicker
+    implementation 'com.wefika:horizontal-picker:1.1.1'
+
+    //https://github.com/leolin310148/ShortcutBadger - badge notifications
+    implementation 'me.leolin:ShortcutBadger:1.1.13@aar'
+    implementation 'com.vfg:splash:2.1.7'
+    //apache
+    implementation 'commons-codec:commons-codec:1.9'
+    implementation 'org.apache.commons:commons-lang3:3.4'
+
+    //secured shared preferences
+    implementation 'online.devliving:securedpreferencestore:0.5.0'
+    implementation 'com.google.android:flexbox:0.3.2'
+
+    implementation(name: 'netperformsdk_v5.1.0', ext: 'aar')
+
+    //facebook
+    implementation 'com.facebook.android:facebook-android-sdk:4.36.1'
+
+    //firebase
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+    implementation 'org.apache.directory.studio:org.apache.commons.io:2.4'
+
+    //adform
+    implementation 'com.google.android.gms:play-services-ads:16.0.0'
+    implementation 'com.adform.tracking.sdk:adform-tracking-sdk:1.3.0'
+    implementation 'com.google.protobuf:protobuf-java:2.6.1'
+}
+
+def initFabricProperties() {
+    file('fabric.properties').delete()
+    if (project.hasProperty("fabricApiKey") && project.hasProperty("fabricApiSecret")) {
+        def commentMessage = "This is autogenerated fabric property from system environment to prevent key to be committed to source control."
+        ant.propertyfile(file: "fabric.properties", comment: commentMessage) {
+            entry(key: "apiSecret", value: project.property("fabricApiSecret"))
+            entry(key: "apiKey", value: project.property("fabricApiKey"))
+        }
+    } else {
+        def commentMessage = "This is autogenerated fabric property from system environment to prevent key to be committed to source control."
+        ant.propertyfile(file: "fabric.properties", comment: commentMessage) {
+            entry(key: "apiSecret", value: "0841504a64cce186e777ba29f01b71f08561883efec788f828a0da756599324c")
+            entry(key: "apiKey", value: "1d93bda626077505c73a030a6fbf5f9264c010dc")
+        }
+    }
+}
+
+def getPropertyOrDefault(String propName, String dflt) {
+    if (!project.hasProperty(propName))
+        return dflt
+    else
+        return project.property(propName)
+}
+
+afterEvaluate {
+    initFabricProperties()
+}
+
+static def stringArray(List<String> stringList) {
+    return '{' + stringList.collect { "\"${it}\"" }.join(",") + '}'
+}
+
+apply plugin: 'com.google.gms.google-services'

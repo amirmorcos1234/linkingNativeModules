@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay_background"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/overlay_regular_border"
+    android:paddingLeft="@dimen/overlay_regular_border"
+    android:paddingRight="@dimen/overlay_regular_border"
+    android:paddingTop="@dimen/overlay_regular_border">
+
+    <RelativeLayout
+        android:id="@+id/select_dialog_tittle_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/overlayDismissButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            android:src="@drawable/close_48_white" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/overlayTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="45dp"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:text="Aplicaţia necesită update"
+            android:textColor="@color/pay_bill_white_color"
+            android:textSize="@dimen/guillotine_item_text_size"
+            customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/to_the_store_btn"
+        android:layout_below="@+id/select_dialog_tittle_container"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/overlay_second_border"
+        android:paddingRight="@dimen/overlay_second_border"
+        android:paddingTop="@dimen/overlay_second_border"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/overlaySubtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:breakStrategy="simple"
+                android:text="Pentru a utiliza această funcţionalitate, te rugăm să îţi actualizezi aplicaţia"
+                android:textColor="@color/pay_bill_white_color"
+                android:textSize="@dimen/button_text_size"
+                customAttrs:vodafoneTextStyle="vodafoneRG" />
+
+    </ScrollView>
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:id="@+id/to_the_store_btn"
+        style="@style/OverlayPrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Intră în Play Store"
+        customAttrs:vodafoneTextStyle="vodafoneRG"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

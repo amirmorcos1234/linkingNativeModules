@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="@drawable/border_shadow"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/viewToken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+	    <ro.vodafone.mcare.android.ui.views.TooltipError
+		    android:id="@+id/txtTokenError"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginBottom="4dp" />
+
+        <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+            android:id="@+id/lblToken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            tools:text="Te rugam sa introduci tokenul primit prin SMS"
+            android:textColor="@color/grey_600"
+            android:textStyle="bold"
+            app:vodafoneTextStyle = "vodafoneRG"/>
+
+
+        <ro.vodafone.mcare.android.custom.CustomEditTextCompat
+            android:id="@+id/txtToken"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_input_height"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+	        android:textColorHint="@color/light_gray_text_color"
+            android:singleLine="true"
+	        android:maxLength="6"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:background="@drawable/default_input_border"
+            tools:hint="sms"
+            android:imeOptions="actionDone"/>
+
+        <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+            android:id="@+id/btnResendToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Retrimite token"
+            android:textSize="@dimen/button_text_size"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            style="@style/CardSecondaryButton"/>
+
+    </LinearLayout>
+    
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_vertical_margin" />
+
+    <ro.vodafone.mcare.android.ui.views.buttons.VodafoneButton
+        android:id="@+id/btnDisplayFee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Afiseaza tarif"
+        android:textSize="@dimen/button_text_size"
+        android:enabled="false"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        style="@style/CardPrimaryButton"/>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+
+    <RelativeLayout
+        android:id="@+id/header_title_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <RelativeLayout
+            android:id="@+id/country_header_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/country_header_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                fresco:placeholderImage="@drawable/default_avatar_icon"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                fresco:roundedCornerRadius="50dp"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/header_price_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/country_header_image_container">
+
+            <TextView
+            android:id="@+id/welcome_message_of_selected_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bon jour!"
+            android:textSize="17dp"
+            android:textColor="@color/whiteNormalTextColor"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            />
+
+            <TextView
+                android:id="@+id/translated_welcome_message_of_current_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/welcome_message_of_selected_country"
+                android:text="Hello!"
+                android:textSize="12dp"
+                android:textColor="@color/whiteNormalTextColor"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customAttrs="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="100dp"
+    android:gravity="center"
+    android:id="@+id/tab_container">
+
+
+    <RadioGroup android:id="@+id/payment_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/inside_card_layout_vertical_margin"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RadioButton android:id="@+id/pay_with_card"
+            android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_with_card"
+            android:paddingLeft="10dp"
+            android:button="@drawable/radio_button_selector"
+            android:checked="true"/>
+
+        <LinearLayout
+            android:id="@+id/payment_icons_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin"
+            android:visibility="gone"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cards_container"
+                android:orientation="vertical"
+                ></LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_new_card_container"
+                android:orientation="vertical"
+
+                ></LinearLayout>
+
+        </LinearLayout>
+
+        <RadioButton android:id="@+id/pay_with_voucher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin"
+            android:text="@string/pay_with_voucher"
+            android:paddingLeft="10dp"
+            android:button="@drawable/radio_button_selector"/>
+
+        <LinearLayout
+            android:id="@+id/pay_with_voucher_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/inside_card_layout_vertical_margin"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/voucher_error_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/black_error_message_border"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/icon_alert"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="top"/>
+
+                    <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                        android:id="@+id/voucher_error_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/whiteNormalTextColor"
+                        android:textSize="@dimen/login_page_labels_text_size"/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/black_triangle">
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ro.vodafone.mcare.android.custom.CustomEditText
+                android:id="@+id/voucher_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/default_input_height"
+                android:textColorHint="@color/gray_text_color"
+                android:textSize="@dimen/card_hint_text_size"
+                android:maxLines="1"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:maxLength="14"
+                android:background="@drawable/default_input_border"
+                android:inputType="number"
+                customAttrs:type="voucherCode"
+                customAttrs:defaultBorderColor="gray"
+                customAttrs:fromChildFragment="true"
+                android:focusableInTouchMode="true">
+            </ro.vodafone.mcare.android.custom.CustomEditText>
+
+        </LinearLayout>
+
+        <RadioButton android:id="@+id/pay_with_invoice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pay_with_invoice"
+            android:paddingLeft="10dp"
+            android:button="@drawable/radio_button_selector"/>
+
+
+        <LinearLayout
+            android:id="@+id/pay_with_invoice_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/inside_card_layout_vertical_margin"
+            android:layout_marginLeft="25dp"
+            android:visibility="visible">
+
+            <ro.vodafone.mcare.android.ui.views.textviews.VodafoneTextView
+                android:id="@+id/pay_with_invoice_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textSize="@dimen/text_size"
+                android:text="Plata reincarcarii va figura pe factura emisa la 15 septembrie"
+                android:textColor="@color/gray_text_color"
+                customAttrs:vodafoneTextStyle = "vodafoneRG"/>
+        </LinearLayout>
+
+    </RadioGroup>
+
+
+</LinearLayout>
